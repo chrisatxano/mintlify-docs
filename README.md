@@ -1,4 +1,8 @@
+import { ColorGenerator } from "/snippets/color-generator.mdx"
+
 # Mintlify Starter Kit
+
+<ColorGenerator />
 
 Click on `Use this template` to copy the Mintlify starter kit. The starter kit contains examples including
 
