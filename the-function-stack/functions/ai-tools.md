@@ -1,0 +1,9 @@
+# AI Tools
+
+{% include "../../.gitbook/includes/function-mcp-list-tool.md" %}
+
+{% include "../../.gitbook/includes/function-mcp-call-tool.md" %}
+
+## Template Engine
+
+{% include "../../.gitbook/includes/template-engine.md" %}

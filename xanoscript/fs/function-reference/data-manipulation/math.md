@@ -1,0 +1,18 @@
+# Math
+
+{% include "../../../../.gitbook/includes/xs-add-number.md" %}
+
+{% include "../../../../.gitbook/includes/xs-subtract-number.md" %}
+
+{% include "../../../../.gitbook/includes/xs-multiply-number.md" %}
+
+{% include "../../../../.gitbook/includes/xs-divide-number.md" %}
+
+{% include "../../../../.gitbook/includes/xs-modulus-number.md" %}
+
+{% include "../../../../.gitbook/includes/bitwise-and-number.md" %}
+
+{% include "../../../../.gitbook/includes/xs-bitwise-or-number.md" %}
+
+{% include "../../../../.gitbook/includes/xs-bitwise-xor-number.md" %}
+

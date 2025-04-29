@@ -1,0 +1,56 @@
+# Array
+
+An array is just another name for a list of items. These items can be anything from text, to integers, to full objects and complex data structures.
+
+An array is always contained inside of square brackets: **\[ ]**
+
+```json
+[
+    1,
+    2,
+    3
+]
+```
+
+```json
+[
+    "Hello",
+    "World"
+]
+```
+
+```json
+[
+  {
+    "id": 1,
+    "created_at": 1736362116570,
+    "name": "Edited Author",
+    "genre": ""
+  },
+  {
+    "id": 3,
+    "created_at": 1736364528436,
+    "name": "Edited Author",
+    "genre": ""
+  },
+  {
+    "id": 2,
+    "created_at": 1736364473744,
+    "name": "john smith",
+    "genre": ""
+  },
+  {
+    "id": 4,
+    "created_at": 1736364560194,
+    "name": "Betty White",
+    "genre": ""
+  },
+  {
+    "id": 5,
+    "created_at": 1736364604938,
+    "name": "Stephen King",
+    "genre": ""
+  }
+]
+```
+

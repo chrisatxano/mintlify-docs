@@ -1,0 +1,138 @@
+---
+icon: bug
+---
+
+# Testing and Debugging Function Stacks
+
+## Testing a Function Stack
+
+{% stepper %}
+{% step %}
+### Click ![](<../.gitbook/assets/CleanShot 2025-01-03 at 10.47.02.png>) at the top of your workflow to execute it.
+
+Clicking this button opens the Run panel.
+{% endstep %}
+
+{% step %}
+### Populate any necessary inputs.
+
+This information will be used to test your workflow. If you're copying and pasting JSON from another source, you can use the Format button to quickly turn it into a readable structure if necessary, although this will not impact the functionality of your test run.
+
+<div align="left"><figure><img src="../.gitbook/assets/CleanShot 2025-01-03 at 10.56.54.png" alt="" width="359"><figcaption></figcaption></figure></div>
+{% endstep %}
+
+{% step %}
+### Click ![](<../.gitbook/assets/CleanShot 2025-01-03 at 10.57.23.png>)to execute the workflow.
+
+{% include "../.gitbook/includes/safe-mode.md" %}
+{% endstep %}
+
+{% step %}
+### Review the response and timing, if desired.
+
+#### Response
+
+The response block will show you what the workflow has returned, if applicable, once execution has completed.
+
+<div align="left"><figure><img src="../.gitbook/assets/CleanShot 2025-01-03 at 10.58.33.png" alt="" width="352"><figcaption></figcaption></figure></div>
+
+You can see the amount of time the request took to complete, and perform several actions from inside this block.
+
+Click ![](<../.gitbook/assets/CleanShot 2025-01-03 at 10.59.29 (1).png>) to copy the contents of the response
+
+Click ![](<../.gitbook/assets/CleanShot 2025-01-03 at 10.59.56.png>) to copy the request as a cURL command to be used outside of Xano
+
+Click ![](<../.gitbook/assets/CleanShot 2025-01-03 at 11.03.04.png>) to create a [unit test](unit-tests.md) based on this run.
+
+Click ![](<../.gitbook/assets/CleanShot 2025-01-03 at 11.04.33.png>) to activate the debugger — more on this below.
+
+#### Timing
+
+You can further review more information for each step that executed during this run in the Timing block.
+
+<div align="left"><figure><img src="../.gitbook/assets/CleanShot 2025-01-03 at 11.05.33.png" alt="" width="353"><figcaption></figcaption></figure></div>
+
+This block will provide individual timings for each step, allowing you to quickly pinpoint any points of delay that could be improved. You can also click the **>** icon next to each step to review that step's output for further investigation.
+{% endstep %}
+
+{% step %}
+### What's next?
+
+Run it again by clicking <mark style="background-color:blue;">Run Again</mark> , reset everything back to the initial state by clicking <mark style="background-color:blue;">Reset</mark> , or activate the debugger with <mark style="background-color:blue;">Activate Debugger</mark> .
+
+You can also use this opportunity to define sample inputs and responses for your [swagger-openapi-documentation.md](../the-function-stack/building-with-visual-development/apis/swagger-openapi-documentation.md "mention").
+
+{% include "../.gitbook/includes/swagger-defining-examples.md" %}
+{% endstep %}
+{% endstepper %}
+
+***
+
+## Using the Debugger
+
+The Debugger is used to review each step of execution, one at a time, to pinpoint the cause of any issues that might arise during that run.
+
+{% hint style="info" %}
+Please note that each step is not actually individually being executed; the full run has completed prior to the debugger being available.
+{% endhint %}
+
+### Simple Mode
+
+&#x20;![](<../.gitbook/assets/CleanShot 2025-01-03 at 11.17.38.png>) Stop Debugging
+
+&#x20;![](<../.gitbook/assets/CleanShot 2025-01-03 at 11.19.12.png>) Restart the Debugger
+
+&#x20;![](<../.gitbook/assets/CleanShot 2025-01-03 at 11.19.29.png>) Move to the next step
+
+As you move through each step, the current will be highlighted as shown below.
+
+<figure><img src="../.gitbook/assets/CleanShot 2025-01-03 at 11.20.02 (1).png" alt=""><figcaption></figcaption></figure>
+
+Completed steps will be highlighted in green.
+
+<figure><img src="../.gitbook/assets/CleanShot 2025-01-03 at 11.20.51.png" alt=""><figcaption></figcaption></figure>
+
+As you progress through each step, the **Variables** panel will update with current data.
+
+<figure><img src="../.gitbook/assets/CleanShot 2025-01-03 at 11.21.43.png" alt=""><figcaption></figcaption></figure>
+
+Clicking different steps in your function stack will bring the debugger to that point.
+
+<figure><img src="../.gitbook/assets/CleanShot 2025-01-03 at 11.23.02.gif" alt=""><figcaption></figcaption></figure>
+
+### Advanced Options
+
+Click ![](<../.gitbook/assets/CleanShot 2025-01-03 at 11.25.43.png>)to enable the advanced debugging options.
+
+* **Step Over** - When working with nested function stacks (custom functions or middleware), if you don't need to debug those, just step right over them and continue with the next function in your function stack&#x20;
+* **Step Into / Step Out** - Step into or out of a nested function (custom function or middleware) and continue the debugging experience seamlessly&#x20;
+* **Continue** - Continue with execution of your function stack&#x20;
+* **Enable Breakpoints** - Enable or disable breakpoints as a whole
+* **Step Forwards / Step Backwards** - Toggle forward or reverse execution of your function stack
+* **Result** - View the result of your completed execution
+* **Watches** - Use custom Javascript expressions for more complex data monitoring or calculation as your function stack executes
+* **Variables** - View the current contents of your variables as the function stack executes
+* **Copy** 📄 **/ Add Watch** 👁️ - Copies the variable's current contents, or adds a variable to your Watches list
+* **Breakpoints** - Hover over the icon on the left side of each function to establish a breakpoint. Breakpoints will cause the debugger to pause at that step.&#x20;
+
+## Unknown Errors and Debugger Errors
+
+{% hint style="warning" %}
+**Unknown Error**
+{% endhint %}
+
+{% hint style="warning" %}
+**The debugger encountered an error**
+{% endhint %}
+
+If you see these messages, they could indicate one of the following:
+
+* An unhandled exception in your logic
+  * This means that you've likely ran across a rare error that we don't yet have specific messaging for. Please let us know about this so we can make an adjustment.
+* Server resource issues
+
+You can also try running your function stack in Safe Mode.
+
+{% include "../.gitbook/includes/safe-mode.md" %}
+
+For assistance with either of these errors, please reach out to our support team. You can also review our documentation on [memory usage](../troubleshooting-and-support/troubleshooting-performance/ram-usage.md) to narrow down the cause.

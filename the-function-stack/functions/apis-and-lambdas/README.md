@@ -1,0 +1,15 @@
+# APIs & Lambdas
+
+> The APIs and Lambda Functions category contains functions to connect with third party services, initiate Realtime events, and execute JavaScript / TypeScript alongside your function stack.
+
+{% content-ref url="external-api-request.md" %}
+[external-api-request.md](external-api-request.md)
+{% endcontent-ref %}
+
+{% content-ref url="lambda-functions.md" %}
+[lambda-functions.md](lambda-functions.md)
+{% endcontent-ref %}
+
+{% content-ref url="realtime-functions.md" %}
+[realtime-functions.md](realtime-functions.md)
+{% endcontent-ref %}

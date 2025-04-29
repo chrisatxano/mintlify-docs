@@ -1,0 +1,77 @@
+---
+icon: lock-hashtag
+---
+
+# Best Practices
+
+### Authentication
+
+Authentication is handled by **JWE** tokens, which is an industry standard.&#x20;
+
+**Authentication** is how a user logs in or signs up to an application. Xano provides secure out-of-the-box authentication via JWE (JSON Web Encryption) tokens. JWE tokens are self-contained and provide data integrity, authenticity, non-repudiation, and confidentiality.&#x20;
+
+**OAuth**, which stands for “**Open Authorization**,” allows third-party services to exchange your information without you having to give away your passwor&#x64;**.**
+
+**OAuth** providers such as Facebook, Google, LinkedIn, and GitHub login are available in the Xano marketplace to easily enable.&#x20;
+
+### Single-Tenancy&#x20;
+
+On Xano's dedicated resource plans, the user's Instance is on a single-tenant deployment or architecture. This means that the user is the only tenant on the server (Instance) architecture and that all the server resources and CPU are dedicated to the tenant. Single-tenancy has a variety of benefits including:
+
+**Data Separation** - Data is kept separate from other users since the Instance is isolated. This allows for independence of data and greater customization of software and hardware.&#x20;
+
+**Data Security** -  If one user has a breach of data, then another user is safe from the breach since their data is stored on a completely separate Instance.&#x20;
+
+**Reliability & Performance** - Since the Instance is only dependent and serves a single tenant, performance and reliability are significantly increased. The alternative would be the Instance serving many different users.
+
+**Recovery** - With a single-tenancy backups are also isolated, making it easier and more reliable to restore from backups in the event of a disaster.&#x20;
+
+### Password Requirements
+
+Xano requires password minimums for logging in to a Xano account. A password must be a minimum of eight (8) characters, maximum of 256 characters, at least one (1) alphabetic character, and at least one (1) numeric character. These password requirements are only for login by email and password.&#x20;
+
+Password requirements for Single Sign-On (SSO) are managed by the SSO provider.&#x20;
+
+### 2FA Security
+
+Two-factor authentication (2FA) security, or two-step authentication, can be enabled for logging in to a Xano account. 2FA security requires the use of two different forms of identification to access and authenticate an account. It is an extra layer of security beyond email and password credentials that secures an account by requiring an authentication step from something that belongs to the user.&#x20;
+
+2FA security can be enabled from the account page of a Xano account. [Learn how to enable 2FA](../your-xano-account/account-page.md#enabling-2fa-two-factor-authentication).
+
+### Inactivity Timeout
+
+To protect your privacy, Xano includes an inactivity timer which will log you out after 2 hours of inactivity by default, but this can be adjusted or disabled entirely via your account settings. This is based on mouse activity and works across multiple tabs.
+
+<figure><img src="../.gitbook/assets/CleanShot 2023-05-30 at 14.31.52.png" alt=""><figcaption></figcaption></figure>
+
+### Enforcement
+
+On certain Xano plans, you have the ability to enable security policy enforcement through your Instance settings.
+
+<figure><img src="../.gitbook/assets/CleanShot 2023-05-30 at 14.31.00.png" alt=""><figcaption></figcaption></figure>
+
+**Require 2FA** enforces that your users not only have two-factor authentication enabled, but that they have logged in using that method.
+
+**Authentication Enforcement** enables requiring your team members to authenticate using one or more of the enabled services you choose.
+
+**Allowed SSO Hosts** enforces the email address domains allowed when team members log in. As an example, if we wanted our team members to only authenticate using Github accounts that use a xano.com email address, we could check Github under Authentication Enforcement, and add xano.com as an allowed SSO host.
+
+### Sensitive Data Flagging
+
+Xano maintains a [request history](../maintenance-monitoring-and-logging/request-history.md) of incoming requests of your APIs. To ensure that no sensitive data is not logged in the request history, you can enable the **Sensitive Data** flag on that database field to ensure it is not stored.
+
+{% hint style="info" %}
+The **sensitive data** flag only impacts the inputs of a request when using database link, which automatically creates inputs for you based on database fields; you will want to ensure that the sensitive data is not returned elsewhere in your function stack.
+{% endhint %}
+
+In the settings for the field you would like to hide, enable the **Sensitive Data** flag.&#x20;
+
+<div align="left"><figure><img src="../.gitbook/assets/CleanShot 2025-02-24 at 09.01.32.png" alt=""><figcaption></figcaption></figure></div>
+
+**Sensitive Data Flag - Disabled**
+
+<div align="left"><figure><img src="../.gitbook/assets/CleanShot 2025-02-24 at 09.29.37.png" alt="" width="323"><figcaption></figcaption></figure></div>
+
+**Sensitive Data Flag - Enabled**
+
+<div align="left"><figure><img src="../.gitbook/assets/CleanShot 2025-02-24 at 09.30.04.png" alt="" width="322"><figcaption></figcaption></figure></div>

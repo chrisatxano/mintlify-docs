@@ -1,0 +1,204 @@
+---
+icon: location-check
+---
+
+# What are Actions?
+
+{% embed url="https://www.youtube.com/watch?v=Ixhk4Sv4mfM" %}
+
+A Xano Action is a powerful, zero-dependency function that anyone can create, share, fork (create new versions), and install. Actions can be previewed, tested, and edited in Run mode outside of a Xano instance, meaning they do not require an account for testing and trying them out.&#x20;
+
+Actions are a lightweight version of the Xano function stack designed for specific processes such as integrations with external APIs or business logic executions. They are similar to custom functions, but without dependencies and shareable to anyone.
+
+Discover Actions on [xano.com/actions](https://www.xano.com/actions).  Browse Actions created by the Xano team or other community members. Clicking on an Action allows you to:
+
+* **Run & Debug** the Action.
+* **Make edits** to the Action.
+* **Clone**: Make a copy of the Action, change whatever you'd like, and publish a new (separate) version of the Action.
+* **Add** the Action into your workspace to be used in any function stack.&#x20;
+
+### What does zero dependency mean?
+
+Actions are designed not to contain dependencies to support more seamless integration to existing Xano workspaces and function stacks. Additionally, it promotes easy shareability for anyone, regardless of if they're a Xano user, to interact with Actions.&#x20;
+
+{% hint style="info" %}
+Zero-dependency means Actions do not contain:
+
+* Database request functions or database tables
+* Middleware
+* Environment variables\*
+* Lambdas
+* Redis caching
+* Multiple Xano objects
+* Docker Microservices\
+
+
+_\*Settings registry is available for actions for API keys and other sensitive tokens or keys._
+{% endhint %}
+
+### Creating an Action
+
+<div align="left"><figure><img src="../.gitbook/assets/CleanShot 2024-10-10 at 09.52.49@2x.png" alt="" width="375"><figcaption></figcaption></figure></div>
+
+Click <mark style="color:blue;">**+ Create Action**</mark> to begin building a new Action.
+
+Building a new Action is very similar to building in a[ regular Xano function stack.](../the-function-stack/building-with-visual-development/#the-anatomy-of-the-visual-builder)
+
+{% hint style="info" %}
+Please note that because Actions are designed to not have dependencies outside of the Action itself, certain functions such as database operations are not available.
+{% endhint %}
+
+### Action Settings
+
+Click the three dots in the upper-right corner to access **Action Settings**. From this panel, you can update the following:
+
+**Name** - Give your action a unique name
+
+**Instructions** - You can write documentation to accompany your action here. This field supports markdown for formatting. View the expandable section below for a quick reference.
+
+<details>
+
+<summary><strong>Quick Markdown Reference</strong></summary>
+
+````
+# Header 1
+## Header 2
+### Header 3
+
+*Italic* or _Italic_
+**Bold** or __Bold__
+***Bold and Italic*** or ___Bold and Italic___
+
+- Item 1
+- Item 2
+  - Subitem 2.1
+
+1. First item
+2. Second item
+   1. Subitem 2.1
+
+[Link text](https://www.example.com)
+
+[Alt text](image-url.jpg)
+
+`inline code`
+
+```code block```
+````
+
+</details>
+
+You can also preview your instructions using the **Preview** tab.
+
+**Category** - You must provide a category for your Action before publishing
+
+**Video URL** - You can insert a YouTube or Loom video link here to accompany your action
+
+### Action Packages
+
+Packages can be used to bundle and install multiple Actions at once.
+
+{% stepper %}
+{% step %}
+### Click ![](<../.gitbook/assets/CleanShot 2025-03-20 at 16.07.44.png>) on the left-hand navigation.
+
+
+{% endstep %}
+
+{% step %}
+### Give your package a name, description, and check the other settings in the panel that opens.
+
+
+{% endstep %}
+
+{% step %}
+### Add Actions to your package by clicking ![](<../.gitbook/assets/CleanShot 2025-03-20 at 16.08.59.png>)
+
+You can choose to either copy the action into the package, or move it.
+
+You can also create new actions at this time specifically for your package.
+{% endstep %}
+
+{% step %}
+### When your Package is ready, click Publish, and once publishing completes, you can add it to your workspace(s).
+
+
+{% endstep %}
+{% endstepper %}
+
+### Publishing
+
+When you publish your Action, you'll be able to review and make any changes to the documentation and certain Action settings once more before going live.
+
+Make sure to choose the appropriate access level for your Action.
+
+**Public** - This Action will be available for anyone to browse for, install and use.
+
+**Private** - This Action will not be available for distribution. Use this for specific Actions that you only want to use internally.
+
+**Unlisted** - This Action will be available to anyone that has the URL, but will not be found when browsing available Actions.
+
+### Settings Registry
+
+Because Actions have no dependencies, each Action contains a Settings Registry, which is used in a similar manner to [environment variables](../the-function-stack/environment-variables.md). You will use the Settings Registry for situations where an Action requires an API key or other sensitive data that you need to ensure users of the Action supply without supplying it yourself.
+
+To add a new value to the Settings Registry, just add a new input to your Action. In the settings for that input, you'll see a new option in the **Configuration** section called Settings Registry.
+
+<figure><img src="../.gitbook/assets/CleanShot 2024-10-15 at 22.25.36@2x.png" alt=""><figcaption></figcaption></figure>
+
+Checking this box will mark this input as part of the Settings Registry, enabling you to provide your own data for testing and make sure it is apparent when these values need to be provided for others utilizing the Action you are building.
+
+### Deleting an Action
+
+{% hint style="info" %}
+Please note that deleting an action does not impact users who have already imported your action into their workspace.&#x20;
+{% endhint %}
+
+Click the settings icon in the top-right of your published action, and click Delete Actio&#x6E;**.**
+
+<figure><img src="../.gitbook/assets/CleanShot 2024-10-29 at 13.44.11.png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+
+
+
+
+Think of projects as a folder for related actions to reside in. They are necessary for any actions you create, and include a number of helpful features to keep you organized.
+
+### Actions
+
+<figure><img src="../.gitbook/assets/CleanShot 2024-10-10 at 09.50.01@2x.png" alt=""><figcaption></figcaption></figure>
+
+Your project can have multiple Actions inside of it. You can add new actions to a Project by clicking Create Action inside of the Project.
+
+### Members
+
+<figure><img src="../.gitbook/assets/CleanShot 2024-10-10 at 09.50.18@2x.png" alt=""><figcaption></figcaption></figure>
+
+You can invite collaborators to a Project that you own by clicking the **Invite Collaborators** button.
+
+Once you've sent an invite, it will show up on the Members screen, as shown below.
+
+<figure><img src="../.gitbook/assets/CleanShot 2024-10-04 at 17.35.59.png" alt=""><figcaption></figcaption></figure>
+
+The invitee will receive an email similar to the one below allowing them to accept the invitation.
+
+<figure><img src="../.gitbook/assets/CleanShot 2024-10-04 at 17.36.47.png" alt=""><figcaption></figcaption></figure>
+
+### Settings
+
+<figure><img src="../.gitbook/assets/CleanShot 2024-10-10 at 09.50.38@2x.png" alt=""><figcaption></figcaption></figure>
+
+**Name** - The name of your project
+
+**Custom Project ID** - You can assign a custom ID to your project here. The project ID determines the slug, or portion of the URL, that leads to the project.
+
+**Description** - A description of your project
+
+From this screen, you can also delete your project.
+
+
+

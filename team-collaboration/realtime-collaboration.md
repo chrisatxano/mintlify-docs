@@ -1,0 +1,58 @@
+---
+icon: users-medical
+---
+
+# Realtime Collaboration
+
+Every Xano workspace includes Real-Time Collaboration which enables you to edit your API simultaneously with your team, just like a Google Doc!&#x20;
+
+{% embed url="https://www.youtube.com/watch?v=91JBboWapDI" %}
+
+### Presence
+
+Real-time presence informs you when a team member is working on the same Function Stack as you at the top of the page with their initials. Each team member’s initials will be displayed on the function stack item they are currently editing.&#x20;
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Example of real-time presence</p></figcaption></figure>
+
+
+
+### Team Activity & Secure Chat
+
+While it is not meant to replace your existing communication platforms, you now have the ability to chat real-time in Xano with others who are present in the same workspace. Chat is accessible by clicking the **Users** indicator on the left-hand menu.\
+![](<../.gitbook/assets/CleanShot 2023-01-03 at 15.26.42@2x.png>)
+
+Clicking this will open the **Collaboration panel**. You can see the current chat history, and send your own messages from here. Please note that chat history only persists per session; if you refresh your browser any current chat messages will disappear from your view.
+
+This Collaboration panel also displays a list of users who are currently present in the workspace, and what page they are on. You can use this to quickly navigate to where another user is working.
+
+<figure><img src="../.gitbook/assets/CleanShot 2023-01-03 at 15.35.53@2x.png" alt=""><figcaption><p>The chat and activity panel, showing recent chat messages</p></figcaption></figure>
+
+When a new message is sent, it is broadcasted to all users currently present in the workspace via a notification in the lower-left corner.
+
+<figure><img src="../.gitbook/assets/CleanShot 2023-01-03 at 15.33.24@2x.png" alt=""><figcaption><p>An example of an incoming chat message</p></figcaption></figure>
+
+### Group Editing
+
+Xano allows you to see when functions are being worked on by another team member. This is noted on the right side of each function, as shown below.
+
+<figure><img src="../.gitbook/assets/CleanShot 2023-01-03 at 16.31.43@2x.png" alt=""><figcaption><p>An example of advertised presence on a function</p></figcaption></figure>
+
+This also exists in the database view. Quickly see exactly what each team member is working on.
+
+<figure><img src="../.gitbook/assets/CleanShot 2023-07-31 at 11.47.43@2x.png" alt=""><figcaption></figcaption></figure>
+
+**Revision History**
+
+As your team members make changes, you can see these drafts by clicking the Revertable Changes indicator at the top of the page. You can see a history of changes your team members have made in [**Drafts**](../the-function-stack/building-with-visual-development/#creating-a-draft).
+
+<figure><img src="../.gitbook/assets/CleanShot 2023-01-03 at 16.36.18@2x.png" alt=""><figcaption><p>An example of revertable changes on a function stack</p></figcaption></figure>
+
+#### Requesting Access to Edit a Function
+
+When trying to access a function that is currently being worked on, you'll be given a notification in the lower-left corner notifying you of this, and giving you an opportunity to request edit access.
+
+![](<../.gitbook/assets/CleanShot 2023-01-03 at 16.33.19@2x.png>) _Notification for requesting access to a function_
+
+When you request access, the other user is notified and can either grant you edit access to this function, or ignore your request.
+
+<figure><img src="../.gitbook/assets/CleanShot 2023-01-03 at 16.34.38@2x.png" alt=""><figcaption></figcaption></figure>

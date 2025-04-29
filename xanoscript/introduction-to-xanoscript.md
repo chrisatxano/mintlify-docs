@@ -1,0 +1,789 @@
+---
+hidden: true
+---
+
+# Introduction to XanoScript
+
+{% include "../.gitbook/includes/xs-beta-alpha-notice.md" %}
+
+## **What is XanoScript & Why It Exists**
+
+The team at Xano has been hard at work creating a specialized language to bridge the gap between structure (JSON/XML/YAML) and flexibility (TypeScript).&#x20;
+
+The end result is XanoScript - a configuration language with programming flexibility. It provides a structured foundation that solves the following key challenges:
+
+* **AI-Friendly Structure**: AI models trained on TypeScript encounter too many variations in logic structure—some more performant than others. XanoScript provides clear patterns that ensure AI-generated code is transparent, scalable, and optimized.
+* **All-in-One Configuration**: XanoScript handles everything from database design and API endpoints to business logic, background tasks, and deployment settings in one consistent language.
+* **Bridging the Gap**: We built XanoScript for collaboration. Developers can write code while product managers and non-technical team members can work visually in Xano, ensuring everyone stays aligned.
+* **Build How You Want**: As development evolves, teams need flexibility. XanoScript allows you to prototype and ship faster—whether you prefer writing code in VS Code or Cursor, or working visually in Xano.
+* **Enhanced AI Development**: Unlike temporary AI application generators that make bug fixing and iteration difficult, XanoScript enables you to build with your preferred AI model, deploy to Xano, and iterate either visually or with additional code based on your needs.
+* **Accessible Yet Powerful**: XanoScript is built on established standards from JSON, YAML, and JavaScript. It's both accessible and powerful—if you know how to build in Xano, you're already proficient in XanoScript.
+
+## What can I do with XanoScript?
+
+* Use your favorite AI models to generate XanoScript and import it into Xano
+* Generate your backend using AI, deploy it to Xano, and iterate using visual development
+* Start with visual development, and continue in XanoScript.
+* Switch between using XanoScript and visual development at any time.
+
+XanoScript works with the database and all types of function stacks, enabling you to use it anywhere inside of Xano.
+
+## XanoScript Beta Status
+
+XanoScript will support every aspect of the Xano platform, but not everything is available during beta. See below for the current state of compatibility:
+
+| Feature            | Status                                         |
+| ------------------ | ---------------------------------------------- |
+| Tables             | <mark style="color:green;">Live</mark>         |
+| API Queries        | <mark style="color:green;">Live</mark>         |
+| Custom Functions   | <mark style="color:green;">Live</mark>         |
+| Tasks              | <mark style="color:green;">Live</mark>         |
+| Addons             | <mark style="color:orange;">Development</mark> |
+| Triggers           | <mark style="color:orange;">Development</mark> |
+| Middleware         | <mark style="color:orange;">Development</mark> |
+| API Groups         | <mark style="color:orange;">Development</mark> |
+| Branches           | <mark style="color:orange;">Development</mark> |
+| Workspace Settings | <mark style="color:orange;">Development</mark> |
+
+{% hint style="danger" %}
+## Other Features Currently In Development
+
+* Database Link
+* // Comments in XanoScript are not supported yet.
+{% endhint %}
+
+## Getting Started with XanoScript <a href="#getstarted" id="getstarted"></a>
+
+Ready to dive in and see what it looks like? Click the ![](<../.gitbook/assets/CleanShot 2025-03-11 at 11.52.14.png>) button and check it out!
+
+If you're itching to get started writing XanoScript yourself, check out the following materials, starting with our **Key Concepts**.
+
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>Key Concepts</strong></td><td><a href="keyconcepts.md">keyconcepts.md</a></td><td></td></tr><tr><td><strong>Using XanoScript in the Database</strong></td><td><a href="db/">db</a></td><td></td></tr><tr><td><strong>Using XanoScript in your Function Stacks</strong></td><td><a href="fs/">fs</a></td><td></td></tr></tbody></table>
+
+## Comparing XanoScript to Traditional Code
+
+We know that developers value access to TypeScript’s ecosystem, and **Xano fully supports this**:
+
+* XanoScript lays the foundation, but developers can still write custom business logic in TypeScript.
+* Through Lambda Functions, you can integrate TypeScript and npm packages, unlocking the full power of external libraries.
+* This means you get the best of both worlds:
+  * A structured, scalable backend with XanoScript
+  * The flexibility of TypeScript and npm libraries when needed
+
+XanoScript stands out for its exceptional readability. The declarative syntax clearly expresses intent without getting lost in implementation details. For example:
+
+```javascript
+db.get user {
+  field_name = "email"
+  field_value = $input.email
+} as user
+```
+
+This is immediately understandable even to non-programmers, unlike equivalent code in languages like JavaScript, PHP, or Python that would require more boilerplate and technical knowledge.
+
+Below, you'll find our standard signup authentication API in XanoScript, and a representation of what it might look like in other languages.
+
+#### Code Volume & Complexity
+
+* **XanoScript**: \~30 lines of clear, concise code
+* **Node.js**: \~80+ lines across multiple files with multiple dependencies
+* **PHP**: \~80+ lines with manual request handling and validations
+* **Python/Django**: \~80+ lines with model definitions, serializers, and views
+
+Each traditional implementation requires:
+
+* **Multiple files**: Models, controllers, routes, services, DTOs, migrations
+* **Framework-specific patterns**: Decorators in NestJS, hooks in GORM, ActiveRecord in Rails
+* **Configuration boilerplate**: Setting up authentication, validation, database connections
+
+XanoScript provides a unified, single-file approach that encapsulates the entire functionality.
+
+{% tabs %}
+{% tab title="XanoScript" %}
+```javascript
+query auth/signup verb=POST {
+  description = "Signup and retrieve an authentication token"
+  input {
+    text name
+    email email
+    password password
+  }
+
+  stack {
+    db.get user {
+      field_name = "email"
+      field_value = $input.email
+    } as user
+  
+    precondition if (`$user == null`) {
+      error_type = "accessdenied"
+      error = "This account is already in use."
+    }
+  
+    db.add user {
+      data = {
+        created_at: "now"
+        name      : $input.name
+        email     : $input.email
+        password  : $input.password
+      }
+    } as user
+  
+    security.create_auth_token {
+      dbtable = "user"
+      expiration = 86400
+      id = $user.id
+    } as authToken
+  }
+
+  response {
+    value = {authToken: $authToken}
+  }
+}
+```
+{% endtab %}
+
+{% tab title="NodeJS" %}
+```javascript
+// routes/auth.js
+const express = require('express');
+const router = express.Router();
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const { body, validationResult } = require('express-validator');
+const db = require('../database/connection');
+
+// Middleware for input validation
+const validateSignup = [
+  body('email').isEmail().withMessage('Please provide a valid email'),
+  body('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters long'),
+  body('name').optional()
+];
+
+/**
+ * @route POST auth/signup
+ * @desc Signup and retrieve an authentication token
+ * @access Public
+ */
+router.post('/signup', validateSignup, async (req, res) => {
+  try {
+    // Check for validation errors
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+
+    const { name, email, password } = req.body;
+
+    // Check if user already exists
+    const existingUser = await db.query(
+      'SELECT * FROM users WHERE email = ?', 
+      [email]
+    );
+
+    if (existingUser.length > 0) {
+      return res.status(403).json({ 
+        error_type: 'accessdenied',
+        error: 'This account is already in use.' 
+      });
+    }
+
+    // Hash password
+    const saltRounds = 10;
+    const hashedPassword = await bcrypt.hash(password, saltRounds);
+
+    // Create user
+    const result = await db.query(
+      'INSERT INTO users (name, email, password, created_at) VALUES (?, ?, ?, NOW())',
+      [name, email, hashedPassword]
+    );
+
+    const userId = result.insertId;
+
+    // Generate auth token
+    const authToken = jwt.sign(
+      { id: userId },
+      process.env.JWT_SECRET,
+      { expiresIn: '24h' } // 86400 seconds
+    );
+
+    // Return token
+    return res.status(201).json({ authToken });
+  } catch (error) {
+    console.error('Signup error:', error);
+    return res.status(500).json({ error: 'Server error' });
+  }
+});
+
+module.exports = router;
+
+// app.js
+const express = require('express');
+const app = express();
+const authRoutes = require('./routes/auth');
+
+app.use(express.json());
+app.use('/auth', authRoutes);
+
+// database/connection.js
+const mysql = require('mysql2/promise');
+
+const pool = mysql.createPool({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
+});
+
+module.exports = {
+  query: async (sql, params) => {
+    const [rows] = await pool.execute(sql, params);
+    return rows;
+  }
+};
+```
+
+
+{% endtab %}
+
+{% tab title="PHP" %}
+```php
+<?php
+// config/database.php
+function getDbConnection() {
+    $host = getenv('DB_HOST');
+    $dbname = getenv('DB_NAME');
+    $username = getenv('DB_USER');
+    $password = getenv('DB_PASSWORD');
+    
+    try {
+        $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        return $conn;
+    } catch(PDOException $e) {
+        die("Connection failed: " . $e->getMessage());
+    }
+}
+
+// auth/signup.php
+header('Content-Type: application/json');
+
+// Validate request method
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    echo json_encode(['error' => 'Method not allowed']);
+    exit;
+}
+
+// Get input data
+$data = json_decode(file_get_contents('php://input'), true);
+
+// Validate input
+$errors = [];
+if (!isset($data['email']) || !filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+    $errors[] = 'Valid email is required';
+}
+if (!isset($data['password']) || strlen($data['password']) < 6) {
+    $errors[] = 'Password must be at least 6 characters';
+}
+
+if (!empty($errors)) {
+    http_response_code(400);
+    echo json_encode(['errors' => $errors]);
+    exit;
+}
+
+// Connect to database
+$conn = getDbConnection();
+
+// Check if user exists
+$stmt = $conn->prepare('SELECT id FROM users WHERE email = :email');
+$stmt->bindParam(':email', $data['email']);
+$stmt->execute();
+$user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if ($user) {
+    http_response_code(403);
+    echo json_encode([
+        'error_type' => 'accessdenied',
+        'error' => 'This account is already in use.'
+    ]);
+    exit;
+}
+
+// Hash password
+$hashedPassword = password_hash($data['password'], PASSWORD_DEFAULT);
+
+// Insert user
+$stmt = $conn->prepare('
+    INSERT INTO users (name, email, password, created_at) 
+    VALUES (:name, :email, :password, NOW())
+');
+$stmt->bindParam(':name', $data['name']);
+$stmt->bindParam(':email', $data['email']);
+$stmt->bindParam(':password', $hashedPassword);
+$stmt->execute();
+
+$userId = $conn->lastInsertId();
+
+// Generate auth token
+require_once 'vendor/autoload.php';
+use Firebase\JWT\JWT;
+
+$tokenId = base64_encode(random_bytes(16));
+$issuedAt = time();
+$expire = $issuedAt + 86400; // 24 hours
+$serverName = $_SERVER['SERVER_NAME'];
+
+$tokenPayload = [
+    'iat' => $issuedAt,
+    'jti' => $tokenId,
+    'iss' => $serverName,
+    'exp' => $expire,
+    'userId' => $userId
+];
+
+$secretKey = getenv('JWT_SECRET');
+$authToken = JWT::encode($tokenPayload, $secretKey, 'HS256');
+
+// Return response
+echo json_encode(['authToken' => $authToken]);
+```
+
+
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+# models.py
+from django.db import models
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
+from django.utils import timezone
+
+class UserManager(BaseUserManager):
+    def create_user(self, email, password=None, **extra_fields):
+        if not email:
+            raise ValueError('The Email field must be set')
+        email = self.normalize_email(email)
+        user = self.model(email=email, **extra_fields)
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
+
+class User(AbstractBaseUser, PermissionsMixin):
+    name = models.CharField(max_length=255, blank=True)
+    email = models.EmailField(unique=True)
+    created_at = models.DateTimeField(default=timezone.now)
+    is_active = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=False)
+
+    objects = UserManager()
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
+
+# serializers.py
+from rest_framework import serializers
+from .models import User
+
+class UserSignupSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(write_only=True, min_length=6)
+
+    class Meta:
+        model = User
+        fields = ['name', 'email', 'password']
+
+    def create(self, validated_data):
+        return User.objects.create_user(**validated_data)
+
+# views.py
+from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from rest_framework_simplejwt.tokens import RefreshToken
+from .serializers import UserSignupSerializer
+from .models import User
+
+class SignupView(APIView):
+    def post(self, request):
+        # Check if user exists
+        email = request.data.get('email')
+        if email and User.objects.filter(email=email).exists():
+            return Response(
+                {
+                    'error_type': 'accessdenied',
+                    'error': 'This account is already in use.'
+                },
+                status=status.HTTP_403_FORBIDDEN
+            )
+            
+        serializer = UserSignupSerializer(data=request.data)
+        if serializer.is_valid():
+            user = serializer.save()
+            refresh = RefreshToken.for_user(user)
+            
+            return Response(
+                {'authToken': str(refresh.access_token)},
+                status=status.HTTP_201_CREATED
+            )
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+# urls.py
+from django.urls import path
+from .views import SignupView
+
+urlpatterns = [
+    path('auth/signup', SignupView.as_view(), name='signup'),
+]
+
+# settings.py (partial)
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),  # 86400 seconds
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+}
+```
+
+
+{% endtab %}
+
+{% tab title="Go" %}
+```go
+// models/user.go
+package models
+
+import (
+	"time"
+
+	"golang.org/x/crypto/bcrypt"
+	"gorm.io/gorm"
+)
+
+type User struct {
+	ID        uint      `gorm:"primarykey" json:"id"`
+	Name      string    `json:"name"`
+	Email     string    `gorm:"uniqueIndex" json:"email"`
+	Password  string    `json:"-"`
+	CreatedAt time.Time `json:"created_at"`
+}
+
+// HashPassword encrypts user password
+func (u *User) HashPassword() error {
+	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(u.Password), bcrypt.DefaultCost)
+	if err != nil {
+		return err
+	}
+	u.Password = string(hashedPassword)
+	return nil
+}
+
+// BeforeCreate - GORM hook that hashes password before user creation
+func (u *User) BeforeCreate(tx *gorm.DB) error {
+	return u.HashPassword()
+}
+
+// handlers/auth.go
+package handlers
+
+import (
+	"net/http"
+	"time"
+
+	"github.com/gin-gonic/gin"
+	"github.com/golang-jwt/jwt/v4"
+	"github.com/yourapp/models"
+	"gorm.io/gorm"
+)
+
+type SignupInput struct {
+	Name     string `json:"name" binding:"omitempty"`
+	Email    string `json:"email" binding:"required,email"`
+	Password string `json:"password" binding:"required,min=6"`
+}
+
+type TokenResponse struct {
+	AuthToken string `json:"authToken"`
+}
+
+type AuthHandler struct {
+	DB     *gorm.DB
+	Secret string
+}
+
+func NewAuthHandler(db *gorm.DB, secret string) *AuthHandler {
+	return &AuthHandler{
+		DB:     db,
+		Secret: secret,
+	}
+}
+
+func (h *AuthHandler) Signup(c *gin.Context) {
+	var input SignupInput
+	if err := c.ShouldBindJSON(&input); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
+	// Check if user exists
+	var existingUser models.User
+	result := h.DB.Where("email = ?", input.Email).First(&existingUser)
+	if result.Error == nil {
+		c.JSON(http.StatusForbidden, gin.H{
+			"error_type": "accessdenied",
+			"error":      "This account is already in use.",
+		})
+		return
+	} else if result.Error != gorm.ErrRecordNotFound {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Database error"})
+		return
+	}
+
+	// Create user
+	user := models.User{
+		Name:      input.Name,
+		Email:     input.Email,
+		Password:  input.Password,
+		CreatedAt: time.Now(),
+	}
+
+	if result := h.DB.Create(&user); result.Error != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to create user"})
+		return
+	}
+
+	// Generate token
+	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
+		"id":  user.ID,
+		"exp": time.Now().Add(time.Hour * 24).Unix(), // 86400 seconds
+	})
+
+	tokenString, err := token.SignedString([]byte(h.Secret))
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to generate token"})
+		return
+	}
+
+	c.JSON(http.StatusCreated, TokenResponse{
+		AuthToken: tokenString,
+	})
+}
+
+// main.go
+package main
+
+import (
+	"os"
+
+	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
+	"github.com/yourapp/handlers"
+	"github.com/yourapp/models"
+	"gorm.io/driver/mysql"
+	"gorm.io/gorm"
+)
+
+func main() {
+	godotenv.Load()
+
+	dsn := os.Getenv("DB_DSN")
+	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+	if err != nil {
+		panic("failed to connect to database")
+	}
+
+	// Auto migrate the schema
+	db.AutoMigrate(&models.User{})
+
+	// Initialize router
+	r := gin.Default()
+
+	// Initialize handlers
+	authHandler := handlers.NewAuthHandler(db, os.Getenv("JWT_SECRET"))
+
+	// Register routes
+	r.POST("/auth/signup", authHandler.Signup)
+
+	r.Run(":8080")
+}
+```
+
+
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+// user.entity.ts
+import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Exclude } from 'class-transformer';
+
+@Entity('users')
+export class User {
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column({ nullable: true })
+  name: string;
+
+  @Column({ unique: true })
+  email: string;
+
+  @Column()
+  @Exclude()
+  password: string;
+
+  @CreateDateColumn()
+  createdAt: Date;
+}
+
+// signup.dto.ts
+import { IsEmail, IsOptional, IsString, MinLength } from 'class-validator';
+
+export class SignupDto {
+  @IsOptional()
+  @IsString()
+  name?: string;
+
+  @IsEmail()
+  email: string;
+
+  @IsString()
+  @MinLength(6)
+  password: string;
+}
+
+// auth.service.ts
+import { ConflictException, Injectable, UnauthorizedException } from '@nestjs/common';
+import { JwtService } from '@nestjs/jwt';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { User } from './user.entity';
+import { SignupDto } from './signup.dto';
+import * as bcrypt from 'bcrypt';
+
+@Injectable()
+export class AuthService {
+  constructor(
+    @InjectRepository(User)
+    private userRepository: Repository<User>,
+    private jwtService: JwtService,
+  ) {}
+
+  async signup(signupDto: SignupDto): Promise<{ authToken: string }> {
+    const { name, email, password } = signupDto;
+
+    // Check if user exists
+    const existingUser = await this.userRepository.findOne({ where: { email } });
+    if (existingUser) {
+      throw new ConflictException({
+        error_type: 'accessdenied',
+        error: 'This account is already in use.',
+      });
+    }
+
+    // Hash password
+    const salt = await bcrypt.genSalt();
+    const hashedPassword = await bcrypt.hash(password, salt);
+
+    // Create user
+    const user = this.userRepository.create({
+      name,
+      email,
+      password: hashedPassword,
+    });
+
+    await this.userRepository.save(user);
+
+    // Generate token
+    const payload = { sub: user.id };
+    const authToken = this.jwtService.sign(payload);
+
+    return { authToken };
+  }
+}
+
+// auth.controller.ts
+import { Body, Controller, Post } from '@nestjs/common';
+import { AuthService } from './auth.service';
+import { SignupDto } from './signup.dto';
+
+@Controller('auth')
+export class AuthController {
+  constructor(private authService: AuthService) {}
+
+  @Post('signup')
+  signup(@Body() signupDto: SignupDto) {
+    return this.authService.signup(signupDto);
+  }
+}
+
+// auth.module.ts
+import { Module } from '@nestjs/common';
+import { JwtModule } from '@nestjs/jwt';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { AuthController } from './auth.controller';
+import { AuthService } from './auth.service';
+import { User } from './user.entity';
+import { ConfigModule, ConfigService } from '@nestjs/config';
+
+@Module({
+  imports: [
+    TypeOrmModule.forFeature([User]),
+    JwtModule.registerAsync({
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: (configService: ConfigService) => ({
+        secret: configService.get('JWT_SECRET'),
+        signOptions: {
+          expiresIn: '24h', // 86400 seconds
+        },
+      }),
+    }),
+  ],
+  controllers: [AuthController],
+  providers: [AuthService],
+})
+export class AuthModule {}
+
+// app.module.ts
+import { Module } from '@nestjs/common';
+import { ConfigModule, ConfigService } from '@nestjs/config';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { AuthModule } from './auth/auth.module';
+
+@Module({
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
+    TypeOrmModule.forRootAsync({
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: (configService: ConfigService) => ({
+        type: 'mysql',
+        host: configService.get('DB_HOST'),
+        port: configService.get('DB_PORT'),
+        username: configService.get('DB_USERNAME'),
+        password: configService.get('DB_PASSWORD'),
+        database: configService.get('DB_DATABASE'),
+        entities: [__dirname + '/**/*.entity{.ts,.js}'],
+        synchronize: configService.get('NODE_ENV') !== 'production',
+      }),
+    }),
+    AuthModule,
+  ],
+})
+export class AppModule {}
+```
+
+
+{% endtab %}
+{% endtabs %}
+

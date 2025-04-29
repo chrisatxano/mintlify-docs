@@ -1,0 +1,30 @@
+# Input Types Reference
+
+{% include "../../.gitbook/includes/xs-beta-alpha-notice.md" %}
+
+{% include "../../.gitbook/includes/xs-db-integer.md" %}
+
+{% include "../../.gitbook/includes/xs-db-text.md" %}
+
+{% include "../../.gitbook/includes/xs-db-decimal.md" %}
+
+{% include "../../.gitbook/includes/xs-db-enum.md" %}
+
+{% include "../../.gitbook/includes/xs-db-timestamp.md" %}
+
+{% include "../../.gitbook/includes/xs-db-date.md" %}
+
+{% include "../../.gitbook/includes/xs-db-object.md" %}
+
+{% include "../../.gitbook/includes/xs-db-json.md" %}
+
+{% include "../../.gitbook/includes/xs-db-vector.md" %}
+
+{% include "../../.gitbook/includes/xs-db-image.md" %}
+
+{% include "../../.gitbook/includes/xs-db-audio.md" %}
+
+{% include "../../.gitbook/includes/xs-db-video.md" %}
+
+{% include "../../.gitbook/includes/xs-db-attachment.md" %}
+

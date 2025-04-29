@@ -1,0 +1,99 @@
+# Timestamp
+
+{% include "../../.gitbook/includes/filter-note.md" %}
+
+{% hint style="info" %}
+For information on how Xano stores, reads, and formats timestamps, visit the [Timestamp](../data-types/timestamp.md) page.
+{% endhint %}
+
+## add\_ms\_to\_timestamp
+
+Add milliseconds to a timestamp. (negative values are ok)
+
+The add\_ms\_to\_timestamp filter is useful when you need to make precise time adjustments at the millisecond level, such as in high-frequency data processing, animation timing, performance measurements, or working with time-sensitive operations like financial transactions.
+
+Inputs:
+
+* primary value: The original timestamp (epoch in milliseconds)
+* milliseconds: The number of milliseconds to add (can be negative)
+
+| Primary Value (timestamp) | Other Value (milliseconds) | Output (timestamp) |
+| ------------------------- | -------------------------- | ------------------ |
+| 1698710400000             | 500                        | 1698710400500      |
+| 1698710400000             | -250                       | 1698710399750      |
+| 1698710400000             | 1500                       | 1698710401500      |
+
+## add\_secs\_to\_timestamp
+
+Add seconds to a timestamp. (negative values are ok)
+
+The add\_secs\_to\_timestamp filter is valuable when you need to adjust time values by seconds, such as calculating expiration times, scheduling events, determining time windows, or adjusting timestamps for different time zones.
+
+Inputs:
+
+* primary value: The original timestamp (epoch in milliseconds)
+* seconds: The number of seconds to add (can be negative)
+
+| Primary Value (timestamp) | Other Value (seconds) | Output (timestamp) |
+| ------------------------- | --------------------- | ------------------ |
+| 1698710400000             | 30                    | 1698710430000      |
+| 1698710400000             | -60                   | 1698710340000      |
+| 1698710400000             | 3600                  | 1698714000000      |
+
+## format\_timestamp
+
+Converts a timestamp into a human readable formatted date based on the supplied format
+
+{% hint style="info" %}
+**This format follows the** [**PHP DateTime format**](https://www.php.net/manual/en/datetime.format.php)**: see the** [**full list of formatting options**](https://www.php.net/manual/en/datetime.formats.php#datetime.formats.relative)**.**
+
+[Timezone regions are listed here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+{% endhint %}
+
+The format\_timestamp filter is essential when displaying dates and times in user interfaces, reports, or any output where timestamps need to be presented in a human-readable format.
+
+Inputs:
+
+* primary value: The timestamp to format (epoch in milliseconds)
+* format: The format string specifying how the timestamp should be displayed
+* timezone: The timezone to provide the formatted timestamp in
+
+| Primary Value (timestamp) | Other Value (format) | Output (formatted string)   |
+| ------------------------- | -------------------- | --------------------------- |
+| 1698710400000             | "YYYY-MM-DD"         | "2023-10-31"                |
+| 1698710400000             | "MMM D, YYYY h:mm A" | "Oct 31, 2023 12:00 AM"     |
+| 1698710400000             | "dddd, MMMM D, YYYY" | "Tuesday, October 31, 2023" |
+
+## parse\_timestamp
+
+Parse a timestamp from a flexible format.
+
+The parse\_timestamp filter is valuable when working with dates and times in various string formats from different sources, allowing you to convert human-readable date strings into the epoch millisecond timestamp format used throughout Xano for storage or further processing.
+
+Inputs:
+
+* primary value: The date/time string to parse
+* format: String specifying the format of the provided timestamp
+* timezone: The timezone to provide the formatted timestamp in
+
+| Primary Value (date string) | Other Value (format)  | Output (timestamp) |
+| --------------------------- | --------------------- | ------------------ |
+| "10/31/2023"                | null                  | 1698710400000      |
+| "October 31, 2023 2:30 PM"  | null                  | 1698765000000      |
+| "2023-10-31 14:30:15"       | "YYYY-MM-DD HH:mm:ss" | 1698765015000      |
+
+## transform\_timestamp
+
+Takes a timestamp and applies a relative transformation to it. Ex. -7 days, last Monday, first day of this month
+
+The transform\_timestamp filter is useful for generating relative dates based on a reference timestamp, such as calculating "last Monday," "beginning of the month," or "7 days ago" for reporting periods, scheduling, or any scenario requiring date navigation relative to a reference point.
+
+Inputs:
+
+* primary value: The reference timestamp (epoch in milliseconds)
+* format: A string describing the relative transformation to apply
+* timezone: The timezone to provide the formatted timestamp in
+
+| Primary Value (timestamp) | Other Value (transformation) | Output (timestamp) |
+| ------------------------- | ---------------------------- | ------------------ |
+| 1698710400000             | "-7 days"                    | 1698105600000      |

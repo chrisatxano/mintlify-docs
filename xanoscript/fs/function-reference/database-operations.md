@@ -1,0 +1,23 @@
+# Database Operations
+
+{% include "../../../.gitbook/includes/xs-query-all-records.md" %}
+
+{% include "../../../.gitbook/includes/xs-get-record.md" %}
+
+{% include "../../../.gitbook/includes/xs-has-record (1).md" %}
+
+{% include "../../../.gitbook/includes/xs-add-record.md" %}
+
+{% include "../../../.gitbook/includes/xs-edit-record.md" %}
+
+
+
+{% include "../../../.gitbook/includes/xs-add-or-edit-record.md" %}
+
+{% include "../../../.gitbook/includes/xs-delete-record.md" %}
+
+{% include "../../../.gitbook/includes/xs-patch.md" %}
+
+
+
+{% include "../../../.gitbook/includes/bulk-operations.md" %}

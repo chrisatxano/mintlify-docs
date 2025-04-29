@@ -1,0 +1,55 @@
+---
+icon: sack-dollar
+---
+
+# Billing
+
+## How does billing work in Xano?
+
+Xano uses a **fixed price model**, meaning that you will never encounter things like overages or usage charges beyond your subscription fee.
+
+Xano subscriptions can be purchased in monthly installments, or yearly payments at a discount.
+
+## Upgrading, Downgrading, and Making Changes
+
+When you make changes to your Xano plan, your subscription period restarts, and you are credited during checkout for any unused time on your current subscription.
+
+For example, if you are currently paying $30 / month, and you add an upgrade that costs $5 / month with half of your current subscription period still remaining, your total during checkout will be $20 for the first month, and $35 on future invoices.
+
+{% stepper %}
+{% step %}
+### Navigate to your [Billing screen](https://app.xano.com/billing?mode=master).
+
+
+{% endstep %}
+
+{% step %}
+### Review your current subscription.
+
+You can see your previous invoices, any add-ons applied, and additional information here.
+
+<figure><img src="../.gitbook/assets/CleanShot 2025-04-09 at 09.09.40.png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
+
+{% step %}
+### Click ![](<../.gitbook/assets/CleanShot 2025-04-09 at 09.10.40.png>) to make changes to your plan.
+
+You'll click this even if you aren't upgrading.
+
+{% hint style="info" %}
+Please note that downgrading back to our free plan is not available as this time. No exceptions can be made due to technical differences between these plans.
+{% endhint %}
+{% endstep %}
+
+{% step %}
+### Choose a different plan or manage add-ons.
+
+You can click the **Upgrade** button to upgrade your plan, scroll down and click **Select** on your desired plan to downgrade, or click **Manage add-ons** on your current plan to add or change additional features.
+{% endstep %}
+{% endstepper %}
+
+## What is Xano's refund policy?
+
+For **monthly plans**, no refunds will be issued.
+
+For **yearly plans**, refunds can be issued at the discretion of our support team within the first month, minus any already used time.

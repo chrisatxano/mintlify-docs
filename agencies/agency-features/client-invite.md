@@ -1,0 +1,60 @@
+# Client Invite
+
+## Inviting a new client
+
+You can invite a client that is new to Xano, or has an existing account already.
+
+{% stepper %}
+{% step %}
+### From the instance selection screen, access your agency dashboard.
+
+Our agency is called **Awesome Xano Agency**.
+
+<div align="left"><figure><img src="../../.gitbook/assets/CleanShot 2025-03-13 at 15.56.05.png" alt="" width="218"><figcaption></figcaption></figure></div>
+{% endstep %}
+
+{% step %}
+### Click ![](<../../.gitbook/assets/CleanShot 2025-03-13 at 15.57.04.png>) and then ![](<../../.gitbook/assets/CleanShot 2025-03-13 at 15.57.34.png>)
+
+
+{% endstep %}
+
+{% step %}
+### Provide the client's name and email, and choose the scenario that applies to them.
+
+Let us know if this is a new Xano customer, if they have a current account and just need to upgrade their plan, or if they're an existing Xano customer already on a paid plan that will suit their needs.
+
+<figure><img src="../../.gitbook/assets/CleanShot 2025-03-13 at 15.58.08.png" alt=""><figcaption></figcaption></figure>
+
+By choosing **New Xano Customer** or **Upgrade Xano Customer**, you'll be able to let them know the plan that you recommend next. If you choose **Existing Xano Customer**, the invite will send right away.
+
+Just select the plan they need and click **Send Proposal to Client**
+
+&#x20;![](<../../.gitbook/assets/CleanShot 2025-03-13 at 16.00.33.png>)
+{% endstep %}
+
+{% step %}
+### On the client's side, they'll get an email to accept the invitation and purchase the plan you've recommended to them.
+
+<figure><img src="../../.gitbook/assets/CleanShot 2025-03-13 at 16.01.36.png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
+{% endstepper %}
+
+## Tracking Client Invitations
+
+On the Agency dashboard, you can track the status of your client invitations.
+
+<figure><img src="../../.gitbook/assets/CleanShot 2025-03-13 at 16.02.35.png" alt=""><figcaption></figcaption></figure>
+
+You can click on an invite to access more information, delete the invite, or resend it.
+
+<figure><img src="../../.gitbook/assets/CleanShot 2025-03-13 at 16.03.47.png" alt="" width="375"><figcaption></figcaption></figure>
+
+
+
+
+
+
+
+
+

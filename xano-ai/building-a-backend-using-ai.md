@@ -1,0 +1,7 @@
+---
+icon: sparkles
+---
+
+# Building a Backend with AI
+
+{% include "../.gitbook/includes/xano-ai-explainer.md" %}

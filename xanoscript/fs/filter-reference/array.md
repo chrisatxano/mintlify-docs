@@ -1,0 +1,80 @@
+# Array
+
+{% include "../../../.gitbook/includes/xs-filter-append.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-count.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-array_diff.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-array_diff_assoc.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-array_entries.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-every.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-filter.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-filter_empty.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-find.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-findindex.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-map.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-range.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-reduce.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-first.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-flatten.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-index_by.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-array_intersect.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-array_intersect_assoc.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-join.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-array_keys.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-last.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-array_merge.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-array_merge_recursive.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-pick.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-array_pop.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-prepend.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-array_push.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-array_remove.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-reverse.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-safe_array.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-array_shift.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-array_shuffle.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-array_slice.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-unique.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-fsort.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-unpick.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-array_unshift.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-array_values.md" %}
+
+{% include "../../../.gitbook/includes/xs-filter-shuffle.md" %}
+

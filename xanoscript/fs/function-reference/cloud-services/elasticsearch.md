@@ -1,0 +1,8 @@
+# Elasticsearch
+
+{% include "../../../../.gitbook/includes/xs-elasticsearch-request.md" %}
+
+{% include "../../../../.gitbook/includes/xs-elasticsearch-document.md" %}
+
+{% include "../../../../.gitbook/includes/xs-elasticsearch-search-query.md" %}
+
