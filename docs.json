@@ -2,6 +2,9 @@
   "$schema": "https://mintlify.com/docs.json",
   "name": "Your Project Name",
   "theme": "mint",
+  "colors": {
+    "primary": "#ff0000"
+},
   "navigation": {
     "pages": [
       "adjust-server-performance.mdx",
