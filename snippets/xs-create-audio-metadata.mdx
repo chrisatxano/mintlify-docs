@@ -1,0 +1,35 @@
+---
+title: XS - Create audio metadata
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Create Audio Metadata <a href="#xs-createaudio" id="xs-createaudio"></a>
+
+```javascript
+storage.create_audio {
+  access=public 
+  value = $input.file
+  filename = ""
+} as x2
+```
+
+| Parameter | Purpose                               | Example                          |
+| --------- | ------------------------------------- | -------------------------------- |
+| access    | Access level for the stored audio     | `public`, `private`              |
+| value     | Source file to create audio from      | `$input.file`, `$audio.data`     |
+| filename  | Name for the stored audio file        | `"recording.mp3"`, `"audio.wav"` |
+| as        | Alias to reference the audio metadata | `x2`, `audio_data`               |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+storage.create_audio access=public {
+  value = $input.audio_upload
+  filename = "audio_"|add:$timestamp|add:".mp3"
+} as uploaded_audio
+```
+
+* Creates metadata for audio file
+
+</details>

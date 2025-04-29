@@ -1,0 +1,18 @@
+---
+title: XS Filter -url_getarg
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> url\_getarg <a href="#xsurl_getarg" id="xsurl_getarg"></a>
+
+`value|url_getarg:name:default`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"https://example.com?page=2"|url_getarg:"page":""     // Returns "2"
+"https://example.com"|url_getarg:"page":"1"           // Returns "1"
+```
+
+</details>

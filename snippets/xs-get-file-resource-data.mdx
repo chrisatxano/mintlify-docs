@@ -1,0 +1,30 @@
+---
+title: xs - get file resource data
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Get File Resource Data <a href="#xs-readfileresource" id="xs-readfileresource"></a>
+
+```javascript
+storage.read_file_resource {
+  value = $input.file
+} as file2
+```
+
+| Parameter | Purpose                              | Example                          |
+| --------- | ------------------------------------ | -------------------------------- |
+| value     | File resource to read                | `$input.file`, `$stored_file.id` |
+| as        | Alias to reference the file contents | `file2`, `file_contents`         |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+storage.read_file_resource {
+  value = $stored_document.id
+} as document_contents
+```
+
+* Reads contents of a stored file resource
+
+</details>

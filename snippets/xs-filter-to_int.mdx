@@ -1,0 +1,19 @@
+---
+title: XS Filter - to_int
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> to\_int <a href="#xs-to_int" id="xs-to_int"></a>
+
+`value|to_int`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"42"|to_int        // Returns 42
+3.14|to_int        // Returns 3
+true|to_int        // Returns 1
+```
+
+</details>

@@ -1,0 +1,19 @@
+---
+title: XS DB -json
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> json <a href="#xs-json" id="xs-json"></a>
+
+`json field_name`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+json metadata       // A JSON field for flexible metadata storage
+json preferences    // A JSON field for user preferences
+json custom_data    // A JSON field for arbitrary data
+```
+
+</details>

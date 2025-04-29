@@ -1,0 +1,19 @@
+---
+title: XS Filter - to_text
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> to\_text <a href="#xs-to_text" id="xs-to_text"></a>
+
+`value|to_text`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+42|to_text         // Returns "42"
+true|to_text       // Returns "true"
+3.14|to_text       // Returns "3.14"
+```
+
+</details>

@@ -1,0 +1,18 @@
+---
+title: XS FILTER -exp
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> exp <a href="#xsexp" id="xsexp"></a>
+
+`value|exp`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+1|exp         // Returns 2.7182818284590
+0|exp         // Returns 1
+```
+
+</details>

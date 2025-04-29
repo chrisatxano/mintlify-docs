@@ -1,0 +1,17 @@
+---
+title: XS Filter - crypto_jwe_decode
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> jwe\_decode <a href="#xs-crypto_jwe_decode" id="xs-crypto_jwe_decode"></a>
+
+`value|jwe_decode:key:header:key_algo:enc_algo:max_age`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+token|jwe_decode:"{}":"{}":"A256KW":"A256CBC-HS512":0    // Returns decoded JWE token
+```
+
+</details>

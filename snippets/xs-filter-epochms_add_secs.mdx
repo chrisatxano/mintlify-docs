@@ -1,0 +1,18 @@
+---
+title: XS Filter -epochms_add_secs
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> add\_secs\_to\_timestamp <a href="#xsepochms_add_secs" id="xsepochms_add_secs"></a>
+
+`value|add_secs_to_timestamp`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+1698710400000|add_secs_to_timestamp:60     // Adds 60 seconds to timestamp
+1698710400000|add_secs_to_timestamp:-30    // Subtracts 30 seconds from timestamp
+```
+
+</details>

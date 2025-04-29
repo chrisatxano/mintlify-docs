@@ -1,0 +1,18 @@
+---
+title: XS Filter - array_merge
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> merge <a href="#xs-array_merge" id="xs-array_merge"></a>
+
+`value|merge:array`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+[1,2]|merge:[3,4]    // Returns [1,2,3,4]
+{"a":1}|merge:{"b":2}    // Returns {"a":1,"b":2}
+```
+
+</details>

@@ -1,0 +1,39 @@
+---
+title: XS -Get Elements From List
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Get Elements From List <a href="#xs-get-elements-from-list" id="xs-get-elements-from-list"></a>
+
+```javascript
+redis.range {
+  key = ""
+  start = 0
+  stop = -1
+} as x10
+```
+
+| Parameter | Purpose                | Example                           |
+| --------- | ---------------------- | --------------------------------- |
+| key       | List key               | `"recent:items"`, `"leaderboard"` |
+| start     | Start index            | `0`, `5`, `-10`                   |
+| stop      | End index              | `-1`, `9`, `20`                   |
+| as        | Alias for range values | `x10`, `items`                    |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+redis.range {
+  key = "recent_posts"
+  start = 0
+  stop = 9
+} as recent_items
+```
+
+* Returns range of list elements
+* -1 means last element
+* Supports negative indices
+* Inclusive of start and stop indices
+
+</details>

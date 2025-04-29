@@ -1,0 +1,29 @@
+---
+title: XS - Validate Password
+---
+
+## <img src="../assets/docuBadge (10).png" alt="" data-size="line"> Validate Password <a href="#xs-securityvalidatepassword" id="xs-securityvalidatepassword"></a>
+
+```javascript
+    security.check_password {
+      text_password = "textPassword"
+      hash_password = "hashedPassword"
+    } as tokenValidate
+```
+
+<table><thead><tr><th width="175">Parameter</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>text_password</td><td>The text version of the password to check</td><td>"textPassword"<br>$textPassword</td></tr><tr><td>hash_password</td><td>The hashed version of the password to check, usually coming from a database table</td><td>"hashedPassword"<br>$user1.password</td></tr></tbody></table>
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+    security.check_password {
+      text_password = "textPassword"
+      hash_password = "hashedPassword"
+    } as tokenValidate
+```
+
+![](<../assets/CleanShot 2025-03-06 at 17.44.31.png>)
+
+</details>

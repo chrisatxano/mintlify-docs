@@ -1,0 +1,18 @@
+---
+title: XS Filter - decbin
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> decbin <a href="#xs-decbin" id="xs-decbin"></a>
+
+`value|decbin`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+10|decbin    // Returns "1010"
+12|decbin    // Returns "1100"
+```
+
+</details>

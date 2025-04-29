@@ -1,0 +1,18 @@
+---
+title: XS Filter -regex_replace
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> regex\_replace <a href="#xsregex_replace" id="xsregex_replace"></a>
+
+`value|regex_replace:pattern:replacement`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"hello123world"|regex_replace:"\\d+":"!"    // Returns "hello!world"
+"test"|regex_replace:"t":"T"                // Returns "TesT"
+```
+
+</details>

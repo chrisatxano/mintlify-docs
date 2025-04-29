@@ -1,0 +1,33 @@
+---
+title: XS -Streaming API Response
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Streaming API Response <a href="#xs-streaming-api-response" id="xs-streaming-api-response"></a>
+
+```javascript
+api.stream {
+  value = ""
+}
+```
+
+| Parameter | Purpose        | Example                           |
+| --------- | -------------- | --------------------------------- |
+| value     | Data to stream | `$stream_data`, `"chunk of data"` |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+api.stream {
+  value = $processed_chunk
+}
+```
+
+* Streams data to client
+* Supports chunked transfer
+* Used in server-sent events
+* Maintains open connection
+
+</details>
+

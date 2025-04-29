@@ -1,0 +1,17 @@
+---
+title: XS Filter - csv_parse
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> csv\_parse <a href="#xs-csv_parse" id="xs-csv_parse"></a>
+
+`value|csv_parse:delimiter:enclosure:escape`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"name,age\nJohn,30"|csv_parse:",":'"':'"'    // Returns [{"name":"John","age":"30"}]
+```
+
+</details>

@@ -1,0 +1,19 @@
+---
+title: XS Filter - is_decimal
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> is\_decimal <a href="#xs-is_decimal" id="xs-is_decimal"></a>
+
+`value|is_decimal`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+3.14|is_decimal    // Returns true
+5|is_decimal       // Returns false
+"1.5"|is_decimal   // Returns false
+```
+
+</details>

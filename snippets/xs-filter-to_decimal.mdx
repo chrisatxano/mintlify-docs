@@ -1,0 +1,18 @@
+---
+title: XS Filter - to_decimal
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> to\_decimal <a href="#xs-to_decimal" id="xs-to_decimal"></a>
+
+`value|to_decimal`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"3.14"|to_decimal    // Returns 3.14
+5|to_decimal         // Returns 5.0
+```
+
+</details>

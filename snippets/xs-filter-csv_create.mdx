@@ -1,0 +1,17 @@
+---
+title: XS Filter - csv_create
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> csv\_create <a href="#xs-csv_create" id="xs-csv_create"></a>
+
+`columns|csv_create:rows:delimiter:enclosure:escape`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+["name","age']|csv_create:["john",30]:",":'"':'"'    // Returns CSV with headers
+```
+
+</details>

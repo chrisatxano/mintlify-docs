@@ -1,0 +1,19 @@
+---
+title: XS Filter - range
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> range <a href="#xs-range" id="xs-range"></a>
+
+`value|range:start:end`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+null|range:1:5    // Returns [1,2,3,4,5]
+null|range:0:2    // Returns [0,1,2]
+null|range:-2:2   // Returns [-2,-1,0,1,2]
+```
+
+</details>

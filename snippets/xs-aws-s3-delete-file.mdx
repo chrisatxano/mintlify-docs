@@ -1,0 +1,47 @@
+---
+title: XS - aws s3 delete file
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> AWS S3: Delete File <a href="#xs-awss3deletefile" id="xs-awss3deletefile"></a>
+
+```javascript
+cloud.aws.s3.delete_file {
+  bucket = ""
+  region = ""
+  key = ""
+  secret = ""
+  file_key = ""
+}
+```
+
+| Parameter | Purpose                | Example                              |
+| --------- | ---------------------- | ------------------------------------ |
+| bucket    | S3 bucket name         | `"my-bucket"`                        |
+| region    | AWS region             | `"us-east-1"`                        |
+| key       | AWS access key ID      | `"AKIAXXXXXXXXXXXXXXXX"`             |
+| secret    | AWS secret access key  | `"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"` |
+| file\_key | Path to file to delete | `"folder/file.txt"`                  |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+cloud.aws.s3.delete_file {
+  bucket = "my-app-uploads"
+  region = "us-west-2"
+  key = $env.AWS_KEY_ID
+  secret = $env.AWS_SECRET_KEY
+  file_key = "temp/"|add:$file.path
+}
+```
+
+* Deletes a file from S3 bucket
+* Permanent deletion (not recoverable)
+* No response alias needed
+* Use with caution
+
+</details>
+
+
+

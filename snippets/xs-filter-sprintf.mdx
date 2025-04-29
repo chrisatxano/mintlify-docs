@@ -1,0 +1,18 @@
+---
+title: XS Filter -sprintf
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> sprintf <a href="#xssprintf" id="xssprintf"></a>
+
+`value|sprintf`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"%s %d"|sprintf:"test":123    // Returns "test 123"
+"%.2f"|sprintf:3.14159        // Returns "3.14"
+```
+
+</details>

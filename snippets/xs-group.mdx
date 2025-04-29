@@ -1,0 +1,54 @@
+---
+title: XS - Group
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Group <a href="#xs-group" id="xs-group"></a>
+
+```javascript
+group {
+  stack {
+    util.sleep {
+      value = 1
+    }
+  
+    util.sleep {
+      value = 2
+    }
+  }
+}
+```
+
+| Parameter | Purpose                             | Example         |
+| --------- | ----------------------------------- | --------------- |
+| group     | Container for organizing operations | `group { ... }` |
+| stack     | Executes operations in sequence     | `stack { ... }` |
+| value     | Duration to sleep in seconds        | `1`, `2`, `0.5` |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+group {
+  stack {
+    util.sleep {
+      value = 0.5
+    }
+    
+    debug.log {
+      value = "Half second passed"
+    }
+    
+    util.sleep {
+      value = 1
+    }
+  }
+}
+```
+
+* Groups related operations together
+* Stack ensures sequential execution
+* Sleep pauses execution for specified duration
+* Operations in stack execute in order
+
+</details>

@@ -1,0 +1,29 @@
+---
+title: XS - Create Eliptic Curve Key
+---
+
+## <img src="../assets/docuBadge (10).png" alt="" data-size="line"> Create Elliptic Curve Key <a href="#xs-elliptickey" id="xs-elliptickey"></a>
+
+```javascript
+    security.create_curve_key {
+      curve = "P-256"
+      format = "object"
+    } as crypto3
+```
+
+<table><thead><tr><th width="175">Parameter</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>curve</td><td>The curve applied to the generated key. Can be P-256, P-384, or P-521</td><td>P-256</td></tr><tr><td>format</td><td>The format of the key generated. This can be either <strong>object</strong> or <strong>base64</strong></td><td>"object"</td></tr><tr><td>as</td><td>The variable that you want to store the key</td><td>crypto3</td></tr></tbody></table>
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+    security.create_curve_key {
+      curve = "P-256"
+      format = "object"
+    } as crypto3
+```
+
+![](<../assets/CleanShot 2025-03-06 at 22.15.45@2x.png>)
+
+</details>

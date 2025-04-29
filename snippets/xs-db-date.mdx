@@ -1,0 +1,19 @@
+---
+title: XS DB -date
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> date <a href="#xs-date" id="xs-date"></a>
+
+`date field_name`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+date birth_date     // A date field for birthdays
+date start_date    // A date field for event start
+date due_date      // A date field for task deadlines
+```
+
+</details>

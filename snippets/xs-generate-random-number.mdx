@@ -1,0 +1,29 @@
+---
+title: XS - Generate Random Number
+---
+
+## <img src="../assets/docuBadge (10).png" alt="" data-size="line"> Generate Random Number <a href="#xs-securityrandomnumber" id="xs-securityrandomnumber"></a>
+
+```javascript
+    security.random_number {
+      min = 0
+      max = 9007199254740991
+    } as randomNumber
+```
+
+<table><thead><tr><th width="175">Parameter</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>min</td><td>The beginning of the range for the randomly generated number</td><td>0</td></tr><tr><td>max</td><td>The end of the range for the randomly generated number</td><td>10000</td></tr><tr><td>as</td><td>The variable that you want to store the generated number</td><td>randomNumber</td></tr></tbody></table>
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+    security.random_number {
+      min = 0
+      max = 9007199254740991
+    } as randomNumber
+```
+
+![](<../assets/CleanShot 2025-03-06 at 18.16.07.png>)
+
+</details>

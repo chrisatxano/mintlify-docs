@@ -1,0 +1,35 @@
+---
+title: XS -Decrement Cache Value
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Decrement Cache Value <a href="#xs-decrement-cache-value" id="xs-decrement-cache-value"></a>
+
+```javascript
+redis.decr {
+  key = ""
+  by = 1
+} as x4
+```
+
+| Parameter | Purpose                | Example           |
+| --------- | ---------------------- | ----------------- |
+| key       | Cache key to decrement | `"stock:123"`     |
+| by        | Decrement amount       | `1`, `5`          |
+| as        | Alias for new value    | `x4`, `new_count` |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+redis.decr {
+  key = "stock:"|add:$product.id
+  by = 1
+} as remaining_stock
+```
+
+* Decrements numeric value
+* Creates key with value 0 if doesn't exist
+
+</details>
+

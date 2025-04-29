@@ -1,0 +1,18 @@
+---
+title: XS FILTER -set
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> set <a href="#xsset" id="xsset"></a>
+
+`value|set:key:new_value`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+{}|set:"name":"John"                     // Returns {"name":"John"}
+{"age":30}|set:"name":"John"            // Returns {"age":30,"name":"John"}
+```
+
+</details>

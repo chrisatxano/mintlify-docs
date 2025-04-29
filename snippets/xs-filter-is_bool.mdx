@@ -1,0 +1,19 @@
+---
+title: XS Filter - is_bool
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> is\_bool <a href="#xs-is_bool" id="xs-is_bool"></a>
+
+`value|is_bool`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+true|is_bool      // Returns true
+false|is_bool     // Returns true
+1|is_bool         // Returns false
+```
+
+</details>

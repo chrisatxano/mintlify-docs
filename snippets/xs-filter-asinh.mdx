@@ -1,0 +1,18 @@
+---
+title: XS FILTER -asinh
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> asinh <a href="#xsasinh" id="xsasinh"></a>
+
+`value|asinh`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+0|asinh       // Returns 0
+1|asinh       // Returns 0.8813735870195
+```
+
+</details>

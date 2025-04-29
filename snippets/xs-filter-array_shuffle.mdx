@@ -1,0 +1,18 @@
+---
+title: XS Filter - array_shuffle
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> shuffle <a href="#xs-array_shuffle" id="xs-array_shuffle"></a>
+
+`value|shuffle`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+[1,2,3]|shuffle    // Returns randomly ordered array
+["a","b"]|shuffle  // Returns randomly ordered array
+```
+
+</details>

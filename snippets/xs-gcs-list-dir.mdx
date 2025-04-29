@@ -1,0 +1,42 @@
+---
+title: XS - gcs list dir
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Google Cloud Storage: List Directory of <a href="#xs-gcslist" id="xs-gcslist"></a>
+
+```javascript
+cloud.google.storage.list_directory {
+  service_account = ""
+  bucket = ""
+  path = ""
+} as x1
+```
+
+| Parameter        | Purpose                     | Example                            |
+| ---------------- | --------------------------- | ---------------------------------- |
+| service\_account | GCP service account JSON    | `{"type": "service_account", ...}` |
+| bucket           | GCS bucket name             | `"my-app-bucket"`                  |
+| path             | Directory path to list      | `"folder/"`, `"uploads/"`          |
+| as               | Alias for directory listing | `x1`, `directory_contents`         |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+cloud.google.storage.list_directory {
+  service_account = $env.GCP_SERVICE_ACCOUNT
+  bucket = "app-assets"
+  path = "images/2024/"
+} as folder_listing
+```
+
+* Lists contents of a GCS directory
+* Returns object names and metadata
+* Supports nested directories
+* Lists all objects in specified path
+
+</details>
+
+
+

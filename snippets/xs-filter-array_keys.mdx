@@ -1,0 +1,18 @@
+---
+title: XS Filter - array_keys
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> keys <a href="#xs-array_keys" id="xs-array_keys"></a>
+
+`value|keys`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+{"a":1,"b":2}|keys    // Returns ["a","b"]
+[1,2,3]|keys         // Returns [0,1,2]
+```
+
+</details>

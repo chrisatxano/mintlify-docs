@@ -1,0 +1,18 @@
+---
+title: XS Filter -upper
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> to\_upper <a href="#xsupper" id="xsupper"></a>
+
+`value|to_upper`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"hello world"|to_upper    // Returns "HELLO WORLD"
+"test"|to_upper          // Returns "TEST"
+```
+
+</details>

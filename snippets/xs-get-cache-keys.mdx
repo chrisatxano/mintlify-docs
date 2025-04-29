@@ -1,0 +1,31 @@
+---
+title: XS -Get Cache Keys
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Get Cache Keys <a href="#xs-get-cache-keys" id="xs-get-cache-keys"></a>
+
+```javascript
+redis.keys {
+  search = ""
+} as keys1
+```
+
+| Parameter | Purpose                | Example                  |
+| --------- | ---------------------- | ------------------------ |
+| search    | Pattern to match keys  | `"user"`, `"session"`    |
+| as        | Alias for matched keys | `keys1`, `matching_keys` |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+redis.keys {
+  search = "user"
+} as active_sessions
+```
+
+* Returns array of matching keys
+
+</details>
+

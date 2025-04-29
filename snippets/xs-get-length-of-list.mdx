@@ -1,0 +1,33 @@
+---
+title: XS -Get Length Of List
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Get Length Of List <a href="#xs-get-length-of-list" id="xs-get-length-of-list"></a>
+
+```javascript
+redis.count {
+  key = ""
+} as x9
+```
+
+| Parameter | Purpose               | Example                             |
+| --------- | --------------------- | ----------------------------------- |
+| key       | List key              | `"queue:pending"`, `"users:online"` |
+| as        | Alias for list length | `x9`, `count`                       |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+redis.count {
+  key = "waiting_users"
+} as queue_size
+```
+
+* Returns current length of list
+* Returns 0 if list doesn't exist
+* Useful for queue management
+* Quick operation regardless of list size
+
+</details>

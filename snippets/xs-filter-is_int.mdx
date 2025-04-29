@@ -1,0 +1,19 @@
+---
+title: XS Filter - is_int
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> is\_int <a href="#xs-is_int" id="xs-is_int"></a>
+
+`value|is_int`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+42|is_int         // Returns true
+3.14|is_int       // Returns false
+"5"|is_int        // Returns false
+```
+
+</details>

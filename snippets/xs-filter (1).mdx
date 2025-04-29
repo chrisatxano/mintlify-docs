@@ -1,0 +1,18 @@
+---
+title: XS FILTER -
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> set\_conditional <a href="#xs" id="xs"></a>
+
+`value|set_conditional:key:new_value:condition`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+{}|set_conditional:"status":"active":true      // Returns {"status":"active"}
+{}|set_conditional:"status":"active":false     // Returns {}
+```
+
+</details>

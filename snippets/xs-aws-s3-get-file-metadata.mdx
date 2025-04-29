@@ -1,0 +1,45 @@
+---
+title: XS - Aws s3 get file metadata
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> AWS S3: Get File Metadata <a href="#xs-awss3getmetadata" id="xs-awss3getmetadata"></a>
+
+```javascript
+cloud.aws.s3.get_file_info {
+  bucket = ""
+  region = ""
+  key = ""
+  secret = ""
+  file_key = ""
+} as x5
+```
+
+| Parameter | Purpose                 | Example                              |
+| --------- | ----------------------- | ------------------------------------ |
+| bucket    | S3 bucket name          | `"my-bucket"`                        |
+| region    | AWS region              | `"us-east-1"`                        |
+| key       | AWS access key ID       | `"AKIAXXXXXXXXXXXXXXXX"`             |
+| secret    | AWS secret access key   | `"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"` |
+| file\_key | Path to file            | `"folder/file.txt"`                  |
+| as        | Alias for file metadata | `x5`, `file_info`                    |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+cloud.aws.s3.get_file_info {
+  bucket = "my-app-storage"
+  region = "us-west-2"
+  key = $env.AWS_KEY_ID
+  secret = $env.AWS_SECRET_KEY
+  file_key = "uploads/"|add:$file.path
+} as file_metadata
+```
+
+* Retrieves file metadata from S3
+* Returns size, last modified, etc.
+* Does not download file contents
+* Useful for file verification
+
+</details>

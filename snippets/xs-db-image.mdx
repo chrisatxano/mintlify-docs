@@ -1,0 +1,19 @@
+---
+title: XS DB -image
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> image <a href="#xs-image" id="xs-image"></a>
+
+`image field_name`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+image profile_pic   // An image field for profile pictures
+image banner       // An image field for banner images
+image thumbnail    // An image field for thumbnail images
+```
+
+</details>

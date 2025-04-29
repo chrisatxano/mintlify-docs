@@ -1,0 +1,19 @@
+---
+title: XS Filter - map
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> map <a href="#xs-map" id="xs-map"></a>
+
+`value|map:code:timeout`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+[1,2,3]|map:"x * 2":10                // Returns [2,4,6]
+["a","b"]|map:"upper(x)":5            // Returns ["A","B"]
+[{"n":1},{"n":2}]|map:"x.n + 1":10    // Returns [2,3]
+```
+
+</details>

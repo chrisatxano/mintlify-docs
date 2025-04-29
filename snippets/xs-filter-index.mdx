@@ -1,0 +1,17 @@
+---
+title: XS Filter - index
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> index  <a href="#xs-index" id="xs-index"></a>
+
+`value|index:"search text"`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"hello world"|index:"world"    // Returns 6
+```
+
+</details>

@@ -1,8 +1,0 @@
----
-icon: sparkles
----
-
-# API Request Assistant
-
-{% include "../.gitbook/includes/ai-request-assistant.md" %}
-

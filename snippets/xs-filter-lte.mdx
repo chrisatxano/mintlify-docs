@@ -1,0 +1,19 @@
+---
+title: XS Filter - lte
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> less\_than\_or\_equal <a href="#xs-lte" id="xs-lte"></a>
+
+`value|less_than_or_equal:compare_value`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+3|less_than_or_equal:5        // Returns true
+5|less_than_or_equal:5        // Returns true
+7|less_than_or_equal:5        // Returns false
+```
+
+</details>

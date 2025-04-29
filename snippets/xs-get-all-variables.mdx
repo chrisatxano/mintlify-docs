@@ -1,0 +1,29 @@
+---
+title: XS - Get All Variables
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Get All Variables <a href="#xs-getvars" id="xs-getvars"></a>
+
+```javascript
+util.get_vars as all_variables
+```
+
+| Parameter | Purpose                                        | Example                 |
+| --------- | ---------------------------------------------- | ----------------------- |
+| as        | New variable to contain the returned variables | `all_variables`, `vars` |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+util.get_vars as system_vars
+
+debug.log {
+  value = $system_vars
+}
+```
+
+* Returns an object containing all variables
+
+</details>

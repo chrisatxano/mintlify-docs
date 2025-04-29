@@ -1,0 +1,157 @@
+---
+title: XS - Query All Records
+---
+
+## <img src="../assets/docuBadge.png" alt="" data-size="line"> Query All Records <a href="#xs-secretkey" id="xs-secretkey"></a>
+
+## Simple Query
+
+Get all records from a table
+
+```javascript
+   db.query table as $variable
+```
+
+<table><thead><tr><th width="175">Parameter</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>table</td><td>The name of the table to query</td><td>user</td></tr><tr><td>as</td><td>The variable to store the result</td><td>allUsers</td></tr></tbody></table>
+
+## **Custom Queries**
+
+```javascript
+    db.query user {
+      search = `$db.user.id == 1`
+    } as $user1
+```
+
+| Parameter | Purpose          | Example                                   |
+| --------- | ---------------- | ----------------------------------------- |
+| search    | The query to run | <pre><code>$db.user.id == 1
+</code></pre> |
+
+## Joins
+
+```javascript
+    db.query user {
+      search = `$db.user.id == 1`
+      bind = [
+        {
+          as    : "user_2"
+          name  : "user"
+          join  : "left"
+          search: `$db.user.id == $db.user_2.id`
+        }
+      ]
+    
+    } as $user1
+```
+
+<table><thead><tr><th width="136">Parameter</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>bind</td><td>The array to contain each join</td><td>Each item should be contained in an object inside of the array</td></tr><tr><td>as</td><td>The internal name of the joined table</td><td>user_2</td></tr><tr><td>name</td><td>The name of the table being joined</td><td>user</td></tr><tr><td>join</td><td>The type of join. This can be either left, inner, or right</td><td>left</td></tr><tr><td>search</td><td>The conditional query to perform when matching records in the join</td><td><pre><code>`$db.user.id == $db.user_2.id`
+</code></pre></td></tr></tbody></table>
+
+## Customizing the Response
+
+```javascript
+    db.query user {
+      search = `$db.user.id == 1` 
+      output = ["id", "name"]
+    } as $user1
+```
+
+| Parameter | Purpose                                                 | Example         |
+| --------- | ------------------------------------------------------- | --------------- |
+| output    | The list of fields returned to display in the response. | \["id", "name"] |
+
+## Return Options
+
+### Return Type
+
+Returns are defined immediately before `} as returnVariable`
+
+* **Exists**
+  * <pre><code><strong>      return_exists = {}
+    </strong></code></pre>
+* **Count**
+  * <pre><code><strong>      return_count = {}
+    </strong></code></pre>
+* **Single**
+  * ```
+          return_single = {}
+    ```
+* **List**
+  * ```
+          return_list = {}
+    ```
+* **Stream**
+  * ```
+          return_stream = {}
+    ```
+*   **Aggregate**
+
+    <figure><img src="../assets/CleanShot 2025-03-07 at 08.29.54 (1).png" alt=""><figcaption></figcaption></figure>
+
+    * ```javascript
+            return_aggregate = {
+                    group: [
+                              {
+                                    name  : "user.created_at"
+                                    as    : "user_createdAt"
+                                    filter: [{name: "epochms_doy", arg: [{value: "UTC"}]}]
+                                    }
+                                    ]
+                                    eval : [
+                                          {
+                                                name  : "user.userRole"
+                                                as    : "userRole"
+                                                filter: [{name: "to_distinct_list"}]
+                                                }
+                                          ]
+                              }
+      ```
+
+**Sorting**
+
+* Sorts are applied as part of the return object. Each sort contains a `sort` and an `order`&#x20;
+  * <pre><code><strong>  return_single = {sorting: [{sort: "user.id", order: "asc"}]}
+    </strong></code></pre>
+
+**Paging**
+
+* Paging is applied as part of the return object.&#x20;
+  * <pre><code><strong>    paging: {
+    </strong><strong>          page    : 1
+    </strong><strong>          per_page: 25
+    </strong><strong>          totals  : true
+    </strong><strong>          offset  : 0
+    </strong><strong>          metadata: true
+    </strong><strong>          }
+    </strong></code></pre>
+* External paging is defined as part of the return object.
+  * <pre><code><strong>      external_simple = {
+    </strong><strong>              page    : 1
+    </strong><strong>              per_page: 1
+    </strong><strong>              offset  : 1        
+    </strong><strong>              search  : 1        
+    </strong><strong>              sort    : 1
+    </strong><strong>            }
+    </strong></code></pre>
+
+<details>
+
+<summary>Examples</summary>
+
+| Visual Builder                                                                                                                                                                     | XanoScript                                                                                                                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>Return any user records with an ID that matches the input <code>userId</code></p><p><img src="../assets/CleanShot 2025-03-07 at 08.42.46.png" alt="" data-size="original"></p>  | <pre class="language-javascript"><code class="lang-javascript">    db.query user {
+      search = `$db.user.id == $input.userId`
+      return_exists = {}
+    } as user1
+</code></pre>                                                  |
+| <p>Return any user records with an ID that matches the input <code>userId</code> that are also admins<br><img src="../assets/CleanShot 2025-03-07 at 09.17.24 (1).png" alt=""></p> | <p></p><pre class="language-javascript"><code class="lang-javascript">    db.query user {
+      search = `$db.user.id == $input.userId &#x26;&#x26; $db.user.userRole == "admin"`
+      return_exists = {}
+    } as user1
+</code></pre> |
+|                                                                                                                                                                                    |                                                                                                                                                                                                                                         |
+
+
+
+</details>

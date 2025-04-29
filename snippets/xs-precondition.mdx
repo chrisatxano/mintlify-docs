@@ -1,0 +1,50 @@
+---
+title: XS - Precondition
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Precondition <a href="#xs-precondition" id="xs-precondition"></a>
+
+```javascript
+precondition `($a == 1)` {
+  error_type = "notfound"
+  error = "Error message to return"
+  payload = "Payload"
+}
+```
+
+| Parameter   | Purpose                                   | Example                                                                                                                                                  |
+| ----------- | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| error\_type | The type of error to throw                | <p>Can be one of the following:<br>- standard<br>- notfound<br>- accessdenied<br>- toomamyrequests<br>- unauthorized<br>- badrequest<br>- inputerror</p> |
+| error       | The error message to display              | `"Resource not found"`, `"Access denied"`                                                                                                                |
+| payload     | Additional data to include with the error | `"Error details"`, `{reason: "Invalid input"}`                                                                                                           |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+precondition `($user.role != "admin")` {
+  error_type = "accessdenied"
+  error = "Admin access required"
+  payload = {
+    required_role: "admin",
+    current_role: $user.role
+  }
+}
+
+precondition `($user.role != "admin")` {
+  error_type = "accessdenied"
+  error = "Admin access required"
+  payload = {
+    required_role: "admin",
+    current_role: $user.role
+  }
+}
+```
+
+* Checks a condition and throws an error if the condition is true
+* Allows specifying error type, message, and additional payload
+* Useful for validation and access control
+* Stops execution if condition is met
+
+</details>

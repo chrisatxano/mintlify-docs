@@ -1,0 +1,19 @@
+---
+title: XS FILTER - array_fill
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> fill <a href="#xs-arrayunshift" id="xs-arrayunshift"></a>
+
+`value|fill:start:length`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+0|fill:0:10     // Creates [0,0,0,0,0,0,0,0,0,0]
+"x"|fill:2:5    // Creates [null,null,"x","x","x","x","x"]
+true|fill:1:3   // Creates [null,true,true,true]
+```
+
+</details>

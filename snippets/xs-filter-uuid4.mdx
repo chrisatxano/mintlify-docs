@@ -1,0 +1,17 @@
+---
+title: XS Filter - uuid4
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> uuid <a href="#xs-uuid4" id="xs-uuid4"></a>
+
+`value|uuid`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+""|uuid    // Returns a new UUID
+```
+
+</details>

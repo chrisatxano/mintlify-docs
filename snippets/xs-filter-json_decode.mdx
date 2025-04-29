@@ -1,0 +1,18 @@
+---
+title: XS Filter - json_decode
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> json\_decode <a href="#xs-json_decode" id="xs-json_decode"></a>
+
+`value|json_decode`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+{"name":"John"}|json_decode    // Returns "{\"name\":\"John\"}
+'[1,2,3]'|json_decode           // Returns "[1,2,3]"
+```
+
+</details>

@@ -1,0 +1,27 @@
+---
+title: XS - Array Add to End
+---
+
+## <img src="../assets/docuBadge (10).png" alt="" data-size="line"> **Array Add to End** <a href="#xs-arraypush" id="xs-arraypush"></a>
+
+```javascript
+ array.push arrayVariable {
+      value = 10
+    }
+```
+
+<table><thead><tr><th width="175">Parameter</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>arrayVariable</td><td>This is the array variable you want to target with the array operation</td><td>arrayVariable</td></tr><tr><td>value</td><td>The value you want to apply to the array operation</td><td>5</td></tr></tbody></table>
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+ array.push arrayVariable {
+      value = 10
+    }
+```
+
+![](<../assets/CleanShot 2025-03-05 at 11.06.36.png>)
+
+</details>

@@ -1,0 +1,18 @@
+---
+title: XS Filter -convert_encoding
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> convert\_encoding <a href="#xsconvert_encoding" id="xsconvert_encoding"></a>
+
+`value|convert_encoding:from:to`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"text"|convert_encoding:"UTF-8":"ASCII"    // Converts encoding from UTF-8 to ASCII
+"text"|convert_encoding:"ASCII":"UTF-8"    // Converts encoding from ASCII to UTF-8
+```
+
+</details>

@@ -1,0 +1,18 @@
+---
+title: XS Filter -addslashes
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> addslashes <a href="#xsaddslashes" id="xsaddslashes"></a>
+
+`value|addslashes`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"O'Reilly"|addslashes    // Returns "O\'Reilly"
+'test"quote'|addslashes  // Returns "test\"quote"
+```
+
+</details>

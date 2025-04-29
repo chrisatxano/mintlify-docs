@@ -1,0 +1,38 @@
+---
+title: XS - gcs delete
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Google Cloud Storage: Delete file <a href="#xs-gcsdelete" id="xs-gcsdelete"></a>
+
+```javascript
+cloud.google.storage.delete_file {
+  service_account = ""
+  bucket = ""
+  filePath = ""
+}
+```
+
+| Parameter        | Purpose                  | Example                            |
+| ---------------- | ------------------------ | ---------------------------------- |
+| service\_account | GCP service account JSON | `{"type": "service_account", ...}` |
+| bucket           | GCS bucket name          | `"my-app-bucket"`                  |
+| filePath         | Path to file to delete   | `"folder/file.txt"`                |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+cloud.google.storage.delete_file {
+  service_account = $env.GCP_SERVICE_ACCOUNT
+  bucket = "temp-storage"
+  filePath = "temp/"|add:$file.name
+}
+```
+
+* Deletes an object from storage
+
+</details>
+
+
+

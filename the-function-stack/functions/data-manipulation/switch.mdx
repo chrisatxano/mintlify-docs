@@ -1,0 +1,66 @@
+# 'Switch'
+
+<Info>
+
+**Quick Summary**
+
+Switch Case is similar to a conditional statement, but it's designed to only check a single value for matches. Where a conditional is great for things like "If the user joined before 2020 and is also a subscriber", Switch Case is more efficient and ideal for simple scenarios like "If the color is red, blue, green, brown, yellow, or orange", when you want each of those options to have different paths.
+
+</Info>
+
+{% include "../../../.gitbook/includes/switch-or-conditional.md" %}
+
+## Using Switch Case
+
+{% stepper %}
+{% step %}
+### Add a Switch statement to your function stack.
+
+Switch is located under Data Manipulation.
+
+<div align="left"><figure><img src="../../..//assets/CleanShot 2025-03-07 at 16.23.52.png" alt=""><figcaption></figcaption></figure></div>
+{% endstep %}
+
+{% step %}
+### Set the value that Switch should be checking.
+
+You can hard code a value here, or specify a variable or input.
+
+<div align="left"><figure><img src="../../..//assets/CleanShot 2025-03-07 at 16.24.20.png" alt=""><figcaption></figcaption></figure></div>
+{% endstep %}
+
+{% step %}
+### Set your 'default' functions, if desired.
+
+<div align="left"><figure><img src="../../..//assets/CleanShot 2025-03-07 at 16.26.03.png" alt=""><figcaption></figcaption></figure></div>
+
+The **Default** section of Switch will run if:
+
+1. No matches are found
+2. You chose to not break out of Switch after a match is found
+
+This is a good spot to insert any "catch-all" situations where you want a standard behavior for unaccounted possibilities.
+{% endstep %}
+
+{% step %}
+### Click ![[](<../../../.gitbook/assets/CleanShot 2025-03-07 at 16.27.32.png>)to define a behavior based on a specific value.
+
+When adding a new **case**, you'll be asked to provide the value that determines if this case will run.&#x20;
+
+You can also choose to either stop the Switch Case statement after the match is found, or execute the functions under Default after matching.
+
+<div align="left"><figure><img src="../../..//assets/CleanShot 2025-03-07 at 16.28.00.png" alt=""><figcaption></figcaption></figure></div>
+{% endstep %}
+
+{% step %}
+### Add functions to your case(s)
+
+Click ![[](<../../../.gitbook/assets/CleanShot 2025-03-07 at 16.30.01.png>)under your cases to add functions to them, or drag and drop functions inside of them. Now, when your Switch function detects that case in the value you specified  in step 2, it will execute those functions.
+
+<div align="left"><figure><img src="../../..//assets/CleanShot 2025-03-07 at 16.29.17.png" alt=""><figcaption></figcaption></figure></div>
+
+
+{% endstep %}
+{% endstepper %}
+
+

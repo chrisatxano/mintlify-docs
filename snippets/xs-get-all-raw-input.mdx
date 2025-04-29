@@ -1,0 +1,16 @@
+---
+title: XS - Get All Raw Input
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Get All Raw Input <a href="#xs-getallrawinput" id="xs-getallrawinput"></a>
+
+```javascript
+util.get_input {
+  encoding = "json"
+} as all_raw_input
+```
+
+| Parameter | Purpose                      | Example                         |
+| --------- | ---------------------------- | ------------------------------- |
+| encoding  | Format of the input data     | `"json"`, `"raw"`, `"text"`     |
+| as        | Alias to reference the input | `all_raw_input`, `request_body` |

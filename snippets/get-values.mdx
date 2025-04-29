@@ -1,0 +1,27 @@
+---
+title: Get Values
+---
+
+## <img src="../assets/docuBadge (10).png" alt="" data-size="line"> Get Entries <a href="#xs-objectentries" id="xs-objectentries"></a>
+
+```javascript
+    object.entries {
+      value = $object
+    } as entries
+```
+
+<table><thead><tr><th width="175">Parameter</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>$object</td><td>The variable that the object you'd like to target is stored</td><td>$object</td></tr><tr><td>as</td><td>The variable that you want to store the result</td><td>entries</td></tr></tbody></table>
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+    object.entries {
+      value = $object
+    } as entries
+```
+
+![](<../assets/CleanShot 2025-03-06 at 12.37.57.png>)
+
+</details>

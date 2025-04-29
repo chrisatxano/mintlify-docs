@@ -1,0 +1,18 @@
+---
+title: XS FILTER -has
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> has <a href="#xshas" id="xshas"></a>
+
+`value|has:key`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+{"name":"John"}|has:"name"     // Returns true
+{"name":"John"}|has:"age"      // Returns false
+```
+
+</details>

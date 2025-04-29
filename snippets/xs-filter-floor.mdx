@@ -1,0 +1,18 @@
+---
+title: XS FILTER -floor
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> floor <a href="#xsfloor" id="xsfloor"></a>
+
+`value|floor`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+3.7|floor     // Returns 3
+-3.7|floor    // Returns -4
+```
+
+</details>

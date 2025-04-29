@@ -1,0 +1,35 @@
+---
+title: XS -Remove From Beginning of List
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Remove From Beginning of List <a href="#xs-remove-from-beginning-of-list" id="xs-remove-from-beginning-of-list"></a>
+
+
+
+```javascript
+redis.shift {
+  key = ""
+} as x8
+```
+
+| Parameter | Purpose                 | Example                         |
+| --------- | ----------------------- | ------------------------------- |
+| key       | List key                | `"queue:tasks"`, `"processing"` |
+| as        | Alias for shifted value | `x8`, `first_item`              |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+redis.shift {
+  key = "message_queue"
+} as next_message
+```
+
+* Removes and returns first element
+* Returns null if list is empty
+* Reduces list length by 1
+* Common for queue operations
+
+</details>

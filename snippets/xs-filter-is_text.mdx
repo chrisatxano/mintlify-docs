@@ -1,0 +1,19 @@
+---
+title: XS Filter - is_text
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> is\_text <a href="#xs-is_text" id="xs-is_text"></a>
+
+`value|is_text`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"hello"|is_text     // Returns true
+123|is_text         // Returns false
+true|is_text        // Returns false
+```
+
+</details>

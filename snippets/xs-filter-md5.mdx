@@ -1,0 +1,18 @@
+---
+title: XS Filter - md5
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> md5 <a href="#xs-md5" id="xs-md5"></a>
+
+`value|md5:numeric`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"data"|md5:true     // Returns numeric MD5 hash
+"data"|md5:false    // Returns string MD5 hash
+```
+
+</details>

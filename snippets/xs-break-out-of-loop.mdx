@@ -1,0 +1,31 @@
+---
+title: XS - Break Out Of Loop
+---
+
+## <img src="../assets/docuBadge (10).png" alt="" data-size="line"> **Break Out Of Loop** <a href="#xs-break" id="xs-break"></a>
+
+```javascript
+    break
+```
+
+<details>
+
+<summary>Example</summary>
+
+![](<../assets/CleanShot 2025-02-27 at 17.52.20@2x (1).png>)
+
+```javascript
+    for (`10`) {
+      each as index {
+        conditional {
+          if (`$index == 5`) {
+            break
+          }
+        }
+      }
+    }
+```
+
+
+
+</details>

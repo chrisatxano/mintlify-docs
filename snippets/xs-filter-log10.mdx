@@ -1,0 +1,18 @@
+---
+title: XS FILTER -log10
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> log10 <a href="#xslog10" id="xslog10"></a>
+
+`value|log10`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+100|log10     // Returns 2
+1000|log10    // Returns 3
+```
+
+</details>

@@ -1,0 +1,18 @@
+---
+title: XS - FILTER array_fill_keys
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> fill\_keys <a href="#xs-array_fill_keys" id="xs-array_fill_keys"></a>
+
+`value|fill_keys:keys`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"value"|fill_keys:'["a","b","c"]'    // Creates {"a":"value","b":"value","c":"value"}
+0|fill_keys:'["x","y"]'              // Creates {"x":0,"y":0}
+```
+
+</details>

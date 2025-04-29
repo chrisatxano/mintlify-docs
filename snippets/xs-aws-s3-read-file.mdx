@@ -1,0 +1,8 @@
+---
+title: XS - aws s3 read file
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Group <a href="#xs-group" id="xs-group"></a>
+
+
+

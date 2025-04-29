@@ -1,0 +1,38 @@
+---
+title: XS - For Each Loop
+---
+
+## <img src="../assets/docuBadge (10).png" alt="" data-size="line"> **For Each Loop** <a href="#xs-foreach" id="xs-foreach"></a>
+
+```javascript
+    foreach ($list) {
+      each as $alias {
+        // Functions go here
+      }
+    }
+```
+
+| Parameter | Purpose                                                         | Example |
+| --------- | --------------------------------------------------------------- | ------- |
+| $list     | The list to iterate through                                     | $users  |
+| $alias    | The variable to store the item currently being iterated through | user    |
+
+Place the functions that run as a part of your loop inside {} brackets after defining the alias.
+
+<details>
+
+<summary>Example</summary>
+
+![](<../assets/CleanShot 2025-02-27 at 09.45.55@2x.png>)
+
+```javascript
+    foreach ($x1) {
+      each as item {
+        util.sleep {
+          value = 1
+        }
+      }
+    }
+```
+
+</details>

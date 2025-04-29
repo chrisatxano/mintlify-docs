@@ -1,0 +1,71 @@
+---
+title: AWS OpenSearch Search Query
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> AWS OpenSearch: Search Query <a href="#xs-awsopensearchsearchquery" id="xs-awsopensearchsearchquery"></a>
+
+```javascript
+cloud.aws.opensearch.query {
+  auth_type = "IAM"
+  key_id = ""
+  access_key = ""
+  region = ""
+  index = ""
+  payload =
+  expression = []
+  size = 0
+  from = 0
+  sort = []
+  included_fields = []
+  return_type = "search"
+} as x3
+```
+
+| Parameter        | Purpose                        | Example                              |
+| ---------------- | ------------------------------ | ------------------------------------ |
+| auth\_type       | Authentication type for AWS    | `"IAM"`                              |
+| key\_id          | AWS access key ID              | `"AKIAXXXXXXXXXXXXXXXX"`             |
+| access\_key      | AWS secret access key          | `"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"` |
+| region           | AWS region for OpenSearch      | `"us-east-1"`, `"eu-west-1"`         |
+| index            | OpenSearch index to query      | `"products"`, `"users"`              |
+| payload          | Query payload                  | `{match: {field: "value"}}`          |
+| expression       | Array of query expressions     | `["term1", "term2"]`                 |
+| size             | Number of results to return    | `10`, `50`, `100`                    |
+| from             | Starting position for results  | `0`, `20`, `100`                     |
+| sort             | Array of sort criteria         | `[{field: "asc"}]`                   |
+| included\_fields | Fields to include in results   | `["name", "price", "description"]`   |
+| return\_type     | Type of search response        | `"search"`, `"count"`                |
+| as               | Alias to reference the results | `x3`, `search_results`               |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+cloud.aws.opensearch.query {
+  auth_type = "IAM"
+  key_id = $env.AWS_KEY_ID
+  access_key = $env.AWS_SECRET_KEY
+  region = "us-west-2"
+  index = "products"
+  payload = {
+    match: {
+      name: "search term"
+    }
+  }
+  expression = ["category:electronics"]
+  size = 20
+  from = 0
+  sort = [{price: "desc"}]
+  included_fields = ["name", "price", "category"]
+  return_type = "search"
+} as product_results
+```
+
+* Performs advanced queries on OpenSearch
+* Supports pagination with size and from
+* Can sort and filter results
+* Allows field selection
+* Supports different return types
+
+</details>

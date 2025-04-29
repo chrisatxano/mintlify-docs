@@ -1,0 +1,18 @@
+---
+title: XS Filter - join
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> join <a href="#xs-join" id="xs-join"></a>
+
+`value|join:separator`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+[1,2,3]|join:","    // Returns "1,2,3"
+["a","b"]|join:"-"  // Returns "a-b"
+```
+
+</details>

@@ -1,0 +1,42 @@
+---
+title: XS - CSV Stream
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> CSV Stream <a href="#xs-csvstream" id="xs-csvstream"></a>
+
+```javascript
+stream.from_csv {
+  value = $input.csv_input
+  separator = ","
+  enclosure = '"'
+  escape_char = '"'
+} as csv_stream
+```
+
+| Parameter    | Purpose                                     | Example                             |
+| ------------ | ------------------------------------------- | ----------------------------------- |
+| value        | Input CSV data source                       | `$input.csv_input`, `$file.content` |
+| separator    | Character used to separate fields           | `","`, `";"`, `"\t"`                |
+| enclosure    | Character used to enclose fields            | `'"'`, `"'"`                        |
+| escape\_char | Character used to escape special characters | `'"'`, `"\"`                        |
+| as           | Alias to reference the stream               | `csv_stream`                        |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+stream.from_csv {
+  value = $input.users_data
+  separator = ","
+  enclosure = '"'
+  escape_char = '"'
+} as users_stream
+```
+
+* Creates a stream from CSV formatted data
+* Configurable field separator, enclosure, and escape characters
+* Assigns stream to an alias for later reference
+* Useful for processing large CSV files
+
+</details>

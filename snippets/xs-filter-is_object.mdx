@@ -1,0 +1,19 @@
+---
+title: XS Filter - is_object
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> is\_object <a href="#xs-is_object" id="xs-is_object"></a>
+
+`value|is_object`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+{"key":"val"}|is_object    // Returns true
+[1,2,3]|is_object         // Returns false
+"test"|is_object          // Returns false
+```
+
+</details>

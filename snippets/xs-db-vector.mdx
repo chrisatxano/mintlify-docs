@@ -1,0 +1,19 @@
+---
+title: XS DB -vector
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> vector <a href="#xs-vector" id="xs-vector"></a>
+
+`vector field_name`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+vector embedding     // A vector field for ML embeddings
+vector coordinates  // A vector field for spatial coordinates
+vector features     // A vector field for feature vectors
+```
+
+</details>

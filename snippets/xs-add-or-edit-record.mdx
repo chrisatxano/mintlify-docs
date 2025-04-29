@@ -1,0 +1,37 @@
+---
+title: XS - Add or Edit Record
+---
+
+## <img src="../assets/docuBadge (6).png" alt="" data-size="line"> Add or Edit Record <a href="#xs-secretkey" id="xs-secretkey"></a>
+
+```javascript
+db.add_or_edit user {
+    field_name = "id"
+    field_value = $input.id
+    data = {name: $input.name}
+} as $recordAddOrEdit
+```
+
+| Parameter    | Purpose                                   | Example          |
+| ------------ | ----------------------------------------- | ---------------- |
+| field\_name  | Field to search for the record            | "id"             |
+| field\_value | Value to match in the search field        | 1                |
+| data         | Object containing fields to update/create | `{name: "John"}` |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+// Update or create user profile
+db.add_or_edit user_profile {
+    field_name = "user_id"
+    field_value = 456
+    data = {
+        bio: "Software Developer",
+        location: "San Francisco"
+    }
+} as userProfile
+```
+
+</details>

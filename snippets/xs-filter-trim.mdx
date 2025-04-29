@@ -1,0 +1,18 @@
+---
+title: XS Filter -trim
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> trim <a href="#xstrim" id="xstrim"></a>
+
+`value|trim:characters`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"  hello  "|trim        // Returns "hello"
+"...test..."|trim:"."   // Returns "test"
+```
+
+</details>

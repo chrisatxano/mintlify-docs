@@ -1,0 +1,18 @@
+---
+title: XS FILTER -acos
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> acos <a href="#xsacos" id="xsacos"></a>
+
+`value|acos`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+0|acos        // Returns 1.5707963267949 (π/2)
+1|acos        // Returns 0
+```
+
+</details>

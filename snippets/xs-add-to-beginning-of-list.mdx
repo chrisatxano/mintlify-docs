@@ -1,0 +1,37 @@
+---
+title: XS -Add To Beginning of List
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Add To Beginning of List <a href="#xs-add-to-beginning-of-list" id="xs-add-to-beginning-of-list"></a>
+
+```javascript
+redis.unshift {
+  key = ""
+  value = ""
+} as x6
+```
+
+| Parameter | Purpose                   | Example                            |
+| --------- | ------------------------- | ---------------------------------- |
+| key       | List key                  | `"queue:tasks"`, `"recent_items"`  |
+| value     | Value to prepend          | `"new_task"`, `{priority: "high"}` |
+| as        | Alias for new list length | `x6`, `list_length`                |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+redis.unshift {
+  key = "recent_views"
+  value = $page.id
+} as list_size
+```
+
+* Adds value to beginning of list
+* Creates list if it doesn't exist
+* Returns new length of list
+* Useful for "most recent" lists
+
+</details>
+

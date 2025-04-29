@@ -1,0 +1,17 @@
+---
+title: XS Filter - secureid_decode
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> secureid\_decode <a href="#xs-secureid_decode" id="xs-secureid_decode"></a>
+
+`value|secureid_decode:key`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+encrypted_id|secureid_decode:"secret_key"    // Returns original ID
+```
+
+</details>

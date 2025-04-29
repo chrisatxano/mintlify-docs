@@ -1,0 +1,258 @@
+---
+title: template engine
+---
+
+{% hint style="info" %}
+# Quick Summary
+
+The Template Engine, powered by Twig, is used to manipulate and dynamically generate large blocks of text or code with your own data, such as records from your Xano database, or from inputs sent to your APIs.
+
+It's great for helping generate things like AI prompts, HTML, and other more large-format data without messing around with a bulk of separate functions to do so.
+{% endhint %}
+
+{% embed url="https://youtu.be/YCGM7bF3Qc4" %}
+
+# What is the Template Engine?
+
+At its core, think of the Template Engine as text replacement and manipulation of the future. It is designed to give you a simple syntax to quickly manipulate large text strings with dynamic data, such as...
+
+* AI Prompts
+* HTML
+* JSON
+* SQL queries
+
+The template engine is powered by Twig, which you can learn more about [here](https://twig.symfony.com/).
+
+# When should I use the Template Engine instead of other text filters?
+
+You should stick with filters like [replace](../../the-function-stack/filters/text.md#replace) or [sprintf](../../the-function-stack/filters/text.md#sprintf) if you're manipulating short strings of text, such as:
+
+* Replacing a name inside of a string like "Hello, \[first\_name] \[last\_name]"
+* Dynamically providing a price for a single product
+
+The Template Engine, however, is useful for content templates where:
+
+* The template will be edited by non-developers
+* The data structure is complex with nested objects
+* You need to include conditional sections
+* Data formatting (like dates) needs to be consistent
+* Templates might be reused with different data sources
+
+If you're doing dynamic replacement over a longer block of text, such as the example below, Template Engine will make this much easier for you.
+
+```twig
+Write a personalized email to {{ $customer.firstName }} {{ $customer.lastName }} about their recent {{ $order.type }} purchase.
+
+Include:
+- Reference to their purchase history (they've ordered {{ $customer.purchaseCount }} times)
+- Mention that their {{ $order.item }} will be delivered on {{ $order.deliveryDate|date('F j, Y') }}
+- If {{ $customer.isVIP }}, offer them a {{ $promotions.VIPDiscount }}% discount on their next purchase
+- Thank them for being a customer since {{ $customer.joinDate|date('Y') }}
+
+Sign off with the name of their account manager: {{ $accountManager.name }}
+```
+
+
+
+# Using the Template Engine
+
+{% stepper %}
+{% step %}
+## Look for the Template Engine function under Utility Functions.
+
+<div align="left"><figure><img src="../assets/CleanShot 2025-04-02 at 16.29.13.png" alt=""><figcaption></figcaption></figure></div>
+{% endstep %}
+
+{% step %}
+## Once you add the Template Engine to your function stack, click the :pencil2: button in the panel to open the editor.
+{% endstep %}
+
+{% step %}
+## Take a tour of the editor and begin building your template.
+
+<figure><img src="../assets/CleanShot 2025-04-02 at 16.33.01.png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
+{% endstepper %}
+
+# Template Syntax
+
+## Variables
+
+Variables are wrapped in \{{ curly braces \}}, like this, and begin with a $ character. In the below example, we're getting the `name` from an object stored in the `user1` variable.
+
+```twig
+Hi, {{ $user1.name }}
+```
+
+Reference items in an array by using the item index.
+
+```twig
+Hi, {{ $users.0.name }}
+```
+
+## Conditionals
+
+Conditionals are helpful if you want to dynamically determine what the end result of your template looks like outside of the actual data. For example, maybe you want VIP users to have a different greeting than regular users.
+
+Conditionals are wrapped in \{% and %\} and have support for `else` and `else if`
+
+```twig
+{% raw %}
+{% if $user1.vip == true %}
+  Hey, {{ $user1.name }}! Thanks for being a part of our VIP program.
+{% else %}
+  Hey, {{ $user1.name }}! Thanks for reading.
+{% endif %}
+{% endraw %}
+```
+
+> In the above example, for this user:
+>
+> ```
+> {
+>     "name" == "Chris",
+>     "vip" == true
+>     }
+> ```
+>
+> ...the result would be:
+>
+> ```
+> Hey, Chris! Thanks for being a part of our VIP program.
+> ```
+
+```twig
+{% raw %}
+{% if $score >== 90 %}
+  Your grade is an A
+{% elseif $score >== 80 %}
+  Your grade is a B
+{% elseif $score >== 70 %}
+  Your grade is a C
+{% else %}
+  Your grade is an F
+{% endif %}
+{% endraw %}
+```
+
+> In the above example, for this score:
+>
+> ```
+> score = 85
+> ```
+>
+> ...the result would be:
+>
+> ```
+> Your grade is a B
+> ```
+
+## Loops
+
+You can use loops to populate lists of data without having to write out separate lines for each item, or knowing how many items you'll need to populate.
+
+```twig
+{% raw %}
+{% for item in $order.items %}
+  - {{ item.quantity }}x {{ item.name }} at ${{ item.price }} each
+{% endfor %}
+{% endraw %}
+```
+
+<table data-full-width="true"><thead><tr><th>Data</th><th>Sample Output</th></tr></thead><tbody><tr><td><pre class="language-json"><code class="lang-json">[
+  {
+    quantity: 2,
+    name: "Blue T-shirt",
+    price: 19.99
+    },
+  {
+    quantity: 1,
+    name: "Denim jeans",
+    price: 59.99
+    },
+  {
+    quantity: 3,
+    name: "Cotton Socks",
+    price: 4.99
+    }
+]
+</code></pre></td><td><p></p><ul><li>2x Blue T-shirt at $19.99 each</li><li>1x Denim Jeans at $59.99 each</li><li>3x Cotton Socks at $4.99 each</li></ul></td></tr></tbody></table>
+
+You can also use an Else statement at the end of your For loop to determine what action to take if no items are found. In the next example, if `$list` contains no items, the template will return `No items found.`
+
+```twig
+{% raw %}
+{% for item in $list %}
+  {{ item }}
+{% else %}
+  No items found.
+{% endfor %}
+{% endraw %}
+```
+
+## Filters
+
+You can use Twig's built in filters, similar to our own, to transform or manipulate data as part of the template.
+
+The below list is some of the most essential filters used in Twig, but it is not all of them. You can review the entire list [here](https://twig.symfony.com/doc/3.x/filters/index.html).
+
+<table><thead><tr><th width="148.541259765625">Filter</th><th width="161.507080078125">Description</th><th width="271.359375">Example</th><th>Result</th></tr></thead><tbody><tr><td><code>upper</code></td><td>Converts string to uppercase</td><td><code>{{ $user.name|upper }}</code><br><em>When $user.name is "John Smith"</em></td><td>"JOHN SMITH"</td></tr><tr><td><code>lower</code></td><td>Converts string to lowercase</td><td><code>{{ $user.name|lower }}</code><br><em>When $user.name is "John Smith"</em></td><td>"john smith"</td></tr><tr><td><code>trim</code></td><td>Removes whitespace from the beginning and end of a string</td><td><code>{{ $user.input|trim }}</code><br><em>When $user.input is " hello "</em></td><td>"hello"</td></tr><tr><td><code>join</code></td><td>Joins array elements into a string with a delimiter</td><td><code>{{ $user.tags|join(', ') }}</code><br><em>When $user.tags is ["php", "twig", "web"]</em></td><td>"php, twig, web"</td></tr><tr><td><code>default</code></td><td>Provides a fallback value if the variable is null, empty, or undefined</td><td><code>{{ $user.middleName|default('No middle name') }}</code><br><em>When $user.middleName is null</em></td><td>"No middle name"</td></tr><tr><td><code>number_format</code></td><td>Formats numbers with grouped thousands and decimal points</td><td><code>{{ $product.price|number_format(2, '.', ',') }}</code><br><em>When $product.price is 1234.56</em></td><td>"1,234.56"</td></tr><tr><td><code>shuffle</code></td><td>Randomly shuffles an array</td><td><code>{{ $user.items|shuffle }}</code><br><em>When $user.items is ["a", "b", "c"]</em></td><td><em>Random order like:</em> ["c", "a", "b"]</td></tr><tr><td><code>date</code></td><td>Formats dates using PHP's date syntax</td><td><code>{{ $user.createdAt|date("F j, Y") }}</code><br><em>When $user.createdAt is "2023-12-25"</em></td><td>"December 25, 2023"</td></tr></tbody></table>
+
+## Escape Filter (e)
+
+The escape filter is used to format text using specifications designated by the destination, such as a URL that only allows certain characters to remain valid.
+
+When you use `e` by itself without specifying a format, it typically defaults to HTML escaping. This means it will convert characters like `<`, `>`, `&`, `"`, and `'` to their HTML-safe equivalents.
+
+When you specify a format (like `e('html')`, `e('js')`, `e('url')`, etc.), you're explicitly telling the Template Engine how to escape the content for a specific context, which can provide more precise protection. We'd recommend always specifying the format, just to be safe.
+
+### HTML Escaping
+
+```twig
+{% raw %}
+{% set $user_input = '<script>alert("XSS");</script>' %}
+{% endraw %}
+{{ $user_input|e('html') }}
+
+Outputs: &lt;script&gt;alert(&quot;XSS&quot;);&lt;/script&gt;
+```
+
+### JavaScript Escaping
+
+```twig
+{% raw %}
+{% set $js_string = 'Hello "world"! \n New line' %}
+{% endraw %}
+{{ $js_string|e('js') }}
+{# Outputs: Hello \"world\"! \\n New line #}
+```
+
+### URL Escaping
+
+```twig
+{% raw %}
+{% set $search_query = 'hello world & special chars' %}
+{% endraw %}
+{{ $search_query|e('url') }}
+{# Outputs: hello+world+%26+special+chars #}
+```
+
+### CSS Escaping
+
+```twig
+{% raw %}
+{% set $css_value = 'expression(alert("XSS"))' %}
+{% endraw %}
+{{ $css_value|e('css') }}
+{# Outputs: expression\28 alert\28 "XSS"\29 \29 #}
+```
+
+## Comments
+
+You can insert comments into your templates by wrapping them in {# and #}. They won't appear in your final template.
+
+```twig
+{# This is a hidden comment #}
+```
+
+You can check out some examples of the Template Engine in real-world scenarios here: [#sample-templates](../../xano-ai/template-engine.md#sample-templates "mention").

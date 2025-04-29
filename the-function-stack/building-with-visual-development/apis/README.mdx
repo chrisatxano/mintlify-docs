@@ -1,0 +1,167 @@
+---
+---
+description: Learn more about building APIs using visual development in Xano
+---
+
+# 'APIs'
+
+<Info>
+
+**Quick Summary**
+
+Think of an API like a waiter in a restaurant - you (the user) give your order to the waiter (the API), who takes it to the kitchen and brings back exactly what you asked for. The waiter creates a seamless connection between you and the kitchen, just like an API connects different parts of an application.
+
+An API acts like a messenger between different parts of an application. When your website needs something done (like creating a new user), it sends a request with the necessary data and gets back a response containing the results. Both requests and responses include headers (which provide context) and data (the actual content being sent or received).
+
+</Info>
+
+## What is an API?
+
+{% include "../../../.gitbook/includes/definition-of-an-api.md" %}
+
+***
+
+## Auto-generated APIs
+
+When adding a new API endpoint in Xano, you have four options to choose from — some of which will give you prebuilt APIs, ready to go right away!
+
+### CRUD Operations
+
+These are database operations for reading, adding, and updating data in your database.
+
+<Info>
+
+Please note that our default **PATCH** endpoint is designed to automatically filter out any null values or empty text strings that are typically sent by most frontend platforms. If you don't need these, you can remove the filters **filter\_null** and **filter\_empty\_text** from the Patch Record function.
+
+</Info>
+
+### Authentication
+
+These are APIs that handle login, signup, and checking an authenticated user's information.
+
+### File Storage
+
+These APIs facilitate file upload to Xano.
+
+### Custom
+
+Start with a blank canvas. Build anything.
+
+***
+
+## API Groups & API Group Settings
+
+All APIs live inside of API groups. These are just like folders that you can use to organize all of your different APIs.
+
+Each API group can be customized to your liking using the following options.
+
+<table><thead><tr><th width="198">Setting</th><th>Function</th></tr></thead><tbody><tr><td>Name</td><td>The name of the API group. Each name in an API group must be unique, including trailing parameters.<br><br>This means that if you have an API named /user/{user_id}, you can not also have an API named /user/getUser</td></tr><tr><td>Description</td><td>An internal description of the API group</td></tr><tr><td>Tags</td><td>Tags are used to label different things you build in Xano, used to search for related items across the workspace</td></tr><tr><td>Swagger</td><td><p>Determines the access level of your auto-generated API documentation<br><strong>Public</strong> - Anyone with the link can access<br><strong>Private (requires token)</strong> - Anyone with the link appended with an auto-generated token can access<br><strong>Disabled</strong> - No API documentation will be made available</p><p><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span><a href="swagger-openapi-documentation.mdx"> <strong>Learn more about API auto-documentation</strong></a></p></td></tr><tr><td>Request History</td><td><p>Choose whether to inherit your workspace's default request history settings, or specify new ones for this API group</p><p></p><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="../../../maintenance-monitoring-and-logging/request-history.mdx"><strong>Learn more about request history</strong></a></p></td></tr><tr><td>External Access</td><td>Quickly enable or disable public access to these APIs</td></tr></tbody></table>
+
+Additionally, you can change the **canonical ID** of an API group from the Security section of the settings menu. The canonical ID dictates part of the endpoint URLs used to access those APIs, so proceed with caution before changing this.
+
+To access your API groups, click ![[](<../../../.gitbook/assets/CleanShot 2024-12-20 at 22.59.05.png>)in the left-hand navigation menu.&#x20;
+
+Click on a group to enter it, or click ![[](<../../../.gitbook/assets/CleanShot 2024-12-20 at 23.00.00.png>)to create a new one.
+
+<Info>
+
+Some of these settings are only available after the API group is created.
+
+</Info>
+
+### CORS Management for API Groups
+
+CORS, or Cross-Origin Resource Sharing, is like a security guard for web applications. It ensures that resources on a web page only talk to servers they are allowed to. Imagine visiting a friend's house; if your friend's parents don't know you, they might not let you in. Similarly, CORS ensures that only trusted sources can interact with your web application, keeping data safe and secure. This is important because it helps protect users from potentially harmful interactions between different websites.
+
+In Xano, you can change CORS to one of three options:
+
+* **Default** - Xano uses wildcard values to allow all origins, methods, and headers. This satisfies the requirements of servers that ask for CORS, and also ensures that all requests are allowed.
+* **Custom** - You can specify your own CORS rules from here, such as only allowing requests from certain servers.
+  * **Allow Credentials** - When checked, this allows requests to include credentials like cookies, HTTP authentication, or client-side SSL certificates. This is necessary if your frontend needs to send authentication information to your backend.
+  * **Allow Methods** - These are the HTTP methods that your API will accept from other origins.
+  * **Allow Origins** - This section lets you specify which domains can access your API. The "Add Origin" button lets you:
+    * Add specific domains (e.g., [[https://yourfrontend.com](https://yourfrontend.com))
+    * Use wildcards (e.g., \*)
+    * List multiple allowed origins
+  * **Allow Headers** - Defines which HTTP headers can be used in requests. The "Add Header" button lets you specify custom headers beyond the standard ones.
+  * **Max Age** - Set to 1 hour by default, this determines how long browsers should cache the CORS preflight response. This helps reduce the number of preflight requests (OPTIONS calls) that browsers make.
+
+<Info>
+
+**What is a preflight request?**
+
+Before accessing data from another site, your browser sends a "preflight request" to ask for permission. If approved, it proceeds with the main request. This step ensures your information stays safe during web interactions.
+
+</Info>
+
+
+
+***
+
+## Creating a new API
+
+### Click ![[](<../../../.gitbook/assets/CleanShot 2024-12-20 at 23.07.25.png>) to create a new API endpoint.
+
+Choose from one of the four different API types available.
+
+{% tabs %}
+{% tab title="CRUD Database Operations" %}
+CRUD stands for **create, read, update,** and **delete**. These are basic database operations that most applications will need to perform on one or more tables.
+
+{% @arcade/embed flowId="Yp4vDb3lF0aL7Xi0aiCX" url="https://app.arcade.software/share/Yp4vDb3lF0aL7Xi0aiCX" %}
+
+Xano can create these for you automatically, based on your database tables.
+
+1. Choose the table you want to create an action for.
+2. Select the endpoint type you want to create.&#x20;
+3. Adjust any settings you wish for the new endpoint being created, and click ![[](<../../../.gitbook/assets/CleanShot 2024-12-20 at 23.15.35.png>)
+{% endtab %}
+
+{% tab title="Authentication" %}
+Authentication endpoints are used for basic auth operations such as **sign up**, **log in**, and **verifying an authenticated user**.
+
+Xano has pre-built authentication endpoints ready to go that can be added here.
+
+{% @arcade/embed flowId="0cfvivthZoS28oNaDklR" url="https://app.arcade.software/share/0cfvivthZoS28oNaDklR" %}
+
+
+
+1. Choose the authentication endpoint you would like to add.
+2. Choose your user table.
+
+<Info>
+
+If you don't see the database table you want to authenticate against, then you need to first enable authentication for that specific database table within its settings panel.
+
+</Info>
+
+3. Adjust any settings you wish for the new endpoint being created, and click ![[](<../../../.gitbook/assets/CleanShot 2024-12-20 at 23.15.35.png>)
+{% endtab %}
+
+{% tab title="Upload Content" %}
+These endpoints are pre-built content upload functions that you can use to upload and store images, videos, and other attachments in Xano.
+
+{% @arcade/embed flowId="YGLpv1LTyvP9XS1ed2hy" url="https://app.arcade.software/share/YGLpv1LTyvP9XS1ed2hy" %}
+
+
+
+1. Choose the endpoint type you'd like to create.
+2. Adjust any settings you wish for the new endpoint being created, and click ![[](<../../../.gitbook/assets/CleanShot 2024-12-20 at 23.15.35.png>)
+{% endtab %}
+
+{% tab title="Custom" %}
+Start with a blank canvas to build upon.
+
+1. Adjust any settings you wish for the new endpoint being created, and click ![[](<../../../.gitbook/assets/CleanShot 2024-12-20 at 23.15.35.png>)
+{% endtab %}
+{% endtabs %}
+
+***
+
+## API Settings
+
+### From the Settings panel
+
+<div align="left"><figure><img src="../../..//assets/CleanShot 2024-12-23 at 09.56.20 (1).png" alt="" width="266"><figcaption></figcaption></figure></div>
+
+<table><thead><tr><th width="257">Name</th><th>Purpose</th></tr></thead><tbody><tr><td>Name</td><td>The name of the API endpoint. This also directly impacts the API URL.</td></tr><tr><td>Description</td><td>An internal description, just for you.</td></tr><tr><td>Verb</td><td>The API method</td></tr><tr><td>Tags</td><td>Use tags to organize objects throughout your Xano workspace and find them later</td></tr><tr><td>Request History</td><td><ul><li><p>Inherit Settings</p><ul><li>Use whatever is set in your workspace branch defaults</li></ul></li><li><p>Other</p><ul><li>Set specific request history settings for this endpoint</li></ul></li></ul><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="../../../maintenance-monitoring-and-logging/request-history.mdx"><strong>Learn more about request history</strong></a></p></td></tr><tr><td>External access</td><td>When disabled, this endpoint will not respond to requests.</td></tr><tr><td>Authentication</td><td>Choose whether this endpoint requires a valid authentication token present in the headers to execute</td></tr><tr><td>Response type</td><td><ul><li><p>Standard</p><ul><li>Waits for execution to finish and delivers the response all at once</li></ul></li><li><p>Streaming</p><ul><li>Used with the Streaming API Response function, stream the response in chunks to a service that supports it</li></ul></li></ul><p><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span> <a href="../../../xano-ai/streaming-apis.md#streaming-api-response"><strong>Learn more about streaming APIs</strong></a></p></td></tr><tr><td>Response caching</td><td>Cache the response and redeliver it for future calls<br><br><span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span><a href="../../additional-features/response-caching.mdx"> <strong>Learn more about response caching</strong></a></td></tr></tbody></table>

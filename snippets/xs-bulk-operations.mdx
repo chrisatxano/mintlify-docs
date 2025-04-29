@@ -1,0 +1,20 @@
+---
+title: XS - Bulk Operations
+---
+
+## <img src="../assets/CleanShot 2025-02-27 at 10.32.33@2x.png" alt="" data-size="line">   <a href="#xs-secretkey" id="xs-secretkey"></a>
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+    security.create_rsa_key {
+      bits = 1024
+      format = "object"
+    } as crypto1
+```
+
+![](<../assets/CleanShot 2025-03-06 at 22.09.40@2x.png>)
+
+</details>

@@ -1,0 +1,18 @@
+---
+title: XS Filter -istarts_with
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> istarts\_with <a href="#xsistarts_with" id="xsistarts_with"></a>
+
+`value|istarts_with:prefix`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"HELLO world"|istarts_with:"hello"    // Returns true (case insensitive)
+"Test"|istarts_with:"test"           // Returns true
+```
+
+</details>

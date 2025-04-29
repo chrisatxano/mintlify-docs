@@ -1,0 +1,27 @@
+---
+title: XS - Append Text
+---
+
+## <img src="../assets/docuBadge (10).png" alt="" data-size="line"> Append Text <a href="#xs-textappend" id="xs-textappend"></a>
+
+```javascript
+    text.append $myText {
+      value = "Text to append"
+    }
+```
+
+<table><thead><tr><th width="175">Parameter</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>$myText</td><td>This is the variable that contains the text to target</td><td>$myText</td></tr><tr><td>value</td><td>This is the text to append to the text in the variable.</td><td>"Text to append"</td></tr></tbody></table>
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+    text.append $myText {
+      value = "Text to append"
+    }  
+```
+
+![](<../assets/CleanShot 2025-03-06 at 15.57.48.png>)
+
+</details>

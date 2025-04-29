@@ -1,0 +1,18 @@
+---
+title: XS Filter -epochms_add_ms
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> add\_ms\_to\_timestamp <a href="#xsepochms_add_ms" id="xsepochms_add_ms"></a>
+
+`value|add_ms_to_timestamp:milliseconds`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+1698710400000|add_ms_to_timestamps:5000     // Adds 5 seconds (5000ms) to timestamp
+1698710400000|add_ms_to_timestamp:-2000    // Subtracts 2 seconds (2000ms) from timestamp
+```
+
+</details>

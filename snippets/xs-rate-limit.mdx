@@ -1,0 +1,19 @@
+---
+title: XS -Rate Limit
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Rate Limit <a href="#xs-rate-limit" id="xs-rate-limit"></a>
+
+```javascript
+redis.ratelimit {
+  key = "ip:"|add:$request.ip
+  max = 100
+  ttl = 3600
+  error = "Rate limit exceeded. Try again later."
+} as rate_status
+```
+
+* Implements rate limiting
+* Tracks attempts within time window
+* Returns current limit status
+* Throws error when limit exceeded

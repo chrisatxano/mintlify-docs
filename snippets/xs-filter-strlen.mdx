@@ -1,0 +1,18 @@
+---
+title: XS Filter -strlen
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> strlen <a href="#xsstrlen" id="xsstrlen"></a>
+
+`value|strlen`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"hello"|strlen    // Returns 5
+""|strlen         // Returns 0
+```
+
+</details>

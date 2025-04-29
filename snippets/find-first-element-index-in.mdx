@@ -1,0 +1,25 @@
+---
+title: Find First Element Index In
+---
+
+## <img src="../assets/CleanShot 2025-02-27 at 10.32.33@2x.png" alt="" data-size="line">  Find All Elements <a href="#xs-arrayfilter" id="xs-arrayfilter"></a>
+
+```javascript
+array.filter ($arrayVariable) if (`$this == 1`) as allFoundElements
+```
+
+<table><thead><tr><th width="175">Parameter</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>$arrayVariable</td><td>This is the variable that contains the array you want to find the element in.</td><td>$arrayVariable</td></tr><tr><td>if</td><td>This is where you define the conditions of the element you want to find. Use <code>$this</code> to represent each individual item in the array.</td><td>if (`$this == 1`)</td></tr><tr><td>as</td><td>The variable that you want to store all of the found elements</td><td>allFoundElements</td></tr></tbody></table>
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+array.filter ($arrayVariable) if (`$this == 1`) as allFoundElements
+```
+
+![](<../assets/CleanShot 2025-03-06 at 12.26.41.png>)
+
+![](<../assets/CleanShot 2025-03-06 at 12.27.01.png>)
+
+</details>

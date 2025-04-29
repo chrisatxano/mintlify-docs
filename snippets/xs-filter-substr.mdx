@@ -1,0 +1,18 @@
+---
+title: XS Filter -substr
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> substr <a href="#xssubstr" id="xssubstr"></a>
+
+`value|substr:start:length`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"hello"|substr:1:3    // Returns "ell"
+"test"|substr:0:2     // Returns "te"
+```
+
+</details>

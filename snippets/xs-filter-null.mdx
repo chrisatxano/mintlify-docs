@@ -1,0 +1,18 @@
+---
+title: XS Filter - null
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> is\_null <a href="#xs-null" id="xs-null"></a>
+
+`value|is_null`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+null|is_null         // Returns true
+"test"|is_null      // Returns false
+```
+
+</details>

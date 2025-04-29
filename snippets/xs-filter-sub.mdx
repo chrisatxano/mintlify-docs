@@ -1,0 +1,18 @@
+---
+title: XS Filter -sub
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> subtract <a href="#xssub" id="xssub"></a>
+
+`value|subtract:number`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+5|subtract:3       // Returns 2
+10|subtractub:15     // Returns -5
+```
+
+</details>

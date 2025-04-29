@@ -1,0 +1,44 @@
+---
+title: XS - External API Request
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> External API Request <a href="#xs-externalapirequest" id="xs-externalapirequest"></a>
+
+```javascript
+api.request {
+  url = "https://www.myapi.com/myApiEndpoint"
+  method = "GET"
+  params = {}|set:"a":1
+  headers = []|array_push:"Authorization: Bearer abc123"
+} as api1
+```
+
+| Parameter | Purpose                                                 | Example                                 |
+| --------- | ------------------------------------------------------- | --------------------------------------- |
+| url       | The endpoint URL to send the request to                 | `"https://www.myapi.com/myApiEndpoint"` |
+| method    | The HTTP method to use                                  | `"GET"`, `"POST"`, `"PUT"`, `"DELETE"`  |
+| params    | Query parameters or body data to send with the request. | \`{}                                    |
+| headers   | Array of HTTP headers to include in the request         | \`\[]                                   |
+| as        | Variable name to reference this request                 | `api1`                                  |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+api.request {
+  url = "https://api.example.com/users"
+  method = "POST"
+  params = {}|set:"name":"John"|set:"age":30
+  headers = []|array_push:"Content-Type: application/json"
+} as createUser
+```
+
+This creates an API request that:
+
+* Sends a POST request to the specified URL
+* Includes query parameters or body data
+* Sets custom headers
+* Can be referenced using the alias "createUser"
+
+</details>

@@ -1,0 +1,19 @@
+---
+title: XS DB -audio
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> audio <a href="#xs-audio" id="xs-audio"></a>
+
+`audio field_name`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+audio podcast      // An audio field for podcast episodes
+audio message     // An audio field for voice messages
+audio music       // An audio field for music tracks
+```
+
+</details>

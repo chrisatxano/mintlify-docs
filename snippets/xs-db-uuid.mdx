@@ -1,0 +1,19 @@
+---
+title: XS DB -uuid
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> uuid <a href="#xs-streaming-api-request" id="xs-streaming-api-request"></a>
+
+`uuid field_name`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+uuid session_id      // A UUID field for session identification
+uuid device_id       // A UUID field for device identification
+uuid token           // A UUID field for unique tokens
+```
+
+</details>

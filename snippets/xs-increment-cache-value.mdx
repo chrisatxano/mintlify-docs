@@ -1,0 +1,37 @@
+---
+title: XS -Increment Cache Value
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Increment Cache Value <a href="#xs-increment-cache-value" id="xs-increment-cache-value"></a>
+
+```javascript
+redis.incr {
+  package_key = ""
+  key = ""
+  by = 1
+} as x3
+```
+
+| Parameter    | Purpose                | Example           |
+| ------------ | ---------------------- | ----------------- |
+| package\_key | Optional namespace     | `"app1"`          |
+| key          | Cache key to increment | `"counter:123"`   |
+| by           | Increment amount       | `1`, `5`          |
+| as           | Alias for new value    | `x3`, `new_count` |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+redis.incr {
+  key = "visits:"|add:$page.id
+  by = 1
+} as visit_count
+```
+
+* Increments numeric value
+* Creates key with value 0 if doesn't exist
+
+</details>
+

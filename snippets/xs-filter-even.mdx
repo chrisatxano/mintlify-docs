@@ -1,0 +1,18 @@
+---
+title: XS Filter - even
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> even <a href="#xs-even" id="xs-even"></a>
+
+`value|even`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+4|even       // Returns true
+7|even       // Returns false
+```
+
+</details>

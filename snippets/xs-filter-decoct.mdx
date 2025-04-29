@@ -1,0 +1,18 @@
+---
+title: XS Filter - decoct
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> decoct <a href="#xs-decoct" id="xs-decoct"></a>
+
+`value|decoct`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+8|decoct     // Returns "10"
+15|decoct    // Returns "17"
+```
+
+</details>

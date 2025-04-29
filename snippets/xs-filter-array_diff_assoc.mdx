@@ -1,0 +1,18 @@
+---
+title: XS Filter - array_diff_assoc
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> diff\_assoc <a href="#xs-array_diff_assoc" id="xs-array_diff_assoc"></a>
+
+`value|diff_assoc:array`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+{"a":1,"b":2}|diff_assoc:{"b":2,"c":3}    // Returns {"a":1}
+{"x":1,"y":2}|diff_assoc:{"y":3,"z":4}    // Returns {"x":1,"y":2}
+```
+
+</details>

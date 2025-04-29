@@ -1,0 +1,32 @@
+---
+title: XS - create file resource
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Create File Resource <a href="#xs-createfileresource" id="xs-createfileresource"></a>
+
+```javascript
+storage.create_file_resource {
+  filename = "filename.ext"
+  filedata = "filedata"
+}
+```
+
+| Parameter | Purpose                    | Example                          |
+| --------- | -------------------------- | -------------------------------- |
+| filename  | Name of the file to create | `"document.txt"`, `"data.json"`  |
+| filedata  | Content of the file        | `"Hello World"`, `$encoded_data` |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+storage.create_file_resource {
+  filename = "export_"|add:$timestamp|add:".csv"
+  filedata = $processed_data|to_csv
+}
+```
+
+* Creates a file resource from provided data
+
+</details>

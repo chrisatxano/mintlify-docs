@@ -1,0 +1,18 @@
+---
+title: XS Filter - url_decode
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> url\_decode <a href="#xs-url_decode" id="xs-url_decode"></a>
+
+`value|url_decode`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"Hello%20World"|url_decode    // Returns "Hello World"
+"test%2Bfile"|url_decode     // Returns "test+file"
+```
+
+</details>

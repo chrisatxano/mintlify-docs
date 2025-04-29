@@ -1,0 +1,18 @@
+---
+title: XS Filter -url_delarg
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> url\_delarg <a href="#xsurl_delarg" id="xsurl_delarg"></a>
+
+`value|url_delarg:name`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"https://example.com?page=2"|url_delarg:"page"    // Returns "https://example.com"
+"https://example.com?x=1&y=2"|url_delarg:"x"      // Returns "https://example.com?y=2"
+```
+
+</details>

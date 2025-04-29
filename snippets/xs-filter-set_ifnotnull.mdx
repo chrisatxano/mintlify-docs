@@ -1,0 +1,18 @@
+---
+title: XS FILTER -set_ifnotnull
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> set\_ifnotnull <a href="#xsset_ifnotnull" id="xsset_ifnotnull"></a>
+
+`value|set_ifnotnull:key:new_value`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+{}|set_ifnotnull:"name":null          // Returns {}
+{}|set_ifnotnull:"name":"John"        // Returns {"name":"John"}
+```
+
+</details>

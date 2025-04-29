@@ -1,0 +1,17 @@
+---
+title: XS Filter - crypto_jws_encode
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> jws\_encode <a href="#xs-crypto_jws_encode" id="xs-crypto_jws_encode"></a>
+
+`value|jws_encode:key:header:algo:max_age`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+data|jws_encode:"{}":"{}":"HS256":0    // Returns JWS token
+```
+
+</details>

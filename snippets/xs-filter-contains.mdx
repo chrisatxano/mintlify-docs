@@ -1,0 +1,18 @@
+---
+title: XS Filter -contains
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> contains <a href="#xscontains" id="xscontains"></a>
+
+`value|contains:substring`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"Hello World"|contains:"World"    // Returns true
+"test123"|contains:"abc"         // Returns false
+```
+
+</details>

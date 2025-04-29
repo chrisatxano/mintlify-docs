@@ -1,0 +1,47 @@
+---
+title: XS - Get Record
+---
+
+## <img src="../assets/docuBadge (2).png" alt="" data-size="line"> Get Record <a href="#xs-getrecord" id="xs-getrecord"></a>
+
+## Simple query
+
+```javascript
+db.get test_data {
+      field_name = "id"
+      field_value = $input.id
+    } as $foundRecord
+}
+```
+
+<table><thead><tr><th width="175">Parameter</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>field_name</td><td>Uses the specified column to search against</td><td>id</td></tr><tr><td>field_value</td><td>Uses the value to search the specified column to retrieve a found match</td><td>"1"</td></tr><tr><td>as</td><td>The variable name that holds the record found</td><td>foundRecord</td></tr></tbody></table>
+
+## Customizing the Response
+
+```
+db.get color_pair {
+      field_name = "id"
+      field_value = $input.id
+      output = ["id", "created_at", "user"]
+} as $color_pair1
+```
+
+| Parameter | Purpose                                                 | Example                        |
+| --------- | ------------------------------------------------------- | ------------------------------ |
+| output    | The list of fields returned to display in the response. | \["id", "created\_at", "user"] |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+db.get test_data {
+      field_name = "id"
+      field_value = $input.id
+    } as foundRecord
+}
+```
+
+![](<../assets/image (84).png>)
+
+</details>

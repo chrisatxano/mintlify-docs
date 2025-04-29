@@ -1,0 +1,19 @@
+---
+title: XS Filter - gte
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> greater\_than\_or\_equal <a href="#xs-gte" id="xs-gte"></a>
+
+`value|greater_than_or_equal:compare_value`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+5|greater_than_or_equal:3        // Returns true
+5|greater_than_or_equal:5        // Returns true
+2|greater_than_or_equal:5        // Returns false
+```
+
+</details>

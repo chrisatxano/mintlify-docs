@@ -1,0 +1,19 @@
+---
+title: XS DB -geo_polygon
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> geo\_polygon <a href="#xs-geo_polygon" id="xs-geo_polygon"></a>
+
+`geo_polygon field_name`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+geo_polygon area        // A polygon field for area definition
+geo_polygon territory   // A polygon field for territory bounds
+geo_polygon zone        // A polygon field for zone definition
+```
+
+</details>

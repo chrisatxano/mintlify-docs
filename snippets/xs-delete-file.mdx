@@ -1,0 +1,32 @@
+---
+title: XS - delete file
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Delete File <a href="#xs-deletefile" id="xs-deletefile"></a>
+
+```javascript
+delete_file {
+  pathname = "/path/to/file.ext"
+}
+```
+
+| Parameter | Purpose                    | Example                             |
+| --------- | -------------------------- | ----------------------------------- |
+| pathname  | Path to the file to delete | `"/path/to/file.ext"`, `$file.path` |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+delete_file {
+  pathname = "/uploads/"|add:$file.name
+}
+```
+
+* Deletes a file from the specified path
+* Requires full path to the file
+* Permanently removes the file
+* Use with caution as deletion cannot be undone
+
+</details>

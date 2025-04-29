@@ -1,0 +1,19 @@
+---
+title: XS DB -video
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> video <a href="#xs-video" id="xs-video"></a>
+
+`video field_name`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+video tutorial      // A video field for tutorial content
+video promo        // A video field for promotional content
+video recording    // A video field for recorded content
+```
+
+</details>

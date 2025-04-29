@@ -1,0 +1,18 @@
+---
+title: XS Filter -array_diff
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> diff <a href="#xsarray_diff" id="xsarray_diff"></a>
+
+`value|diff:array`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+[1,2,3]|diff:[2,3]    // Returns [1]
+[4,5,6]|diff:[4,5]    // Returns [6]
+```
+
+</details>

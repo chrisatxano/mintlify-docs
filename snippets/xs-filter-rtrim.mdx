@@ -1,0 +1,18 @@
+---
+title: XS Filter -rtrim
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> rtrim <a href="#xsrtrim" id="xsrtrim"></a>
+
+`value|rtrim:characters`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"hello  "|rtrim        // Returns "hello"
+"test..."|rtrim:"."    // Returns "test"
+```
+
+</details>

@@ -1,0 +1,778 @@
+# 'Text'
+
+{% include "../../.gitbook/includes/filter-note.md" %}
+
+## addslashes
+
+Adds a backslash to the following characters: single quote, double quote, backslash, and null character.
+
+The addslashes filter is useful when preparing text for insertion into databases, JSON strings, or other contexts where special characters need to be escaped to prevent syntax errors or security vulnerabilities such as SQL injection.
+
+Inputs:
+
+* primary value: The text string to escape
+
+| Primary Value (text) | Output                |
+| -------------------- | --------------------- |
+| "Let's go"           | "Let's go"            |
+| "He said "Hello""    | "He said \\"Hello\\"" |
+| "C:\Program Files"   | "C:\\\Program Files"  |
+
+## capitalize
+
+Converts the first letter of each word to a capital letter
+
+The capitalize filter is useful when formatting names, titles, headings, or any text that follows title case conventions, such as book titles, product names, or section headers in documents.
+
+Inputs:
+
+* primary value: The text string to capitalize
+
+| Primary Value (text)  | Output                |
+| --------------------- | --------------------- |
+| "hello world"         | "Hello World"         |
+| "john smith"          | "John Smith"          |
+| "THE QUICK BROWN FOX" | "The Quick Brown Fox" |
+
+## concat
+
+Concatenates two values together
+
+The concat filter is valuable for combining strings, such as joining first and last names, building full addresses, assembling complete URLs, or constructing formatted messages with dynamic values.
+
+Inputs:
+
+* primary value: The first string
+* value: The second string to append to the primary value
+
+| Primary Value (text)  | Other Value (text) | Separator | Output                          |
+| --------------------- | ------------------ | --------- | ------------------------------- |
+| "Hello, "             | "World!"           | " "       | "Hello, World!"                 |
+| "User"                | "John"             | ": "      | "User: John"                    |
+| "https://example.com" | "page.html"        | "/"       | "https://example.com/page.html" |
+
+## contains
+
+Returns whether or not the expression is found
+
+The contains filter is useful for checking if a specific word or phrase exists within text, which is essential for search functionality, content filtering, conditional logic based on text content, or validating user input.
+
+Inputs:
+
+* primary value: The text to search within
+* substring: The text to search for
+
+| Primary Value (text)  | Other Value (substring) | Output |
+| --------------------- | ----------------------- | ------ |
+| "Hello World"         | "World"                 | true   |
+| "apple banana orange" | "cherry"                | false  |
+| "user@example.com"    | "@"                     | true   |
+
+## convert\_encoding
+
+Convert the character encoding of the supplied text
+
+The convert\_encoding filter is valuable when working with data from different systems that use different character encodings, such as processing international text, handling legacy data, or ensuring compatibility across platforms with different encoding standards.
+
+Inputs:
+
+* primary value: The text to convert
+* from\_encoding: The current encoding of the text
+* to\_encoding: The target encoding to convert to
+
+| Primary Value (text) | Other Value (from\_encoding) | Other Value (to\_encoding) | Output                |
+| -------------------- | ---------------------------- | -------------------------- | --------------------- |
+| "Café"               | "UTF-8"                      | "ISO-8859-1"               | Encoded text (binary) |
+| Binary data          | "ISO-8859-1"                 | "UTF-8"                    | "Café"                |
+
+## detect\_encoding
+
+Detect the character encoding of the supplied text
+
+The detect\_encoding filter is useful when receiving text from unknown sources, such as uploaded files, API responses, or user input, and you need to determine the encoding before processing to ensure proper handling of special characters and international text.
+
+Inputs:
+
+* primary value: The text to analyze
+
+| Primary Value (text) | Output       |
+| -------------------- | ------------ |
+| "Hello World"        | "ASCII"      |
+| "こんにちは"              | "UTF-8"      |
+| Binary data          | "ISO-8859-1" |
+
+## ends\_with
+
+Returns whether or not the expression is present at the end
+
+The ends\_with filter is helpful for validating file extensions, checking URL patterns, verifying if text ends with specific terms (like domain names), or implementing string-based conditions that depend on the ending of text.
+
+Inputs:
+
+* primary value: The text to check
+* suffix: The ending text to look for
+
+| Primary Value (text) | Other Value (suffix) | Output |
+| -------------------- | -------------------- | ------ |
+| "image.jpg"          | ".jpg"               | true   |
+| "example.com"        | ".org"               | false  |
+| "Hello World"        | "World"              | true   |
+
+## escape
+
+Converts special characters into their escaped variants. Ex: for tabs and\
+for newlines.
+
+The escape filter is essential when preparing text for environments where special characters need to be represented by escape sequences, such as JSON strings, XML documents, programming code, or any context where raw special characters might cause parsing issues.
+
+Inputs:
+
+* primary value: The text to escape
+
+| Primary Value (text)    | Output                |
+| ----------------------- | --------------------- |
+| <p>"Line1<br>Line2"</p> | "Line1\nLine2"        |
+| "Tab.    Separated"     | "Tab\tSeparated"      |
+| "Quotes "quoted""       | "Quotes \\"quoted\\"" |
+
+## unescape
+
+Converts escaped variants of characters back into their unescaped variants.
+
+### Examples
+
+| Example               | Output            |
+| --------------------- | ----------------- |
+| "Line1\\\nLine2"      | "Line1\nLine2"    |
+| "Tab\\\tSeparated"    | "Tab\tSeparated"  |
+| "Quotes \\"quoted\\"" | "Quotes "quoted"" |
+
+***
+
+## from\_utf8
+
+Convert the supplied text from UTF-8 to its binary form (ISO-8859-1).
+
+The from\_utf8 filter is useful when you need to convert UTF-8 encoded text to binary form, which may be necessary for certain legacy systems, binary protocol requirements, or special data transmission formats that expect ISO-8859-1 encoding.
+
+Inputs:
+
+* primary value: The UTF-8 encoded text
+
+| Primary Value (text) | Output                |
+| -------------------- | --------------------- |
+| "Hello World"        | Binary representation |
+| "Café"               | Binary representation |
+| "こんにちは"              | Binary representation |
+
+## icontains
+
+Returns whether or not the case-insensitive expression is found
+
+The icontains filter is valuable for case-insensitive text searches, such as user search features, content filtering without case sensitivity, or form validation where case should not matter in determining if text contains specific terms.
+
+Inputs:
+
+* primary value: The text to search within
+* substring: The case-insensitive text to search for
+
+| Primary Value (text)  | Other Value (substring) | Output |
+| --------------------- | ----------------------- | ------ |
+| "Hello World"         | "world"                 | true   |
+| "apple banana orange" | "BANANA"                | true   |
+| "user@EXAMPLE.com"    | "example"               | true   |
+
+## iends\_with
+
+Returns whether or not the case-insensitive expression is present at the end
+
+The iends\_with filter is useful for case-insensitive validation of endings, such as checking file extensions regardless of case, validating domain names, or implementing any string comparison that should ignore case differences at the end of text.
+
+Inputs:
+
+* primary value: The text to check
+* suffix: The case-insensitive ending to look for
+
+| Primary Value (text) | Other Value (suffix) | Output |
+| -------------------- | -------------------- | ------ |
+| "image.JPG"          | ".jpg"               | true   |
+| "EXAMPLE.COM"        | ".com"               | true   |
+| "Hello world"        | "WORLD"              | true   |
+
+## iindex
+
+Returns the index of the case-insensitive expression or false if it can't be found
+
+The iindex filter is helpful for finding the position of text regardless of case, which is useful for parsing, text processing, or extracting substrings when case sensitivity is not important in determining the starting position.
+
+Inputs:
+
+* primary value: The text to search within
+* substring: The case-insensitive text to locate
+
+| Primary Value (text)  | Other Value (substring) | Output |
+| --------------------- | ----------------------- | ------ |
+| "Hello World"         | "world"                 | 6      |
+| "apple banana orange" | "BANANA"                | 6      |
+| "Hello World"         | "xyz"                   | false  |
+
+## index
+
+Returns the index of the case-sensitive expression or false if it can't be found
+
+The index filter is essential for finding the exact position of text with case sensitivity, which is important for precise text processing, extracting substrings with exact matches, or implementing search functionality that respects case differences.
+
+Inputs:
+
+* primary value: The text to search within
+* substring: The case-sensitive text to locate
+
+| Primary Value (text)  | Other Value (substring) | Output |
+| --------------------- | ----------------------- | ------ |
+| "Hello World"         | "World"                 | 6      |
+| "Hello World"         | "world"                 | false  |
+| "apple banana orange" | "banana"                | 6      |
+
+## istarts\_with
+
+Returns whether or not the case-insensitive expression is present at the beginning
+
+The istarts\_with filter is valuable for case-insensitive validation of text beginnings, such as checking prefixes, validating file names, or implementing any string comparison that should ignore case differences at the start of text.
+
+Inputs:
+
+* primary value: The text to check
+* prefix: The case-insensitive beginning to look for
+
+| Primary Value (text) | Other Value (prefix) | Output |
+| -------------------- | -------------------- | ------ |
+| "Hello World"        | "hello"              | true   |
+| "EXAMPLE.com"        | "ex"                 | true   |
+| "Hello World"        | "WORLD"              | false  |
+
+## list\_encodings
+
+List support character encodings
+
+The list\_encodings filter is useful when you need to see all available character encodings supported by the system, which can help in determining which encodings to use for conversion or when working with internationalization features.
+
+Inputs:
+
+* primary value: No input required, can be empty
+
+| Primary Value | Output                                                                |
+| ------------- | --------------------------------------------------------------------- |
+| empty         | \["UTF-8", "ASCII", "ISO-8859-1", ...] (array of supported encodings) |
+
+## ltrim
+
+Trim whitespace or other characters from the left side and return the result
+
+The ltrim filter is helpful for cleaning up text by removing leading whitespace or specific characters, which is common in form data processing, CSV parsing, or any situation where leading characters need to be removed for consistent formatting.
+
+Inputs:
+
+* primary value: The text to trim
+* characters: Optional string of characters to trim (default is whitespace)
+
+| Primary Value (text) | Other Value (characters) | Output         |
+| -------------------- | ------------------------ | -------------- |
+| " Hello World"       | null                     | "Hello World"  |
+| "///path/to/file"    | "/"                      | "path/to/file" |
+| "000123"             | "0"                      | "123"          |
+
+## querystring\_parse
+
+Parses a query string from a URL into its individual key-value pairs.
+
+The querystring\_parse filter is valuable when working with URLs and needing to extract and organize query parameters, such as processing web analytics data, handling form submissions, or working with API requests that include query strings.
+
+Inputs:
+
+* primary value: The query string to parse
+
+| Primary Value (text)                  | Output                                               |
+| ------------------------------------- | ---------------------------------------------------- |
+| "name=John\&age=30"                   | {"name": "John", "age": "30"}                        |
+| "search=apple\&sort=price\&order=asc" | {"search": "apple", "sort": "price", "order": "asc"} |
+| "id=123\&id=456"                      | {"id": \["123", "456"]}                              |
+
+## regex\_get\_all\_matches
+
+Return all matches performed by a regular expression on the supplied subject text.
+
+The regex\_get\_all\_matches filter is essential when you need to extract all occurrences of patterns in text, such as finding all email addresses, phone numbers, dates, or any repeated pattern in content for analysis or extraction.
+
+Inputs:
+
+* primary value: The regex expression
+* text: The value to search
+
+| Primary Value (pattern)           | Other Value (text)                            | Output                                          |
+| --------------------------------- | --------------------------------------------- | ----------------------------------------------- |
+| "\\/\[\w.+-]+@\[\w-]+\\.\[\w.-]+/ | "Contact: john@example.com, jane@example.com" | \[\["john@example.com"], \["jane@example.com"]] |
+| "/\d{4}-\d{2}-\d{2}/"             | "Dates: 2023-01-15, 2023-02-20"               | \[\["2023-01-15"], \["2023-02-20"]]             |
+| "/\d+/"                           | "No matches here"                             | \[]                                             |
+
+## regex\_get\_first\_match
+
+Return the first set of matches performed by a regular expression on the supplied subject text.
+
+The regex\_get\_first\_match filter is useful when you only need the first occurrence of a pattern, such as extracting the first URL, email address, or any specific pattern from text when multiple matches are not needed.
+
+Inputs:
+
+* primary value: The regex expression
+* text: The value to search
+
+| Primary Value (pattern)          | Other Value (text)                            | Output                                |
+| -------------------------------- | --------------------------------------------- | ------------------------------------- |
+| "/\[\w.+-]+@\[\w-]+\\.\[\w.-]+/" | "Contact: john@example.com, jane@example.com" | \["john@example.com"]                 |
+| "/(\[A-Z]+)-(\d+)-(\[A-Z]+)/"    | "ID: ABC-123-XYZ"                             | \["ABC-123-XYZ", "ABC", "123", "XYZ"] |
+| "/\d+/"                          | "No matches here"                             | null                                  |
+
+## regex\_matches
+
+Tests if a regular expression matches the supplied subject text.
+
+The regex\_matches filter is valuable for validating text against patterns, such as checking if a string matches a specific format (email, phone number, postal code) or testing if content adheres to certain structural requirements before processing.
+
+Inputs:
+
+* primary value: The regex expression
+* text: The value to check
+
+| Primary Value (pattern)            | Other Value (text) | Output |
+| ---------------------------------- | ------------------ | ------ |
+| "/^\[\w.+-]+@\[\w-]+\\.\[\w.-]+$/" | "john@example.com" | true   |
+| "/^\d{4}-\d{2}-\d{2}$/"            | "2023-01-15"       | true   |
+| "/^\d+$/"                          | "ABC123"           | false  |
+
+## regex\_quote
+
+Update the supplied text value to be properly escaped for regular expressions.
+
+The regex\_quote filter is helpful when incorporating user-provided text into regular expressions, ensuring special regex characters are escaped to be treated as literals, thus preventing syntax errors or unintended pattern behavior.
+
+Inputs:
+
+* primary value: The text to escape for regex use
+
+| Primary Value (text) | Output              |
+| -------------------- | ------------------- |
+| "Hello (World)"      | "Hello \\(World\\)" |
+| "example.com"        | "example\\.com"     |
+| "$100 + 25%"         | "\\$100 \\+ 25\\%"  |
+
+## regex\_replace
+
+Perform a regular expression search and replace on the supplied subject text.
+
+The regex\_replace filter is essential for advanced text transformation, such as formatting text based on patterns, standardizing formats, cleaning text with complex patterns, or any sophisticated find-and-replace operation that requires pattern matching.
+
+Inputs:
+
+* primary value: The text to perform replacements on
+* pattern: The regular expression pattern to find
+* replacement: The replacement text
+
+| Primary Value (pattern) | Other Value (text)       | Other Value (replacement) | Output                |
+| ----------------------- | ------------------------ | ------------------------- | --------------------- |
+| "/\d{10}/"              | "Phone: 1234567890"      | "XXX-XXX-XXXX"            | "Phone: XXX-XXX-XXXX" |
+| "/\d{4}-\d{2}-\d{2}/"   | "Date: 2023-01-15"       | "YYYY-MM-DD"              | "Date: YYYY-MM-DD"    |
+| "/\d+/"                 | "Remove all digits: 123" | ""                        |                       |
+
+## replace
+
+Replace a text phrase with another
+
+The replace filter is useful for simple text substitutions, such as correcting common spelling errors, replacing deprecated terms, standardizing terminology, or implementing basic find-and-replace functionality.
+
+Inputs:
+
+* primary value: The text to modify
+* search: The text to find
+* replace: The text to insert instead
+
+| Primary Value (text) | Other Value (search) | Other Value (replace) | Output                 |
+| -------------------- | -------------------- | --------------------- | ---------------------- |
+| "Hello World"        | "World"              | "Universe"            | "Hello Universe"       |
+| "color color color"  | "color"              | "colour"              | "colour colour colour" |
+| "I like apples"      | "like"               | "love"                | "I love apples"        |
+
+## rtrim
+
+Trim whitespace or other characters from the right return the result
+
+The rtrim filter is valuable for cleaning up text by removing trailing whitespace or specific characters, which is useful in form data processing, file path normalization, or any context where trailing characters need to be removed.
+
+Inputs:
+
+* primary value: The text to trim
+* characters: Optional string of characters to trim (default is whitespace)
+
+| Primary Value (text) | Other Value (characters) | Output         |
+| -------------------- | ------------------------ | -------------- |
+| "Hello World "       | null                     | "Hello World"  |
+| "path/to/file///"    | "/"                      | "path/to/file" |
+| "123000"             | "0"                      | "123"          |
+
+## split
+
+Splits text into an array of text and returns the result
+
+The split filter is essential for breaking text into parts based on a delimiter, which is useful for parsing CSV data, processing delimited lists, extracting elements from structured text, or any operation that requires dividing text into separate components.
+
+Inputs:
+
+* primary value: The text to split
+* delimiter: The character or string that separates the parts
+
+| Primary Value (text)  | Other Value (delimiter) | Output                         |
+| --------------------- | ----------------------- | ------------------------------ |
+| "apple,banana,orange" | ","                     | \["apple", "banana", "orange"] |
+| "2023-01-15"          | "-"                     | \["2023", "01", "15"]          |
+| "Hello World"         | " "                     | \["Hello", "World"]            |
+
+## sprintf
+
+formats text with variable substitution
+
+The sprintf filter is valuable for creating formatted text with placeholders, similar to many programming languages, which allows for precisely formatted numbers, padded text, or complex string compositions with dynamic values.
+
+Use %s for string replacement and %d for integer replacement.
+
+Inputs:
+
+* primary value: The format string with placeholders
+* values: Additional values to insert into the format
+
+| Primary Value (format) | Other Values | Output          |
+| ---------------------- | ------------ | --------------- |
+| "Hello, %s!"           | "World"      | "Hello, World!" |
+| "ID: 00%d              | 42           | "ID: 0042"      |
+
+## starts\_with
+
+Returns whether or not the expression is present at the beginning
+
+The starts\_with filter is useful for checking if text begins with specific characters or words, which is helpful for validating prefixes, checking file types, implementing pattern matching, or identifying text categories based on standard beginnings.
+
+Inputs:
+
+* primary value: The text to check
+* prefix: The beginning text to look for
+
+| Primary Value (text) | Other Value (prefix) | Output |
+| -------------------- | -------------------- | ------ |
+| "Hello World"        | "Hello"              | true   |
+| "example.com"        | "http://"            | false  |
+| "12345"              | "123"                | true   |
+
+## strip\_accents
+
+Removes accents from characters
+
+The strip\_accents filter is helpful for normalizing text by removing diacritical marks, which can be useful for search functionality, creating URL slugs, or standardizing text for comparison where accents should be ignored.
+
+Inputs:
+
+* primary value: The text with accents to normalize
+
+| Primary Value (text) | Output        |
+| -------------------- | ------------- |
+| "café"               | "cafe"        |
+| "résumé"             | "resume"      |
+| "Mötley Crüe"        | "Motley Crue" |
+
+## strip\_html
+
+Removes HTML tags from a string
+
+The strip\_html filter is essential when you need plain text extracted from HTML content, such as generating text previews, preparing content for search indexing, or sanitizing user input that may contain HTML markup.
+
+Inputs:
+
+* primary value: The HTML text to clean
+
+| Primary Value (text)      | Output       |
+| ------------------------- | ------------ |
+| "\<a href="#">Click here" | "Click here" |
+
+## strlen
+
+Returns the number of characters
+
+The strlen filter is useful for measuring text length, which is essential for input validation, enforcing character limits, truncating text for display, or any operation that depends on knowing the exact length of a string.
+
+Inputs:
+
+* primary value: The text to measure
+
+| Primary Value (text) | Output |
+| -------------------- | ------ |
+| "Hello World"        | 11     |
+| ""                   | 0      |
+| "12345"              | 5      |
+
+## sql\_alias
+
+Safely wrap text intended for use as table names or aliases in SQL queries.
+
+Useful if you are dynamically constructing SQL queries and you want to ensure prevention of SQL injection attacks. `sql_alias` puts **double quotes** around things like table names and escapes existing double quotes inside to keep the database from getting confused and executing unintended commands.&#x20;
+
+Let's say your sentence structure is:
+
+`"Show me the data from the" [BLANK] "table."`
+
+Now, a user provides the name of the table they want to see.
+
+*   **Without `sql_alias`:** If the user types in `users`, your sentence becomes:
+
+    `"Show me the data from the users table."` - This looks fine.
+*   **Without `sql_alias`:** If a malicious user types in something like:
+
+    `users; DROP TABLE important_data;`
+
+    Your sentence would become:
+
+    `"Show me the data from the users; DROP TABLE important_data; table."`
+
+    In the world of SQL, the `;` often separates different commands. So, instead of just looking at the `users` table, the database might also try to `DROP TABLE important_data;` which could delete crucial information! This is a **SQL Injection** attack.
+
+| Parameter    | Purpose           | Example   |
+| ------------ | ----------------- | --------- |
+| parent value | The value to wrap | `"users"` |
+
+### Examples
+
+| Input                | Output                 | Explanation                                                                   |
+| -------------------- | ---------------------- | ----------------------------------------------------------------------------- |
+| `users`              | `"users"`              | Simple table name, wrapped in double quotes.                                  |
+| `order details`      | `"order details"`      | Table name with a space, safely wrapped.                                      |
+| `user"info"`         | `"user""info"`         | Existing double quote within the name is escaped by doubling.                 |
+| `schema.products`    | `"schema.products"`    | Qualified table name, safely wrapped.                                         |
+| `` `special` ``      | ``"`special`"``        | Backticks are treated as regular characters and are wrapped in double quotes. |
+| `SELECT * FROM data` | `"SELECT * FROM data"` | While a SQL fragment, it's still wrapped in double quotes.                    |
+
+***
+
+## sql\_esc
+
+Safely wrap text intended for use as values within SQL queries. It wraps the input in single quotes (`'`) and escapes any existing single quotes within the input by doubling them.
+
+`sql_esc` puts **single quotes** around data values and escapes existing single quotes inside to make sure the database treats everything within those quotes as a single piece of data, not as parts of the SQL structure.
+
+For example, let's say your sentence structure is:
+
+`"Find all records where the name is" [BLANK] "."`
+
+Now, a user provides the name they want to search for.
+
+*   **Without `sql_esc`:** If the user types in `John Doe`, your sentence becomes:
+
+    `"Find all records where the name is John Doe."` - This looks fine.
+*   **Without `sql_esc`:** If a user types in a name with a single quote, like:
+
+    `O'Malley`
+
+    Your sentence would become:
+
+    `"Find all records where the name is O'Malley."`
+
+    In SQL, single quotes are often used to mark the beginning and end of a text value. The single quote in `O'Malley` could confuse the database and potentially lead to errors or security vulnerabilities.
+*   **Without `sql_esc` (Bigger Problem!):** What if a malicious user types:
+
+    `' OR 1=1 --`
+
+    Your sentence would become:
+
+    `"Find all records where the name is ' OR 1=1 -- ."`
+
+    In SQL, `'` starts a string, `OR 1=1` is always true, and `--` starts a comment (ignoring the rest). This could make the database return _all_ records, bypassing the intended search! This is another form of SQL Injection.
+
+| Parameter    | Purpose             | Example     |
+| ------------ | ------------------- | ----------- |
+| parent value | The value to escape | "User Name" |
+
+### Examples
+
+| Input                 | Output                  | Explanation                                                    |
+| --------------------- | ----------------------- | -------------------------------------------------------------- |
+| `John Doe`            | `'John Doe'`            | Simple string value, wrapped in single quotes.                 |
+| `O'Malley`            | `'O''Malley'`           | Existing single quote within the value is escaped by doubling. |
+| `user input`          | `'user input'`          | Value with a space, safely wrapped.                            |
+| `123`                 | `'123'`                 | Numeric value treated as a string and wrapped.                 |
+| `true`                | `'true'`                | Boolean value treated as a string and wrapped.                 |
+| `hello'world'`        | `'hello''world'''`      | Multiple single quotes are all escaped.                        |
+| `SELECT * FROM users` | `'SELECT * FROM users'` | While a SQL fragment, it's still wrapped in single quotes.     |
+
+***
+
+## substr
+
+Extracts a section of text
+
+The substr filter is valuable for extracting specific portions of text, such as parsing fixed-width data, truncating content to a maximum length, or isolating specific segments of structured text based on known positions.
+
+Inputs:
+
+* primary value: The source text
+* start: The starting position (0-based index)
+* length: Optional number of characters to extract (if omitted, extracts to the end)
+
+| Primary Value (text) | Other Value (start) | Other Value (length) | Output  |
+| -------------------- | ------------------- | -------------------- | ------- |
+| "Hello World"        | 6                   | 5                    | "World" |
+| "Hello World"        | 0                   | 5                    | "Hello" |
+| "Hello World"        | 6                   | null                 | "World" |
+
+## to\_lower
+
+Converts all characters to lower case and returns the result
+
+The to\_lower filter is essential for standardizing text case, which is useful for case-insensitive comparisons, normalizing user input, ensuring consistent formatting, or any context where text should be in lowercase regardless of original casing.
+
+Inputs:
+
+* primary value: The text to convert
+
+| Primary Value (text) | Output        |
+| -------------------- | ------------- |
+| "Hello World"        | "hello world" |
+| "EXAMPLE.COM"        | "example.com" |
+| "CamelCase"          | "camelcase"   |
+
+## to\_upper
+
+Converts all characters to upper case and returns the result
+
+The to\_upper filter is useful for standardizing text to uppercase, which is valuable for emphasizing text, creating headings, normalizing codes or identifiers, or any situation where consistent uppercase formatting is required.
+
+Inputs:
+
+* primary value: The text to convert
+
+| Primary Value (text) | Output        |
+| -------------------- | ------------- |
+| "Hello World"        | "HELLO WORLD" |
+| "example.com"        | "EXAMPLE.COM" |
+| "CamelCase"          | "CAMELCASE"   |
+
+## to\_utf8
+
+Convert the supplied text from its binary form (ISO-8859-1) to UTF-8.
+
+The to\_utf8 filter is valuable when working with binary data that needs to be converted to UTF-8 text, which is essential for proper display of international characters, working with modern text processing systems, or ensuring compatibility with UTF-8 compliant applications.
+
+Inputs:
+
+* primary value: The binary text in ISO-8859-1 encoding
+
+| Primary Value (binary) | Output        |
+| ---------------------- | ------------- |
+| Binary data            | "Hello World" |
+| Binary data            | "Café"        |
+| Binary data            | "こんにちは"       |
+
+## trim
+
+Trim whitespace or other characters from both sides and return the result
+
+The trim filter is essential for cleaning text by removing both leading and trailing whitespace or specific characters, which is common in form data processing, text normalization, or any context where surrounding characters need to be removed.
+
+Inputs:
+
+* primary value: The text to trim
+* characters: Optional string of characters to trim (default is whitespace)
+
+| Primary Value (text) | Other Value (characters) | Output         |
+| -------------------- | ------------------------ | -------------- |
+| " Hello World "      | null                     | "Hello World"  |
+| "/path/to/file/"     | "/"                      | "path/to/file" |
+| "===Test==="         | "="                      | "Test"         |
+
+## url\_addarg
+
+Parses a URL and returns an updated version with an encoded version of the supplied argument
+
+The url\_addarg filter is useful when building or modifying URLs by adding query parameters, which is common in constructing API requests, creating shareable links with parameters, or implementing tracking with UTM parameters.
+
+Inputs:
+
+* primary value: The URL to modify
+* key: The parameter name
+* value: The parameter value
+
+| Primary Value (URL)          | Other Value (key) | Other Value (value) | Output                                 |
+| ---------------------------- | ----------------- | ------------------- | -------------------------------------- |
+| "https://example.com"        | "id"              | "123"               | "https://example.com?id=123"           |
+| "https://example.com?page=1" | "sort"            | "asc"               | "https://example.com?page=1\&sort=asc" |
+| "https://example.com"        | "q"               | "search term"       | "https://example.com?q=search%20term"  |
+
+## url\_delarg
+
+Parses a URL and returns an updated version with the supplied argument removed
+
+The url\_delarg filter is valuable when cleaning or modifying URLs by removing specific query parameters, which is useful for creating canonical URLs, removing tracking parameters, or updating existing URLs by removing unwanted or expired parameters.
+
+Inputs:
+
+* primary value: The URL to modify
+* key: The parameter name to remove
+
+| Primary Value (URL)                    | Other Value (key) | Output                         |
+| -------------------------------------- | ----------------- | ------------------------------ |
+| "https://example.com?id=123"           | "id"              | "https://example.com"          |
+| "https://example.com?page=1\&sort=asc" | "sort"            | "https://example.com?page=1"   |
+| "https://example.com?a=1\&b=2\&c=3"    | "b"               | "https://example.com?a=1\&c=3" |
+
+## url\_getarg
+
+Gets the argument's value from a URL
+
+The url\_getarg filter is essential for extracting specific query parameters from URLs, which is useful when processing incoming requests, analyzing tracking parameters, or working with parameterized links to extract the values they contain.
+
+Inputs:
+
+* primary value: The URL to parse
+* key: The parameter name to extract
+
+| Primary Value (URL)                    | Other Value (key) | Output        |
+| -------------------------------------- | ----------------- | ------------- |
+| "https://example.com?id=123"           | "id"              | "123"         |
+| "https://example.com?page=1\&sort=asc" | "sort"            | "asc"         |
+| "https://example.com?q=search%20term"  | "q"               | "search term" |
+
+## url\_hasarg
+
+Returns the existence of a argument in the URL
+
+The url\_hasarg filter is helpful for checking if a specific query parameter exists in a URL, which is valuable for conditional logic based on URL parameters, validating required parameters, or implementing feature toggles based on URL flags.
+
+Inputs:
+
+* primary value: The URL to check
+* key: The parameter name to look for
+
+| Primary Value (URL)                    | Other Value (key) | Output |
+| -------------------------------------- | ----------------- | ------ |
+| "https://example.com?id=123"           | "id"              | true   |
+| "https://example.com?page=1\&sort=asc" | "filter"          | false  |
+| "https://example.com?a=1\&b=2\&c=3"    | "b"               | true   |
+
+## url\_parse
+
+Parses a URL into its individual components.
+
+The url\_parse filter is valuable for breaking down a URL into its structural parts, which is useful for routing logic, domain validation, extracting specific portions of URLs, or any situation requiring access to the individual components of a URL.
+
+Inputs:
+
+* primary value: The URL to parse
+
+| Primary Value (URL)                                       | Output                                                                                                                                               |
+| --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "https://user:pass@example.com:8080/path?q=term#fragment" | {"scheme": "https", "host": "example.com", "port": 8080, "user": "user", "pass": "pass", "path": "/path", "query": "q=term", "fragment": "fragment"} |
+| "https://example.com/page.html"                           | {"scheme": "https", "host": "example.com", "path": "/page.html"}                                                                                     |
+| "http://subdomain.example.org:8080"                       | {"scheme": "http", "host": "subdomain.example.org", "port": 8080}                                                                                    |

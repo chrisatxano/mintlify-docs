@@ -1,0 +1,31 @@
+---
+title: XS - Delete Record
+---
+
+## <img src="../assets/docuBadge (7).png" alt="" data-size="line"> Delete Record <a href="#xs-secretkey" id="xs-secretkey"></a>
+
+```javascript
+db.del user {
+    field_name = "id"
+    field_value = $input.id
+}
+```
+
+| Parameter    | Purpose                            | Example |
+| ------------ | ---------------------------------- | ------- |
+| field\_name  | Field to search for the record     | "id"    |
+| field\_value | Value to match in the search field | 1       |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+// Delete inactive user
+db.del user {
+    field_name = "email"
+    field_value = "old@example.com"
+} as deletedUser
+```
+
+</details>

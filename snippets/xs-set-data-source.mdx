@@ -1,0 +1,29 @@
+---
+title: XS - Set data source
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Set Data Source <a href="#xs-setdatasource" id="xs-setdatasource"></a>
+
+```javascript
+db.set_datasource {
+  value = "test"
+}
+```
+
+| Parameter | Purpose                       | Example                               |
+| --------- | ----------------------------- | ------------------------------------- |
+| value     | Name of the datasource to use | `"test"`, `"production"`, `"staging"` |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+db.set_datasource {
+  value = "staging"
+}
+```
+
+* Sets the active database datasource
+
+</details>

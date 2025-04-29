@@ -1,0 +1,33 @@
+---
+title: XS - JSONL Stream
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> JSONL Stream <a href="#xs-jsonlstream" id="xs-jsonlstream"></a>
+
+```javascript
+stream.from_jsonl {
+  value = $input.JSONL_file
+} as jsonl_stream
+```
+
+| Parameter | Purpose                       | Example                              |
+| --------- | ----------------------------- | ------------------------------------ |
+| value     | Input JSONL data source       | `$input.JSONL_file`, `$file.content` |
+| as        | Alias to reference the stream | `jsonl_stream`                       |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+stream.from_jsonl {
+  value = $input.log_entries
+} as logs_stream
+```
+
+* Creates a stream from JSON Lines formatted data
+* Each line must be a valid JSON object
+* Assigns stream to an alias for later reference
+* Useful for processing large datasets line by line
+
+</details>

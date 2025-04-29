@@ -1,0 +1,18 @@
+---
+title: XS FILTER -rad2deg
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> rad2deg <a href="#xsrad2deg" id="xsrad2deg"></a>
+
+`value|rad2deg`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+3.14159|rad2deg    // Returns 180
+1.5708|rad2deg     // Returns 90
+```
+
+</details>

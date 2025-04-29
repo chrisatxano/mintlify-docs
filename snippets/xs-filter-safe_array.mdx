@@ -1,0 +1,18 @@
+---
+title: XS Filter - safe_array
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> safe\_array <a href="#xs-safe_array" id="xs-safe_array"></a>
+
+`value|safe_array`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+null|safe_array    // Returns []
+[1,2]|safe_array  // Returns [1,2]
+```
+
+</details>

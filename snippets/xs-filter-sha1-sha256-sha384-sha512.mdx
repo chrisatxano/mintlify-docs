@@ -1,0 +1,18 @@
+---
+title: XS Filter - sha1 / sha256 / sha384 / sha512
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> sha1 / sha256 / sha384 / sha512 <a href="#xs-sha1-sha256-sha384-sha512" id="xs-sha1-sha256-sha384-sha512"></a>
+
+`value|sha1:hex_output`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"data"|sha1:true     // Returns hex SHA1 hash
+"data"|sha1:false    // Returns binary SHA1 hash
+```
+
+</details>

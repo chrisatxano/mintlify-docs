@@ -1,0 +1,18 @@
+---
+title: XS Filter -sin
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> sin <a href="#xssin" id="xssin"></a>
+
+`value|sin`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+0|sin         // Returns 0
+1.5708|sin    // Returns 1
+```
+
+</details>

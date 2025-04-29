@@ -1,0 +1,27 @@
+---
+title: XS - Generate Random Bytes
+---
+
+## <img src="../assets/docuBadge (10).png" alt="" data-size="line"> Generate Random Bytes <a href="#xs-randombytes" id="xs-randombytes"></a>
+
+```javascript
+    security.random_bytes {
+      length = 16
+    } as randomBytes
+```
+
+<table><thead><tr><th width="175">Parameter</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>length</td><td>The length of the string you'd like to generate</td><td>16</td></tr><tr><td>as</td><td>The variable that you want to store the random bytes generated</td><td>randomBytes</td></tr></tbody></table>
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+    security.random_bytes {
+      length = 16
+    } as randomBytes
+```
+
+![](<../assets/CleanShot 2025-03-06 at 22.04.57@2x.png>)
+
+</details>

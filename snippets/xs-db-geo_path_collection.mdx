@@ -1,0 +1,19 @@
+---
+title: XS DB -geo_path_collection
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> geo\_path\_collection <a href="#xs-geo_path_collection" id="xs-geo_path_collection"></a>
+
+`geo_path_collection field_name`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+geo_path_collection routes      // Multiple routes collection
+geo_path_collection boundaries // Multiple boundary lines
+geo_path_collection networks   // Network of paths
+```
+
+</details>

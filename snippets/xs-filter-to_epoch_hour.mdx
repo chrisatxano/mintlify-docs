@@ -1,0 +1,18 @@
+---
+title: XS Filter - to_epoch_hour
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> to\_hours <a href="#xs-to_epoch_hour" id="xs-to_epoch_hour"></a>
+
+`value|to_hours:timezone`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"2024-01-01"|to_hours:"UTC"    // Returns hours since Unix epoch
+"now"|to_hours:"UTC"           // Returns current hours since Unix epoch
+```
+
+</details>

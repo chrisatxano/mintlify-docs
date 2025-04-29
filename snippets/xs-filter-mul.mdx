@@ -1,0 +1,18 @@
+---
+title: XS FILTER -mul
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> multiply <a href="#xsmul" id="xsmul"></a>
+
+`value|multiply:number`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+5|multiply:3       // Returns 15
+-2|multiply:4      // Returns -8
+```
+
+</details>

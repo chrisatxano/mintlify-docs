@@ -1,0 +1,18 @@
+---
+title: XS Filter - to_epochms
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> to\_ms <a href="#xs-to_epochms" id="xs-to_epochms"></a>
+
+`value|to_ms:timezone`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"2024-01-01"|to_ms:"UTC"    // Returns timestamp in milliseconds
+"now"|to_ms:"UTC"           // Returns current timestamp in milliseconds
+```
+
+</details>

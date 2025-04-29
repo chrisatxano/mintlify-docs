@@ -1,0 +1,19 @@
+---
+title: XS Filter - ne
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> ne <a href="#xs-ne" id="xs-ne"></a>
+
+`value|ne:compare_value`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+5|ne:3            // Returns true
+"test"|ne:"test"  // Returns false
+1|ne:1            // Returns false
+```
+
+</details>

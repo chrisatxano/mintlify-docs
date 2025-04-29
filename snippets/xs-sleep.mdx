@@ -1,0 +1,31 @@
+---
+title: XS - Sleep
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Sleep <a href="#xs-sleep" id="xs-sleep"></a>
+
+```javascript
+util.sleep {
+  value = 1
+}
+```
+
+| Parameter | Purpose                              | Example           |
+| --------- | ------------------------------------ | ----------------- |
+| value     | Number of seconds to pause execution | `1`, `0.5`, `2.5` |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+util.sleep {
+  value = 0.5
+}
+```
+
+* Pauses execution for specified number of seconds
+* Accepts decimal values for sub-second precision
+* Useful for rate limiting or creating delays
+
+</details>

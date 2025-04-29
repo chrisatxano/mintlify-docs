@@ -1,0 +1,26 @@
+---
+title: XS -Template Engine
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Template Engine <a href="#xs-templateengine" id="xs-templateengine"></a>
+
+```javascript
+   util.template {
+      value = """
+        Write a personalized email to {{ $customer.firstName }} {{ $customer.lastName }} about their recent {{ $order.type }} purchase.
+        
+        Include:
+        - Reference to their purchase history (they've ordered {{ $customer.purchaseCount }} times)
+        - Mention that their {{ $order.item }} will be delivered on {{ $order.deliveryDate|date('F j, Y') }}
+        - If {{ $customer.isVIP }}, offer them a {{ $promotions.VIPDiscount }}% discount on their next purchase
+        - Thank them for being a customer since {{ $customer.joinDate|date('Y') }}
+        
+        Sign off with the name of their account manager: {{ $accountManager.name }}
+        """
+    } as $x1
+```
+
+| Parameter | Purpose                                | Example   |
+| --------- | -------------------------------------- | --------- |
+| value     | The template you're using              | See above |
+| as        | The variable to output the template to | as $x1    |

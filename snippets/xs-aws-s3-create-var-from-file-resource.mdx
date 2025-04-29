@@ -1,0 +1,46 @@
+---
+title: XS - AWS S3 Create var from file resource
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> AWS S3: Create Var From File Resource <a href="#xs-awss3createvar" id="xs-awss3createvar"></a>
+
+```javascript
+cloud.aws.s3.read_file {
+  bucket = ""
+  region = ""
+  key = ""
+  secret = ""
+  file_key = ""
+} as x4
+```
+
+| Parameter | Purpose                 | Example                              |
+| --------- | ----------------------- | ------------------------------------ |
+| bucket    | S3 bucket name          | `"my-bucket"`                        |
+| region    | AWS region              | `"us-east-1"`                        |
+| key       | AWS access key ID       | `"AKIAXXXXXXXXXXXXXXXX"`             |
+| secret    | AWS secret access key   | `"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"` |
+| file\_key | Path to file to read    | `"folder/file.txt"`                  |
+| as        | Alias for file contents | `x4`, `file_data`                    |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+cloud.aws.s3.read_file {
+  bucket = "my-app-data"
+  region = "us-west-2"
+  key = $env.AWS_KEY_ID
+  secret = $env.AWS_SECRET_KEY
+  file_key = "documents/"|add:$doc.id|add:".pdf"
+} as document_contents
+```
+
+* Reads file contents from S3
+* Returns file data
+* Useful for processing file contents
+* Supports all file types
+
+</details>
+

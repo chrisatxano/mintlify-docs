@@ -1,0 +1,17 @@
+---
+title: XS Filter - crypto_jwe_encode
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> jwe\_encode <a href="#xs-crypto_jwe_encode" id="xs-crypto_jwe_encode"></a>
+
+`value|jwe_encode:key:header:key_algo:enc_algo:max_age`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+data|jwe_encode:"{}":"{}":"A256KW":"A256CBC-HS512":0    // Returns JWE token
+```
+
+</details>

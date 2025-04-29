@@ -1,0 +1,22 @@
+---
+title: XS DB -password
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> password <a href="#xs-password" id="xs-password"></a>
+
+`password field_name`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+password user_password {     // A password field for user authentication
+  sensitive = true
+}
+password api_key {          // A password field for API authentication
+  sensitive = true
+}
+```
+
+</details>

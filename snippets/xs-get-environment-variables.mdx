@@ -1,0 +1,25 @@
+---
+title: XS - Get Environment Variables
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Get Environment Variables <a href="#xs-getenv" id="xs-getenv"></a>
+
+```javascript
+util.get_env as all_env_vars
+```
+
+| Parameter | Purpose                                      | Example               |
+| --------- | -------------------------------------------- | --------------------- |
+| as        | Alias to reference the environment variables | `all_env_vars`, `env` |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+util.get_env as env
+```
+
+* Returns an object containing all environment variables
+
+</details>

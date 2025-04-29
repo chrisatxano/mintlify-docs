@@ -1,0 +1,27 @@
+---
+title: XS - Text Right Trim
+---
+
+## <img src="../assets/docuBadge (10).png" alt="" data-size="line"> Right Trim <a href="#xs-textrtrim" id="xs-textrtrim"></a>
+
+```javascript
+    text.rtrim $myText {
+      value = "Text to trim"
+    }
+```
+
+<table><thead><tr><th width="175">Parameter</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>$myText</td><td>This is the variable that contains the text to target</td><td>$myText</td></tr><tr><td>value</td><td>The text you'd like to trim. If you do not provide a value, blank space will be trimmed by default.</td><td>"Text to trim"</td></tr></tbody></table>
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+    text.rtrim $myText {
+      value = "Text to trim"
+    }
+```
+
+![](<../assets/CleanShot 2025-03-06 at 16.05.03.png>)
+
+</details>

@@ -1,0 +1,9 @@
+---
+title: Function Descriptions
+---
+
+Give this function a description for easy understanding of what this function achieves.
+
+This description will appear in the function stack, giving you easier readability for complex logic.
+
+<div align="left"><figure><img src="../assets/CleanShot 2025-01-08 at 12.46.13 (2).png" alt="" width="532"><figcaption></figcaption></figure></div>

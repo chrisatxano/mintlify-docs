@@ -1,0 +1,19 @@
+---
+title: XS Filter - reduce
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> reduce <a href="#xs-reduce" id="xs-reduce"></a>
+
+`value|reduce:initial:code:timeout`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+[1,2,3]|reduce:0:"acc + x":10           // Returns 6 (sum of array)
+["a","b"]|reduce:"":"acc + x":5         // Returns "ab" (string concatenation)
+[1,2,3]|reduce:1:"acc * x":10           // Returns 6 (product of array)
+```
+
+</details>

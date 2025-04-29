@@ -1,0 +1,19 @@
+---
+title: XS DB -geo_path
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> geo\_path <a href="#xs-geo_path" id="xs-geo_path"></a>
+
+`geo_path field_name`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+geo_path route        // A path field for route tracking
+geo_path trail       // A path field for hiking trails
+geo_path boundary    // A path field for boundary lines
+```
+
+</details>

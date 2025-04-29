@@ -1,0 +1,196 @@
+# 'Security'
+
+Security functions are a mix of helper functions and cryptography/encryption functions to bring added security to your function stack and application.
+
+* [[**UUID**](security.md#uuid) - Generate a globally unique identifier.
+* [[**Create Authentication** **Token**](security.md#create-authentication-token) - Create a Token used for Authentication.
+* [[**Validate (Check) Password**](security.md#validate-check-password) - Validate a match against a hashed password.
+* [[**Generate Password**](security.md#generate-password) - Generate a password.
+* [[**Random Number**](security.md#random-number) - Generate a random number
+* [[**Create Secret Key**](security.md#create-secret-key) - Create a secret key.
+* [[**Create RSA Secret**](security.md#create-rsa-secret) - Create a RSA secret.
+* [[**Create Elliptic Curve Key**](security.md#create-elliptic-curve-key) - Create Elliptic Curve key.
+* [[**JWE Encode**](security.md#jwe-encode) - Encode a payload as a JWS token.
+* [[**JWE Decode**](security.md#jwe-decode) - Decode a JWE token.
+* [[**JWS Encode**](security.md#jws-encode) - Encode a payload as a JWS token.
+* [[**JWS Decode**](security.md#jws-decode) - Decode a JWS token.
+* [[**Encrypt**](security.md#encrypt) - Encrypt a payload as raw binary data.
+* [[**Decrypt**](security.md#decrypt) - Decrypt a payload to its original form.
+* [[**Examples and additional content**](security.md#examples)
+
+### **UUID** <a href="#uuid" id="uuid"></a>
+
+Generate a globally unique identifier. The industry standard UUID (Universally Unique Identifier - version 4) i.e. 9bcc06a9-9782-4859-a69f-778a7f28d666
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252F4w8vxhyR9p5BMuJSOrx1%252FCleanShot%25202022-01-06%2520at%252014.50.39.png%3Falt%3Dmedia%26token%3Dc97535a6-4b92-40d4-9147-032e4df7d69a\&width=768\&dpr=4\&quality=100\&sign=750395c5\&sv=2)
+
+### **Create Authentication Token** <a href="#create-authentication-token" id="create-authentication-token"></a>
+
+Create a Token used for Authentication. Authentication is an important concept in app building, you can read more about it [[here](https://docs.xano.com/building-features/authentication-sign-up-and-log-in/authentication).
+
+* **dbtable**: Refers to a database table that has authentication enabled. Select the table you wish to authenticate against
+* **id**: The ID to be stored in the token. Typically, this is a user ID, which you will get from a user record.
+* **extras**: Extras allow you to store additional data in the authentication token. An example of this may be a user's role. Use the SET filter to define a path and the value of the extra. [[Read more about extras](../../building-backend-features/user-authentication-and-user-data/#extras).
+* **expiration**: The amount of time, in seconds, the authentication token will last. You can set this to a very large number if you don't plan on having the token expire.
+* **Return variable:** Contains the output of the created authentication token.
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-M8Si5XvG2QHSLi9JcVY%252F-MknkthB5fhX1Y6BifQO%252F-Mknl1cUZx2h9icUOU0K%252FCleanShot%25202021-09-29%2520at%252015.51.05.png%3Falt%3Dmedia%26token%3D8cc6d03e-923e-4ed1-b6e6-34805de36fb5\&width=768\&dpr=4\&quality=100\&sign=f81ba54c\&sv=2)
+
+### **Validate (Check) Password** <a href="#validate-check-password" id="validate-check-password"></a>
+
+Return the result of a plaintext password matching a hashed password.
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FfZO9B0UgXt9ik3AdK4mg%252FCleanShot%25202022-01-06%2520at%252014.56.32.png%3Falt%3Dmedia%26token%3D2f1d108e-db6d-4648-bb91-e14e38c9c8c6\&width=768\&dpr=4\&quality=100\&sign=47ae7892\&sv=2)
+
+### **Generate Password** <a href="#generate-password" id="generate-password"></a>
+
+Generates a password.
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FznUGXMyn8ULBPmDMi5lE%252FCleanShot%25202022-01-06%2520at%252015.02.13.png%3Falt%3Dmedia%26token%3D92e0584a-7434-4abc-b719-82bfcacfaab5\&width=768\&dpr=4\&quality=100\&sign=62b12657\&sv=2)
+
+* **character\_count** - Number of required characters
+* **require\_lowercase** - True/false if lowercase characters are required.
+* **require\_uppercase** - True/false if uppercase characters are required.
+* **require\_digit** - True/false if a numerical digit is required.
+* **require\_symbol** - True/false if special symbols are required.
+* **symbol\_whitelist** - Optionally whitelist a symbol.
+* **Return** variable - Returns the generate password in a variable.
+
+### **Random Number** <a href="#random-number" id="random-number"></a>
+
+Generate a random number.
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-M8Si5XvG2QHSLi9JcVY%252F-MjfpkL0AhVURZe4ZET9%252F-Mjfz4rgAO7gT0jr8oTT%252FCleanShot%25202021-09-15%2520at%252017.22.24%25402x.png%3Falt%3Dmedia%26token%3D613b9535-77f8-4adf-bb14-9fa47d0c4e3e\&width=768\&dpr=4\&quality=100\&sign=47522692\&sv=2)
+
+### Create Secret Key <a href="#create-secret-key" id="create-secret-key"></a>
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FcumBPdOUb0E8iN2xzG08%252FCleanShot%25202022-01-07%2520at%252016.00.13.png%3Falt%3Dmedia%26token%3D60aea3b2-5850-4f9e-833e-aa2073eba96b\&width=768\&dpr=4\&quality=100\&sign=6bf2bfb0\&sv=2)
+
+### **Create RSA Secret** <a href="#create-rsa-secret" id="create-rsa-secret"></a>
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FrqtyxOBjCE62FDP3j2TC%252FCleanShot%25202022-01-07%2520at%252016.26.56.png%3Falt%3Dmedia%26token%3Dc2779279-93b8-4cb9-84b4-5fa337c1e702\&width=768\&dpr=4\&quality=100\&sign=af7f9573\&sv=2)
+
+### **Create Elliptic Curve Key** <a href="#create-elliptic-curve-key" id="create-elliptic-curve-key"></a>
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FpGWMlvMfozrtye0cTumV%252FCleanShot%25202022-01-07%2520at%252016.28.55.png%3Falt%3Dmedia%26token%3Dd6421068-f97c-46bc-9aa9-e3af4e5402a5\&width=768\&dpr=4\&quality=100\&sign=c6e2bdb0\&sv=2)
+
+### **JWE Encode** <a href="#jwe-encode" id="jwe-encode"></a>
+
+Encode a payload as a JWE token.
+
+<div align="left"><figure><img src="../..//assets/CleanShot 2025-04-09 at 08.35.13.png" alt="" width="266"><figcaption></figcaption></figure></div>
+
+### JWE Decode <a href="#jwe-decode" id="jwe-decode"></a>
+
+Decode a JWE token.
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FePwv66rLYl9KD0jsQGH9%252FCleanShot%25202022-01-07%2520at%252016.34.32.png%3Falt%3Dmedia%26token%3D45d1bd58-710d-46c5-b07c-43de9ca92d2a\&width=768\&dpr=4\&quality=100\&sign=4630a275\&sv=2)
+
+### JWS Encode <a href="#jws-encode" id="jws-encode"></a>
+
+Encode a payload as a JWS token.
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FNztVyTL9v0UI4y2eYvXB%252FCleanShot%25202022-05-03%2520at%252016.32.57.png%3Falt%3Dmedia%26token%3D98e1f477-715b-42a4-83ac-97be2a6bbd56\&width=768\&dpr=4\&quality=100\&sign=f7a2b5c9\&sv=2)
+
+### JWS Decode <a href="#jws-decode" id="jws-decode"></a>
+
+Decode a JWS token.
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FcyQM1in4fIxZUKspj5QW%252FCleanShot%25202022-05-03%2520at%252016.28.59.png%3Falt%3Dmedia%26token%3D84e1af45-12e3-4296-9b37-f1473cfe6309\&width=768\&dpr=4\&quality=100\&sign=a9f19301\&sv=2)
+
+### Encrypt <a href="#encrypt" id="encrypt"></a>
+
+Encrypt a payload as raw binary data.
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FTz2ALjBnr0ggcAzJ5vXV%252FCleanShot%25202022-02-22%2520at%252015.01.47.png%3Falt%3Dmedia%26token%3D0c5f3a01-dd69-4fe8-9b80-fe455b56fbee\&width=768\&dpr=4\&quality=100\&sign=efaa3971\&sv=2)
+
+* **Data** - add the data or payload that you want to encrypt
+* **Algorithm** - choose between six algorithms (cbc or gcm)
+* **Key** - A key can be generated from one key generating function or you can insert raw text as your key. This same key will be needed to decrypt the data.
+* **IV** - This is either 16 or 12 characters depending on your algorithm (cbc requires 16 characters and gcm requires 12). This information should be kept hidden in an env variable. If you are sending encrypted data to someone, then they would need to know this.
+
+Tip: For certain use cases when passing the encrypted value through a URL, it is recommended to use the `base64_encode_urlsafe` filter.
+
+### Decrypt <a href="#decrypt" id="decrypt"></a>
+
+Decrypt a payload to its original form.
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FjAyGylvniHGzCpHeeC3Q%252FCleanShot%25202022-02-22%2520at%252015.08.49.png%3Falt%3Dmedia%26token%3D951bc3a4-242a-43ca-ae84-f1a3a7678dc0\&width=768\&dpr=4\&quality=100\&sign=8e0412dd\&sv=2)
+
+### Examples <a href="#examples" id="examples"></a>
+
+#### JWS Encode/Decode Example <a href="#jws-encode-decode-example" id="jws-encode-decode-example"></a>
+
+**Using your own key**
+
+We can use our own encryption key when encoding and decoding JWS.
+
+First, use the Create Secret Key function to generate a secret key.
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FuPeq16BhTLgDLdXPzZET%252FCleanShot%25202023-01-18%2520at%252010.24.43.png%3Falt%3Dmedia%26token%3D638441ef-7434-405a-a7de-3c8c806be3ea\&width=768\&dpr=4\&quality=100\&sign=6ce2b31f\&sv=2)
+
+It's a good idea to store the key in a safe, reusable place such as in an environment variable. Click the copy result button on the result of the secret key.
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252F8XTLYIYLSZY6eiEOvlJ4%252FCleanShot%25202022-05-03%2520at%252016.52.00.png%3Falt%3Dmedia%26token%3Da690de45-a77c-4165-9b97-65361312019d\&width=768\&dpr=4\&quality=100\&sign=8cce43d4\&sv=2)
+
+Navigate to the settings page and add your secret key as an environment variable.
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FkW6LQvT614Heuf59krz7%252FCleanShot%25202022-05-03%2520at%252016.55.59.png%3Falt%3Dmedia%26token%3D48f56e15-c83c-4a53-a42a-c38008eafccd\&width=768\&dpr=4\&quality=100\&sign=e91d7204\&sv=2)
+
+Next, use the JWS Encode function to encrypt a payload. In this example, we will encrypt a simple text string.
+
+Be sure to use the secret key stored in the environment variable as the key.
+
+Optionally add a ttl or time to live if you want the token to expire.
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252F0nN2MquU1Ha4tf7MaAAk%252FCleanShot%25202023-01-18%2520at%252010.25.09.png%3Falt%3Dmedia%26token%3Dd25c30f7-62d7-430a-932f-11276955ec44\&width=768\&dpr=4\&quality=100\&sign=e9de4d46\&sv=2)
+
+The result is an encrypted JWS token.
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FbovDE7yQqum2Zr7XRTv8%252FCleanShot%25202022-05-03%2520at%252017.01.57.png%3Falt%3Dmedia%26token%3Dd7cb61b5-7e4b-43bc-8337-dfea33ab35f0\&width=768\&dpr=4\&quality=100\&sign=d2ed439d\&sv=2)
+
+To decode the JWS token, we must make sure to use the same key used for encrypting it.
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FHvysS0qKjIRC1OD0zGyb%252FCleanShot%25202022-05-03%2520at%252017.04.24.png%3Falt%3Dmedia%26token%3D24a87116-7fb7-40b0-99c1-032b58a69f2a\&width=768\&dpr=4\&quality=100\&sign=9e262b1b\&sv=2)
+
+The result is our decrypted message.
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FE91SdbrovljbPVvwfwaU%252FCleanShot%25202022-05-03%2520at%252017.05.50.png%3Falt%3Dmedia%26token%3D5720db1a-5a81-44e4-985f-116a97d6c801\&width=768\&dpr=4\&quality=100\&sign=4983d3b7\&sv=2)
+
+### **Using an external key**
+
+Sometimes you may be using a service that requires you to decode or decrypt a JWS token. Like the above example, it is recommended that you store the key in an environment variable for safe keeping and so that you may call it wherever you may need it in your workspace.
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252Fg6OyFfIrlGK56EoxeOxf%252FCleanShot%25202022-05-03%2520at%252017.22.22.png%3Falt%3Dmedia%26token%3D6041a376-bb47-45f4-805b-5241530c61a3\&width=768\&dpr=4\&quality=100\&sign=1e08121d\&sv=2)
+
+When decoding the JWS from the external source, be sure to use the environment variable as the decryption key.
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FLeAGcLLJAPDHNTqTdOcd%252FCleanShot%25202022-05-03%2520at%252017.24.40.png%3Falt%3Dmedia%26token%3D34b43722-c92f-4f5d-8e44-c37bfd2b78ca\&width=768\&dpr=4\&quality=100\&sign=c2991dc4\&sv=2)
+
+Ensure the algorithm matches what's defined from the external source.
+
+Time drift helps account for a leeway if clocks are not aligned. Consider a time drift if there is an expiration on the JWS.
+
+#### JWE vs JWS <a href="#jwe-vs-jws" id="jwe-vs-jws"></a>
+
+The main difference between JWE and JWS is one is able to be seen but not tampered with and the other is encrypted and not tampered with. JWS is able to be seen (with the right decryption) but not tampered. JWE is encrypted and not tampered with.
+
+**Example using JWT.IO**
+
+We can use jwt.io to see an example of the difference between JWE and JWS.
+
+First let's encode a JWE token.
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FCKJ8iFhPVPW8HkNlaEtf%252FCleanShot%25202022-05-03%2520at%252017.35.42.png%3Falt%3Dmedia%26token%3Daa72e388-2ecd-497d-8141-46d4c3c5bb26\&width=768\&dpr=4\&quality=100\&sign=19703727\&sv=2)
+
+When we place the resulting JWE token into jwt.io, we can see that the result is an encrypted payload.
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252F2fCvtyF9x3eW60h0RTvC%252FCleanShot%25202022-05-03%2520at%252017.36.22.png%3Falt%3Dmedia%26token%3D8d505f15-53c8-445c-9486-1b0dac3ea7ef\&width=768\&dpr=4\&quality=100\&sign=c048aa0d\&sv=2)
+
+Next, let's generate a JWS token in Xano.
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FtBL8eugyodQEgQLLI2Z5%252FCleanShot%25202022-05-03%2520at%252017.38.27.png%3Falt%3Dmedia%26token%3D3f759024-0b75-4d13-91ee-1594e586a939\&width=768\&dpr=4\&quality=100\&sign=afb24b05\&sv=2)
+
+When we place the resulting JWS token in jwt.io and match up the correct algorithm, we are able to see the payload.
+
+![[](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FqGQVRvZ5ef9lmNAoOl1E%252FCleanShot%25202022-05-03%2520at%252017.39.26.png%3Falt%3Dmedia%26token%3D283a39e8-c67b-499e-9162-3a101a52abcd\&width=768\&dpr=4\&quality=100\&sign=dad4ca1f\&sv=2)

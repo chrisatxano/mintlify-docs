@@ -1,0 +1,58 @@
+---
+title: 'XS -Elasticsearch: Request'
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Elasticsearch: Request <a href="#xs-elasticsearch-request" id="xs-elasticsearch-request"></a>
+
+```javascript
+cloud.elasticsearch.request {
+  auth_type = "API Key"
+  key_id = ""
+  access_key = ""
+  region = ""
+  method = "POST"
+  url = ""
+  query = ""
+} as x1
+```
+
+| Parameter   | Purpose                    | Example                                           |
+| ----------- | -------------------------- | ------------------------------------------------- |
+| auth\_type  | Authentication method      | `"API Key"`, `"Basic"`                            |
+| key\_id     | Elasticsearch API key ID   | `"VuaCfGcBCdbkQm-e5aOx"`                          |
+| access\_key | Elasticsearch API key      | `"ui2lp2axTNmsyakw9tvNnw"`                        |
+| region      | Elasticsearch region       | `"us-east-1"`, `"eu-west-1"`                      |
+| method      | HTTP method for request    | `"GET"`, `"POST"`, `"PUT"`, `"DELETE"`            |
+| url         | Elasticsearch endpoint URL | `"https://search-domain.region.es.amazonaws.com"` |
+| query       | Query body                 | `{query: {match_all: {}}}`                        |
+| as          | Alias for response         | `x1`, `search_response`                           |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+cloud.elasticsearch.request {
+  auth_type = "API Key"
+  key_id = $env.ES_KEY_ID
+  access_key = $env.ES_ACCESS_KEY
+  region = "us-west-2"
+  method = "POST"
+  url = "https://my-domain.es.amazonaws.com/products/_search"
+  query = {
+    query: {
+      match: {
+        name: "search term"
+      }
+    }
+  }
+} as search_results
+```
+
+* Makes direct requests to Elasticsearch
+* Supports all Elasticsearch APIs
+* Flexible query construction
+* Returns raw Elasticsearch response
+
+</details>
+

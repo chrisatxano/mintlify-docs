@@ -1,0 +1,18 @@
+---
+title: XS Filter - filter_empty
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> filter\_empty <a href="#xs-filter_empty" id="xs-filter_empty"></a>
+
+`value|filter_empty`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+[1,"",null,2]|filter_empty    // Returns [1,2]
+[0,false,"test"]|filter_empty // Returns ["test"]
+```
+
+</details>

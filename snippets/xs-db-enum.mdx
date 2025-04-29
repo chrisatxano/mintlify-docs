@@ -1,0 +1,25 @@
+---
+title: XS DB -enum
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> enum <a href="#xs-enum" id="xs-enum"></a>
+
+`enum field_name {values=[]}`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+enum status {          // An enum field for status options
+  values = ["pending", "active", "completed"]
+}
+enum role {           // An enum field for user roles
+  values = ["admin", "user", "guest"]
+}
+enum size {           // An enum field for size options
+  values = ["small", "medium", "large"]
+}
+```
+
+</details>

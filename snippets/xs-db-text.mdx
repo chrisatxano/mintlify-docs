@@ -1,0 +1,19 @@
+---
+title: XS DB - text
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> text <a href="#xs-text" id="xs-text"></a>
+
+`text field_name`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+text description    // A text field for storing descriptions
+text user_bio      // A text field for user biographies
+text address       // A text field for storing addresses
+```
+
+</details>

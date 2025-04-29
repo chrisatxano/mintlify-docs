@@ -1,0 +1,19 @@
+---
+title: XS Filter - is_array
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> is\_array <a href="#xs-is_array" id="xs-is_array"></a>
+
+`value|is_array`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+[1,2,3]|is_array       // Returns true
+{"key":"val"}|is_array // Returns false
+"test"|is_array        // Returns false
+```
+
+</details>

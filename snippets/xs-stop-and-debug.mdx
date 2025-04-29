@@ -1,0 +1,32 @@
+---
+title: XS - Stop and Debug
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Stop and Debug <a href="#xs-stopanddebug" id="xs-stopanddebug"></a>
+
+```javascript
+debug.stop {
+  value = "Value to return"
+}
+```
+
+| Parameter | Purpose                                     | Example                                                    |
+| --------- | ------------------------------------------- | ---------------------------------------------------------- |
+| value     | The value to return when stopping execution | `"Debug stop message"`, `$variable`, `{status: "stopped"}` |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+debug.stop {
+  value = "Stopping execution"
+}
+```
+
+* Immediately stops function execution
+* Returns the specified value
+* Useful for debugging and development
+* Can return any data type
+
+</details>

@@ -1,0 +1,35 @@
+---
+title: XS - Create Video Metadata
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Create Video Metadata <a href="#xs-createvideo" id="xs-createvideo"></a>
+
+```javascript
+storage.create_video {
+  access=public 
+  value = $image_metadata
+  filename = ""
+} as x1
+```
+
+| Parameter | Purpose                               | Example                          |
+| --------- | ------------------------------------- | -------------------------------- |
+| access    | Access level for the stored video     | `public`, `private`              |
+| value     | Source file to create video from      | `$input.video`, `$file.data`     |
+| filename  | Name for the stored video file        | `"video.mp4"`, `"recording.mov"` |
+| as        | Alias to reference the video metadata | `x1`, `video_data`               |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+storage.create_video access=public {
+  value = $input.video_upload
+  filename = "video_"|add:$timestamp|add:".mp4"
+} as uploaded_video
+```
+
+* Creates metadata for a video file
+
+</details>

@@ -1,0 +1,34 @@
+---
+title: XS - Patch
+---
+
+## <img src="../assets/docuBadge (8).png" alt="" data-size="line"> Patch Record <a href="#xs-secretkey" id="xs-secretkey"></a>
+
+```javascript
+db.patch user {
+    field_name = "id"
+    field_value = $input.id
+    data = {}|set:"name":$input.name
+} as $patchRecord
+```
+
+| Parameter    | Purpose                            | Example          |
+| ------------ | ---------------------------------- | ---------------- |
+| field\_name  | Field to search for the record     | "id"             |
+| field\_value | Value to match in the search field | 1                |
+| data         | Object with fields to patch        | `{name: "John"}` |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+// Update only the last_login field
+db.patch user {
+    field_name = "id"
+    field_value = 789
+    data = {}|set:"last_login":"now"
+} as updatedLoginTime
+```
+
+</details>

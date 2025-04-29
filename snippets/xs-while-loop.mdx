@@ -1,0 +1,38 @@
+---
+title: XS - While Loop
+---
+
+## <img src="../assets/docuBadge (10).png" alt="" data-size="line"> **While Loop**  <a href="#xs-while" id="xs-while"></a>
+
+```javascript
+    while (`conditions`) {
+      each {
+         // Functions go here
+      }
+    }
+```
+
+<table><thead><tr><th width="154">Parameter</th><th width="186">Purpose</th><th width="406">Example</th></tr></thead><tbody><tr><td>conditions</td><td>The condition(s) that the loop will use to determine if it continues to run</td><td><pre><code>false == false &#x26;&#x26; true == true
+</code></pre></td></tr></tbody></table>
+
+Place the functions that run as a part of your loop inside {} brackets after defining your conditions.
+
+<details>
+
+<summary>Example</summary>
+
+![](<../assets/CleanShot 2025-02-27 at 17.52.20@2x (1).png>)
+
+```javascript
+    while (`true == true && true == true`) {
+      each {
+        util.sleep {
+          value = 1
+        }
+      }
+    }
+```
+
+
+
+</details>

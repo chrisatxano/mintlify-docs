@@ -1,0 +1,18 @@
+---
+title: XS Filter -sqrt
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> sqrt <a href="#xssqrt" id="xssqrt"></a>
+
+`value|sqrt`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+9|sqrt        // Returns 3
+16|sqrt       // Returns 4
+```
+
+</details>

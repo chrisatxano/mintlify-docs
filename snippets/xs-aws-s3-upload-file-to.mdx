@@ -1,0 +1,59 @@
+---
+title: XS - aws s3 upload file to
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> AWS S3: Upload File to <a href="#xs-awss3uploadfile" id="xs-awss3uploadfile"></a>
+
+```javascript
+cloud.aws.s3.upload_file {
+  bucket = ""
+  region = ""
+  key = ""
+  secret = ""
+  file_key = ""
+  file = ""
+  metadata =
+  object_lock_mode = ""
+  object_lock_retain_until = ""
+} as x3
+```
+
+| Parameter                   | Purpose                    | Example                              |
+| --------------------------- | -------------------------- | ------------------------------------ |
+| bucket                      | S3 bucket name             | `"my-bucket"`                        |
+| region                      | AWS region                 | `"us-east-1"`                        |
+| key                         | AWS access key ID          | `"AKIAXXXXXXXXXXXXXXXX"`             |
+| secret                      | AWS secret access key      | `"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"` |
+| file\_key                   | Destination path in bucket | `"uploads/file.jpg"`                 |
+| file                        | File to upload             | `$input.file`, `$file_data`          |
+| metadata                    | Custom metadata for file   | `{contentType: "image/jpeg"}`        |
+| object\_lock\_mode          | S3 Object Lock mode        | `"GOVERNANCE"`, `"COMPLIANCE"`       |
+| object\_lock\_retain\_until | Lock retention date        | `"2024-12-31"`                       |
+| as                          | Alias for upload result    | `x3`, `upload_result`                |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+cloud.aws.s3.upload_file {
+  bucket = "my-app-uploads"
+  region = "us-west-2"
+  key = $env.AWS_KEY_ID
+  secret = $env.AWS_SECRET_KEY
+  file_key = "users/"|add:$user.id|add:"/profile.jpg"
+  file = $input.profile_photo
+  metadata = {
+    contentType: "image/jpeg",
+    userId: $user.id
+  }
+} as upload_response
+```
+
+* Uploads file to S3 bucket
+* Supports custom metadata
+* Optional Object Lock configuration
+* Returns upload confirmation
+
+</details>
+

@@ -1,0 +1,57 @@
+---
+title: XS - AWS OpenSearch Request
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> AWS OpenSearch: Request <a href="#xs-awsopensearchrequest" id="xs-awsopensearchrequest"></a>
+
+```javascript
+cloud.aws.opensearch.request {
+  auth_type = "IAM"
+  key_id = ""
+  access_key = ""
+  region = ""
+  method = "GET"
+  url = ""
+  query =
+} as x1
+```
+
+| Parameter   | Purpose                         | Example                                           |
+| ----------- | ------------------------------- | ------------------------------------------------- |
+| auth\_type  | Authentication type for AWS     | `"IAM"`                                           |
+| key\_id     | AWS access key ID               | `"AKIAXXXXXXXXXXXXXXXX"`                          |
+| access\_key | AWS secret access key           | `"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"`              |
+| region      | AWS region for OpenSearch       | `"us-east-1"`, `"eu-west-1"`                      |
+| method      | HTTP method for the request     | `"GET"`, `"POST"`, `"PUT"`, `"DELETE"`            |
+| url         | OpenSearch endpoint URL         | `"https://search-domain.region.es.amazonaws.com"` |
+| query       | Query to send to OpenSearch     | `{query: {match_all: {}}}`                        |
+| as          | Alias to reference the response | `x1`, `search_results`                            |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+cloud.aws.opensearch.request {
+  auth_type = "IAM"
+  key_id = $env.AWS_KEY_ID
+  access_key = $env.AWS_SECRET_KEY
+  region = "us-west-2"
+  method = "GET"
+  url = "https://search-mydomain.us-west-2.es.amazonaws.com/index/_search"
+  query = {
+    query: {
+      match: {
+        title: "search term"
+      }
+    }
+  }
+} as search_response
+```
+
+* Makes requests to AWS OpenSearch service
+* Supports IAM authentication
+* Can perform search and index operations
+* Returns OpenSearch response data
+
+</details>

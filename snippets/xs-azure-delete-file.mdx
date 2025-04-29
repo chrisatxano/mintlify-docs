@@ -1,0 +1,44 @@
+---
+title: XS - Azure delete file
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Azure Blob Storage: Delete file <a href="#xs-azuredelete" id="xs-azuredelete"></a>
+
+```javascript
+cloud.azure.storage.delete_file {
+  account_name = ""
+  account_key = ""
+  container_name = ""
+  filePath = ""
+}
+```
+
+| Parameter       | Purpose                    | Example                     |
+| --------------- | -------------------------- | --------------------------- |
+| account\_name   | Azure storage account name | `"mystorageaccount"`        |
+| account\_key    | Azure storage account key  | `"XXXXXXXXXXXXXXXXXXXXX=="` |
+| container\_name | Storage container name     | `"uploads"`                 |
+| filePath        | Path to file to delete     | `"folder/file.txt"`         |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+cloud.azure.storage.delete_file {
+  account_name = $env.AZURE_ACCOUNT_NAME
+  account_key = $env.AZURE_ACCOUNT_KEY
+  container_name = "temp-files"
+  filePath = "uploads/"|add:$file.name
+}
+```
+
+* Deletes a blob from storage
+* Permanent deletion
+* No response needed
+* Use with caution
+
+</details>
+
+
+

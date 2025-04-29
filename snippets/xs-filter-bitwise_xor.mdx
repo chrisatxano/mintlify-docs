@@ -1,0 +1,18 @@
+---
+title: XS FILTER -bitwise_xor
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> bitwise\_xor <a href="#xsbitwise_xor" id="xsbitwise_xor"></a>
+
+`value|bitwise_xor:number`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+5|bitwise_xor:3    // Returns 6
+12|bitwise_xor:10  // Returns 6
+```
+
+</details>

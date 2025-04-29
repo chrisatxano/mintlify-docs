@@ -1,0 +1,35 @@
+---
+title: Swagger - Defining examples
+---
+
+When [testing your function stacks](../../testing-debugging/testing-and-debugging-function-stacks.md) in Xano, you can define sample input and output examples for your Swagger documentation.
+
+It is important that you do this to ensure that your documentation is as effective as possible, as well as for helping AI models understand what's expected when interacting with your APIs.
+
+{% stepper %}
+{% step %}
+## In the 'response' section of the Run panel, click <mark style="background-color:blue;">Set As Example</mark>&#x20;
+
+<div align="left"><figure><img src="../assets/CleanShot 2025-04-21 at 09.37.02.png" alt="" width="482"><figcaption></figcaption></figure></div>
+{% endstep %}
+
+{% step %}
+## Review the sample input and response, and make any necessary adjustments
+
+{% hint style="warning" %}
+Make sure these do not include any sensitive information.
+{% endhint %}
+
+<div align="left"><figure><img src="../assets/CleanShot 2025-04-21 at 09.38.01.png" alt="" width="375"><figcaption></figcaption></figure></div>
+{% endstep %}
+
+{% step %}
+## Click <mark style="background-color:blue;">Save</mark> and you will see these defined in your Swagger documentation.
+
+<figure><img src="../assets/CleanShot 2025-04-21 at 09.43.22.png" alt=""><figcaption></figcaption></figure>
+
+If you need to make adjustments later, you can do so from the settings menu.
+
+<div align="left"><figure><img src="../assets/CleanShot 2025-04-21 at 09.42.32.png" alt="" width="293"><figcaption></figcaption></figure></div>
+{% endstep %}
+{% endstepper %}

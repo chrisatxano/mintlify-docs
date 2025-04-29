@@ -1,0 +1,18 @@
+---
+title: XS Filter - to_epoch_day
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> to\_days <a href="#xs-to_epoch_day" id="xs-to_epoch_day"></a>
+
+`value|to_days:timezone`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"2024-01-01"|to_days:"UTC"    // Returns days since Unix epoch
+"now"|to_days:"UTC"           // Returns current days since Unix epoch
+```
+
+</details>

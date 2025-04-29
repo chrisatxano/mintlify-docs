@@ -1,0 +1,18 @@
+---
+title: XS FILTER -ln
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> ln <a href="#xsln" id="xsln"></a>
+
+`value|ln`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+2.718|ln      // Returns 1
+1|ln          // Returns 0
+```
+
+</details>

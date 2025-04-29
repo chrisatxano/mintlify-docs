@@ -1,0 +1,133 @@
+---
+---
+hidden: true
+---
+
+# 'XanoScript for Function Stacks'
+
+{% include "../../.gitbook/includes/xs-beta-alpha-notice.md" %}
+
+<Info>
+
+## A note about Custom Functions
+
+APIs and custom functions behave largely the same in XanoScript, so you can use this documentation to serve as a resource for both.
+
+The only additional resource you will need is some custom function specific XanoScript, which is available below. Starting at the input block, everything is the same as an API.
+
+```
+function "My Custom Function" {
+  description = "Here's a description" 
+```
+
+</Info>
+
+## Accessing XanoScript in your Function Stacks
+
+Use the quick toggle above the input blocks to switch between XanoScript and the visual builder.
+
+<figure><img src="../..//assets/CleanShot 2025-03-11 at 09.52.58.gif" alt=""><figcaption></figcaption></figure>
+
+## What does a XanoScript function stack look like?
+
+This is a typical Get Record API endpoint.
+
+<figure><img src="../..//assets/CleanShot 2025-03-11 at 09.54.26.png" alt=""><figcaption></figcaption></figure>
+
+Here is the XanoScript representation.
+
+```javascript
+query "user/{user_id}" verb=GET {
+  input {
+    int user_id? filters=min:1
+  }
+
+  stack {
+    db.get user {
+      field_name = "id"
+      field_value = $input.user_id
+    } as model
+  
+    precondition if (`$model != null`) {
+      error_type = "notfound"
+      error = "Not Found"
+    }
+  }
+
+  response {
+    value = $model
+  }
+}
+```
+
+### Part 1 - Definition and Inputs
+
+```javascript
+query "user/{user_id}" verb=GET {
+  input {
+    int user_id? filters=min:1
+  }
+```
+
+`query "user/{user_id}" verb=GET {`
+
+Here, we define what we are building (`query` is an API endpoint), give it a name `user/{user_id}`, and assign the verb `verb=GET`
+
+```javascript
+  input {
+    int user_id? filters=min:1
+  }
+```
+
+Finally, we define our inputs: an `int` input called `user_id.` We've also applied a `?` after `user_id` to indicate that this value is not required, and added a filter to enforce a minimum value of 1.
+
+### Part 2 - The function stack
+
+The function stack is contained in an object that starts with `stack {`
+
+Each function name is designed to be human readable, just like the function stack. They will be immediately followed by an object that provides those function parameters.
+
+If the function outputs to a variable, that is defined after the object is closed.
+
+Here, we're starting with a Get Record function on the table named `user`. &#x20;
+
+<table><thead><tr><th width="338.4896240234375">Function Stack</th><th width="391.0589599609375">XanoScript</th></tr></thead><tbody><tr><td><img src="../..//assets/image (85).png" alt="" data-size="original"></td><td><pre><code>    db.get user {
+</code></pre></td></tr><tr><td><img src="../..//assets/CleanShot 2025-03-11 at 09.57.55 (1).png" alt="" data-size="original"></td><td><p></p><pre><code>      field_name = "id"
+      field_value = $input.user_id
+</code></pre></td></tr><tr><td><img src="../..//assets/image (86).png" alt="" data-size="original"></td><td><pre><code>    } as model
+</code></pre></td></tr></tbody></table>
+
+### Part 3 - The response
+
+Once your inputs and function stack are defined, we can build our response.  This begins with a  `response {` object.
+
+Our response will be a JSON object, which is standard.
+
+<table><thead><tr><th width="357.3203125">Function Stack</th><th width="369.5164794921875">XanoScript</th></tr></thead><tbody><tr><td><img src="../..//assets/CleanShot 2025-03-11 at 09.59.34.png" alt="" data-size="original"></td><td><pre><code>  response {
+    value = $model
+  }
+</code></pre></td></tr></tbody></table>
+
+{% include "../../.gitbook/includes/xs-using-functions.md" %}
+
+Now that you have an understanding of how to write XanoScript in your function stacks, you can start building! There are a couple of different recommended ways to get started.
+
+{% stepper %}
+{% step %}
+### Build a function stack in the visual builder and review the generated XanoScript.
+
+Add some functions to a function stack, and then click ![[](<../../.gitbook/assets/CleanShot 2025-03-10 at 08.08.53.png>) > XanoScript in the upper-right corner.
+
+Try changing some values or adding a simple function, and watch the visual builder update with the changes you've made. You can switch from building with XanoScript to the visual builder at any time, and always see your changes reflected.
+{% endstep %}
+
+{% step %}
+### Review the function reference and build with XanoScript from scratch.
+
+Use the function reference to see how all of our functions are written using XanoScript, and try building your own!
+{% endstep %}
+{% endstepper %}
+
+{% content-ref url="function-reference/" %}
+[[function-reference](function-reference/)
+{% endcontent-ref %}

@@ -1,0 +1,18 @@
+---
+title: XS Filter -regex_match
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> regex\_match <a href="#xsregex_match" id="xsregex_match"></a>
+
+`value|regex_match:pattern`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"test123"|regex_match:"\\d+"    // Returns ["123"]
+"abc"|regex_match:"[a-z]"       // Returns ["a"]
+```
+
+</details>

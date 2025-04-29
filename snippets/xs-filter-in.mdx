@@ -1,0 +1,18 @@
+---
+title: XS Filter - in
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> in <a href="#xs-in" id="xs-in"></a>
+
+`value|in:array`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"apple"|in:["apple","banana"]     // Returns true
+5|in:[1,2,3]                      // Returns false
+```
+
+</details>

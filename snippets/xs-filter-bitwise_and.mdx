@@ -1,0 +1,18 @@
+---
+title: XS FILTER -bitwise_and
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> bitwise\_and <a href="#xsbitwise_and" id="xsbitwise_and"></a>
+
+`value|bitwise_and:number`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+5|bitwise_and:3    // Returns 1
+12|bitwise_and:10  // Returns 8
+```
+
+</details>

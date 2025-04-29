@@ -1,0 +1,18 @@
+---
+title: XS Filter - last
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> last <a href="#xs-last" id="xs-last"></a>
+
+`value|last`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+[1,2,3]|last    // Returns 3
+[]|last         // Returns null
+```
+
+</details>

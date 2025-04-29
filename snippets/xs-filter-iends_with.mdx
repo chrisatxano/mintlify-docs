@@ -1,0 +1,18 @@
+---
+title: XS Filter -iends_with
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> iends\_with <a href="#xsiends_with" id="xsiends_with"></a>
+
+`value|iends_with:suffix`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"test.JPG"|iends_with:".jpg"    // Returns true (case insensitive)
+"test.png"|iends_with:".JPG"    // Returns false
+```
+
+</details>

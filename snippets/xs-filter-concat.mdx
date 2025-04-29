@@ -1,0 +1,18 @@
+---
+title: XS Filter -concat
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> concat <a href="#xsconcat" id="xsconcat"></a>
+
+`value|concat:string1:string2`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"Hello"|concat:" ":"World"    // Returns "Hello World"
+"user"|concat:"_":"123"       // Returns "user_123"
+```
+
+</details>

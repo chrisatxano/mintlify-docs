@@ -1,0 +1,19 @@
+---
+title: XS DB -
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> geo\_point <a href="#xs-geo_point" id="xs-geo_point"></a>
+
+`geo_point field_name`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+geo_point location     // A geo point field for single locations
+geo_point store       // A geo point field for store location
+geo_point checkpoint  // A geo point field for route checkpoints
+```
+
+</details>

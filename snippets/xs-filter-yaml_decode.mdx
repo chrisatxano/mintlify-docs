@@ -1,0 +1,17 @@
+---
+title: XS Filter - yaml_decode
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> yaml\_decode <a href="#xs-yaml_decode" id="xs-yaml_decode"></a>
+
+`value|yaml_decode`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+"name: John\nage: 30"|yaml_decode    // Returns {"name":"John","age":30}
+```
+
+</details>

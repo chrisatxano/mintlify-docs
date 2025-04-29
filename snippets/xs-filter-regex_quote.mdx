@@ -1,0 +1,18 @@
+---
+title: XS Filter -regex_quote
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> regex\_quote <a href="#xsregex_quote" id="xsregex_quote"></a>
+
+`value|regex_quote`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+".*+?^${}()|[]\\"|regex_quote    // Escapes regex special characters
+"[test]"|regex_quote            // Returns "\\[test\\]"
+```
+
+</details>

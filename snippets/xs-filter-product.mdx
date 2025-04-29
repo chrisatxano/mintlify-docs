@@ -1,0 +1,18 @@
+---
+title: XS FILTER -product
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> product <a href="#xsproduct" id="xsproduct"></a>
+
+`value|product`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+[2,3,4]|product    // Returns 24
+[5,2]|product      // Returns 10
+```
+
+</details>

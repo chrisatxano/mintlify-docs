@@ -1,0 +1,32 @@
+---
+title: XS -Has Cache Value
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Has Cache Value <a href="#xs-has-cache-value" id="xs-has-cache-value"></a>
+
+```javascript
+redis.has {
+  key = ""
+} as x2
+```
+
+| Parameter | Purpose            | Example         |
+| --------- | ------------------ | --------------- |
+| key       | Cache key to check | `"session:abc"` |
+| as        | Alias for result   | `x2`, `exists`  |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+redis.has {
+  key = "session:"|add:$session.id
+} as session_exists
+```
+
+* Checks if key exists in cache
+* Returns boolean
+
+</details>
+

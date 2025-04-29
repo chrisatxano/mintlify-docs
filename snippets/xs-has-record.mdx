@@ -1,0 +1,28 @@
+---
+title: XS - Has Record
+---
+
+## <img src="../assets/CleanShot 2025-02-27 at 10.32.33@2x.png" alt="" data-size="line">  Has Record <a href="#xs-secretkey" id="xs-secretkey"></a>
+
+<pre class="language-javascript"><code class="lang-javascript"><strong>db.has user {
+</strong>      field_name = "id"
+      field_value = $input.id
+}
+</code></pre>
+
+<table><thead><tr><th width="175">Parameter</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>field_name</td><td>The length of the key generated. Common values are 1024, 2048, 4096, etc...</td><td>1024</td></tr><tr><td>field_value</td><td>The format of the key generated. This can be either <strong>object</strong> or <strong>base64</strong></td><td>"object"</td></tr></tbody></table>
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+    security.create_rsa_key {
+      bits = 1024
+      format = "object"
+    } as crypto1
+```
+
+![](<../assets/CleanShot 2025-03-06 at 22.09.40@2x.png>)
+
+</details>

@@ -1,0 +1,17 @@
+---
+title: XS Filter - create_object
+---
+
+## <img src="../assets/docuBadge (11).png" alt="" data-size="line"> create\_object <a href="#xs-create_object" id="xs-create_object"></a>
+
+`keys|create_object:values`
+
+<details>
+
+<summary>Examples</summary>
+
+```javascript
+["name","age"]|create_object:["John",30]    // Returns {"name":"John","age":30}
+```
+
+</details>

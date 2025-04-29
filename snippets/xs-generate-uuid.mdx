@@ -1,0 +1,23 @@
+---
+title: XS - Generate UUID
+---
+
+## <img src="../assets/docuBadge (10).png" alt="" data-size="line"> Generate UUID <a href="#xs-securitycreateuuid" id="xs-securitycreateuuid"></a>
+
+```javascript
+    security.create_uuid as $myVariable
+```
+
+<table><thead><tr><th width="175">Parameter</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>$myVariable</td><td>This is the variable you want to store the generated value in.</td><td>$myVariable</td></tr></tbody></table>
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+    security.create_uuid as $myVariable
+```
+
+![](<../assets/CleanShot 2025-03-06 at 17.26.44.png>)
+
+</details>

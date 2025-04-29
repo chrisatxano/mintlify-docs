@@ -1,0 +1,48 @@
+---
+title: xs - gcs upload file
+---
+
+# <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Google Cloud Storage: Upload file to <a href="#xs-gcsupload" id="xs-gcsupload"></a>
+
+```javascript
+cloud.google.storage.upload_file {
+  service_account = ""
+  bucket = ""
+  filePath = ""
+  file = ""
+  metadata =
+}
+```
+
+| Parameter        | Purpose                    | Example                            |
+| ---------------- | -------------------------- | ---------------------------------- |
+| service\_account | GCP service account JSON   | `{"type": "service_account", ...}` |
+| bucket           | GCS bucket name            | `"my-app-bucket"`                  |
+| filePath         | Destination path in bucket | `"uploads/file.jpg"`               |
+| file             | File to upload             | `$input.file`                      |
+| metadata         | Custom metadata for object | `{contentType: "image/jpeg"}`      |
+
+<details>
+
+<summary>Example</summary>
+
+```javascript
+cloud.google.storage.upload_file {
+  service_account = $env.GCP_SERVICE_ACCOUNT
+  bucket = "user-content"
+  filePath = $user.id|add:"/profile.jpg"
+  file = $input.profile_photo
+  metadata = {
+    userId: $user.id,
+    uploadTime: $now
+  }
+}
+```
+
+* Uploads file to Google Cloud Storage
+* Supports custom metadata
+
+</details>
+
+
+
