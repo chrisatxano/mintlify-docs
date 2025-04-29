@@ -1,6 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "name": "Your Project Name",
+  "theme": "mint",
   "navigation": {
     "pages": [
       "adjust-server-performance.mdx",
@@ -8,7 +9,8 @@
       "developer-api-deprecated.mdx",
       "frequently-asked-questions.mdx",
       "increasing-plan-limits.mdx",
-      "tool-rate-limit.mdx"
+      "tool-rate-limit.mdx",
+      "introduction.mdx"
     ],
     "groups": [
       {
