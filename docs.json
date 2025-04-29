@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Xano Documentation",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
@@ -98,5 +98,1355 @@
       "github": "https://github.com/mintlify",
       "linkedin": "https://linkedin.com/company/mintlify"
     }
-  }
+  },
+  "sidebar": [
+    {
+      "text": "Home",
+      "link": "README"
+    },
+    {
+      "text": "Summary",
+      "link": "SUMMARY"
+    },
+    {
+      "text": "Adjust Server Performance",
+      "link": "adjust-server-performance"
+    },
+    {
+      "text": "Agencies",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Agency Features",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Agency Features Overview",
+              "link": "agencies/agency-features/README"
+            },
+            {
+              "text": "Agency Dashboard",
+              "link": "agencies/agency-features/agency-dashboard"
+            },
+            {
+              "text": "Agency Profile",
+              "link": "agencies/agency-features/agency-profile"
+            },
+            {
+              "text": "Client Invite",
+              "link": "agencies/agency-features/client-invite"
+            },
+            {
+              "text": "Commission",
+              "link": "agencies/agency-features/commission"
+            },
+            {
+              "text": "Private Marketplace",
+              "link": "agencies/agency-features/private-marketplace"
+            },
+            {
+              "text": "Transfer Ownership",
+              "link": "agencies/agency-features/transfer-ownership"
+            }
+          ]
+        },
+        {
+          "text": "Xano for Agencies",
+          "link": "agencies/xano-for-agencies"
+        }
+      ]
+    },
+    {
+      "text": "AI Tools",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "MCP Servers",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "MCP Servers Overview",
+              "link": "ai-tools/mcp-servers/README"
+            },
+            {
+              "text": "Connecting Clients",
+              "link": "ai-tools/mcp-servers/connecting-clients"
+            },
+            {
+              "text": "MCP Functions",
+              "link": "ai-tools/mcp-servers/mcp-functions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "API Rate Limit",
+      "link": "api-rate-limit"
+    },
+    {
+      "text": "Before You Begin",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Key Concepts",
+          "link": "before-you-begin/key-concepts"
+        },
+        {
+          "text": "Navigating Xano",
+          "link": "before-you-begin/navigating-xano"
+        },
+        {
+          "text": "Set Up A Free Xano Account",
+          "link": "before-you-begin/set-up-a-free-xano-account"
+        },
+        {
+          "text": "The Development Life Cycle",
+          "link": "before-you-begin/the-development-life-cycle"
+        },
+        {
+          "text": "Using These Docs",
+          "link": "before-you-begin/using-these-docs"
+        },
+        {
+          "text": "Where Should I Start",
+          "link": "before-you-begin/where-should-i-start"
+        }
+      ]
+    },
+    {
+      "text": "Building Backend Features",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Chatbots",
+          "link": "building-backend-features/chatbots"
+        },
+        {
+          "text": "Connecting to External Systems and Services",
+          "link": "building-backend-features/connecting-to-external-systems-and-services"
+        },
+        {
+          "text": "Custom Report Generation",
+          "link": "building-backend-features/custom-report-generation"
+        },
+        {
+          "text": "Emails",
+          "link": "building-backend-features/emails"
+        },
+        {
+          "text": "Fuzzy Search",
+          "link": "building-backend-features/fuzzy-search"
+        },
+        {
+          "text": "Location Data",
+          "link": "building-backend-features/location-data"
+        },
+        {
+          "text": "Messaging",
+          "link": "building-backend-features/messaging"
+        },
+        {
+          "text": "Notifications",
+          "link": "building-backend-features/notifications"
+        },
+        {
+          "text": "Payments",
+          "link": "building-backend-features/payments"
+        },
+        {
+          "text": "User Authentication and User Data",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "User Authentication and User Data Overview",
+              "link": "building-backend-features/user-authentication-and-user-data/README"
+            },
+            {
+              "text": "OAuth SSO",
+              "link": "building-backend-features/user-authentication-and-user-data/oauth-sso"
+            },
+            {
+              "text": "Restricting Access RBAC",
+              "link": "building-backend-features/user-authentication-and-user-data/restricting-access-rbac"
+            },
+            {
+              "text": "Separating User Data",
+              "link": "building-backend-features/user-authentication-and-user-data/separating-user-data"
+            }
+          ]
+        },
+        {
+          "text": "User Roles",
+          "link": "building-backend-features/user-roles"
+        },
+        {
+          "text": "Webhooks",
+          "link": "building-backend-features/webhooks"
+        }
+      ]
+    },
+    {
+      "text": "Connecting to a Front-end",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Adalo",
+          "link": "connecting-to-a-front-end/adalo"
+        },
+        {
+          "text": "Appgyver",
+          "link": "connecting-to-a-front-end/appgyver"
+        },
+        {
+          "text": "Bubble",
+          "link": "connecting-to-a-front-end/bubble"
+        },
+        {
+          "text": "Flutterflow",
+          "link": "connecting-to-a-front-end/flutterflow"
+        },
+        {
+          "text": "Fundamentals",
+          "link": "connecting-to-a-front-end/fundamentals"
+        },
+        {
+          "text": "Javascript",
+          "link": "connecting-to-a-front-end/javascript"
+        },
+        {
+          "text": "Toddle",
+          "link": "connecting-to-a-front-end/toddle"
+        },
+        {
+          "text": "Webflow",
+          "link": "connecting-to-a-front-end/webflow"
+        },
+        {
+          "text": "Weweb",
+          "link": "connecting-to-a-front-end/weweb"
+        }
+      ]
+    },
+    {
+      "text": "Developer API Deprecated",
+      "link": "developer-api-deprecated"
+    },
+    {
+      "text": "Enterprise",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Enterprise Features",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Enterprise Features Overview",
+              "link": "enterprise/enterprise-features/README"
+            },
+            {
+              "text": "Compliance Center",
+              "link": "enterprise/enterprise-features/compliance-center"
+            },
+            {
+              "text": "Deployment",
+              "link": "enterprise/enterprise-features/deployment"
+            },
+            {
+              "text": "Instance Activity",
+              "link": "enterprise/enterprise-features/instance-activity"
+            },
+            {
+              "text": "Microservices",
+              "link": "enterprise/enterprise-features/microservices"
+            },
+            {
+              "text": "RBAC Role Based Access Control",
+              "link": "enterprise/enterprise-features/rbac-role-based-access-control"
+            },
+            {
+              "text": "Security Policy",
+              "link": "enterprise/enterprise-features/security-policy"
+            },
+            {
+              "text": "Tenant Center",
+              "link": "enterprise/enterprise-features/tenant-center"
+            },
+            {
+              "text": "Xano Link",
+              "link": "enterprise/enterprise-features/xano-link"
+            }
+          ]
+        },
+        {
+          "text": "Xano for Enterprise",
+          "link": "enterprise/xano-for-enterprise"
+        }
+      ]
+    },
+    {
+      "text": "File Storage",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "File Storage in Xano",
+          "link": "file-storage/file-storage-in-xano"
+        },
+        {
+          "text": "Private File Storage",
+          "link": "file-storage/private-file-storage"
+        }
+      ]
+    },
+    {
+      "text": "Frequently Asked Questions",
+      "link": "frequently-asked-questions"
+    },
+    {
+      "text": "Increasing Plan Limits",
+      "link": "increasing-plan-limits"
+    },
+    {
+      "text": "Instances",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Instances Overview",
+          "link": "instances/README"
+        },
+        {
+          "text": "API Rate Limit",
+          "link": "instances/api-rate-limit"
+        }
+      ]
+    },
+    {
+      "text": "Maintenance Monitoring and Logging",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Instance Dashboard",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Instance Dashboard Overview",
+              "link": "maintenance-monitoring-and-logging/instance-dashboard/README"
+            },
+            {
+              "text": "Memory Usage",
+              "link": "maintenance-monitoring-and-logging/instance-dashboard/memory-usage"
+            }
+          ]
+        },
+        {
+          "text": "Request History",
+          "link": "maintenance-monitoring-and-logging/request-history"
+        },
+        {
+          "text": "Statement Explorer",
+          "link": "maintenance-monitoring-and-logging/statement-explorer"
+        }
+      ]
+    },
+    {
+      "text": "Realtime",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Channel Permissions",
+          "link": "realtime/channel-permissions"
+        },
+        {
+          "text": "Realtime in Webflow",
+          "link": "realtime/realtime-in-webflow"
+        },
+        {
+          "text": "Realtime in Xano",
+          "link": "realtime/realtime-in-xano"
+        }
+      ]
+    },
+    {
+      "text": "Security",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Best Practices",
+          "link": "security/best-practices"
+        }
+      ]
+    },
+    {
+      "text": "Special Discount Pricing",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Non Profits",
+          "link": "special-discount-pricing/non-profits"
+        },
+        {
+          "text": "Students",
+          "link": "special-discount-pricing/students"
+        }
+      ]
+    },
+    {
+      "text": "Team Collaboration",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Branching and Merging",
+          "link": "team-collaboration/branching-and-merging"
+        },
+        {
+          "text": "Managing Team Members",
+          "link": "team-collaboration/managing-team-members"
+        },
+        {
+          "text": "Realtime Collaboration",
+          "link": "team-collaboration/realtime-collaboration"
+        },
+        {
+          "text": "Role Based Access Control RBAC",
+          "link": "team-collaboration/role-based-access-control-rbac"
+        }
+      ]
+    },
+    {
+      "text": "Testing Debugging",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Test Suites",
+          "link": "testing-debugging/test-suites"
+        },
+        {
+          "text": "Testing and Debugging Function Stacks",
+          "link": "testing-debugging/testing-and-debugging-function-stacks"
+        },
+        {
+          "text": "Unit Tests",
+          "link": "testing-debugging/unit-tests"
+        }
+      ]
+    },
+    {
+      "text": "The Database",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Database Basics",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Database Basics Overview",
+              "link": "the-database/database-basics/README"
+            },
+            {
+              "text": "Data Sources",
+              "link": "the-database/database-basics/data-sources"
+            },
+            {
+              "text": "Database Views",
+              "link": "the-database/database-basics/database-views"
+            },
+            {
+              "text": "Export and Sharing",
+              "link": "the-database/database-basics/export-and-sharing"
+            },
+            {
+              "text": "Field Types",
+              "link": "the-database/database-basics/field-types"
+            },
+            {
+              "text": "Relationships",
+              "link": "the-database/database-basics/relationships"
+            },
+            {
+              "text": "Using the Xano Database",
+              "link": "the-database/database-basics/using-the-xano-database"
+            }
+          ]
+        },
+        {
+          "text": "Database Performance and Maintenance",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Database Performance and Maintenance Overview",
+              "link": "the-database/database-performance-and-maintenance/README"
+            },
+            {
+              "text": "Indexing",
+              "link": "the-database/database-performance-and-maintenance/indexing"
+            },
+            {
+              "text": "Maintenance",
+              "link": "the-database/database-performance-and-maintenance/maintenance"
+            },
+            {
+              "text": "Schema Versioning",
+              "link": "the-database/database-performance-and-maintenance/schema-versioning"
+            },
+            {
+              "text": "Storage",
+              "link": "the-database/database-performance-and-maintenance/storage"
+            }
+          ]
+        },
+        {
+          "text": "Designing Your Database",
+          "link": "the-database/designing-your-database"
+        },
+        {
+          "text": "Migrating Your Data",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Migrating Your Data Overview",
+              "link": "the-database/migrating-your-data/README"
+            },
+            {
+              "text": "Adalo to Xano",
+              "link": "the-database/migrating-your-data/adalo-to-xano"
+            },
+            {
+              "text": "Add Via API",
+              "link": "the-database/migrating-your-data/add-via-api"
+            },
+            {
+              "text": "Airtable to Xano",
+              "link": "the-database/migrating-your-data/airtable-to-xano"
+            },
+            {
+              "text": "Bubble to Xano",
+              "link": "the-database/migrating-your-data/bubble-to-xano"
+            },
+            {
+              "text": "Connect to an External Database",
+              "link": "the-database/migrating-your-data/connect-to-an-external-database"
+            },
+            {
+              "text": "CSV Import and Export",
+              "link": "the-database/migrating-your-data/csv-import-and-export"
+            },
+            {
+              "text": "Fastgen to Xano",
+              "link": "the-database/migrating-your-data/fastgen-to-xano"
+            },
+            {
+              "text": "Google Sheets to Xano",
+              "link": "the-database/migrating-your-data/google-sheets-to-xano"
+            },
+            {
+              "text": "Supabase to Xano",
+              "link": "the-database/migrating-your-data/supabase-to-xano"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "The Function Stack",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Additional Features",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Additional Features Overview",
+              "link": "the-function-stack/additional-features/README"
+            },
+            {
+              "text": "Response Caching",
+              "link": "the-function-stack/additional-features/response-caching"
+            }
+          ]
+        },
+        {
+          "text": "Building with Visual Development",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Building with Visual Development Overview",
+              "link": "the-function-stack/building-with-visual-development/README"
+            },
+            {
+              "text": "APIs",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "APIs Overview",
+                  "link": "the-function-stack/building-with-visual-development/apis/README"
+                },
+                {
+                  "text": "Swagger OpenAPI Documentation",
+                  "link": "the-function-stack/building-with-visual-development/apis/swagger-openapi-documentation"
+                }
+              ]
+            },
+            {
+              "text": "Background Tasks",
+              "link": "the-function-stack/building-with-visual-development/background-tasks"
+            },
+            {
+              "text": "Configuring Expressions",
+              "link": "the-function-stack/building-with-visual-development/configuring-expressions"
+            },
+            {
+              "text": "Custom Functions",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "Custom Functions Overview",
+                  "link": "the-function-stack/building-with-visual-development/custom-functions/README"
+                },
+                {
+                  "text": "Async Functions",
+                  "link": "the-function-stack/building-with-visual-development/custom-functions/async-functions"
+                }
+              ]
+            },
+            {
+              "text": "Middleware",
+              "link": "the-function-stack/building-with-visual-development/middleware"
+            },
+            {
+              "text": "Triggers",
+              "link": "the-function-stack/building-with-visual-development/triggers"
+            },
+            {
+              "text": "Working with Data",
+              "link": "the-function-stack/building-with-visual-development/working-with-data"
+            }
+          ]
+        },
+        {
+          "text": "Data Types",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Data Types Overview",
+              "link": "the-function-stack/data-types/README"
+            },
+            {
+              "text": "Array",
+              "link": "the-function-stack/data-types/array"
+            },
+            {
+              "text": "Boolean",
+              "link": "the-function-stack/data-types/boolean"
+            },
+            {
+              "text": "Decimal",
+              "link": "the-function-stack/data-types/decimal"
+            },
+            {
+              "text": "Expression",
+              "link": "the-function-stack/data-types/expression"
+            },
+            {
+              "text": "Integer",
+              "link": "the-function-stack/data-types/integer"
+            },
+            {
+              "text": "Null",
+              "link": "the-function-stack/data-types/null"
+            },
+            {
+              "text": "Object",
+              "link": "the-function-stack/data-types/object"
+            },
+            {
+              "text": "Text",
+              "link": "the-function-stack/data-types/text"
+            },
+            {
+              "text": "Timestamp",
+              "link": "the-function-stack/data-types/timestamp"
+            }
+          ]
+        },
+        {
+          "text": "Environment Variables",
+          "link": "the-function-stack/environment-variables"
+        },
+        {
+          "text": "Filters",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Filters Overview",
+              "link": "the-function-stack/filters/README"
+            },
+            {
+              "text": "Array",
+              "link": "the-function-stack/filters/array"
+            },
+            {
+              "text": "Comparison",
+              "link": "the-function-stack/filters/comparison"
+            },
+            {
+              "text": "Conversion",
+              "link": "the-function-stack/filters/conversion"
+            },
+            {
+              "text": "Manipulation",
+              "link": "the-function-stack/filters/manipulation"
+            },
+            {
+              "text": "Math",
+              "link": "the-function-stack/filters/math"
+            },
+            {
+              "text": "Security",
+              "link": "the-function-stack/filters/security"
+            },
+            {
+              "text": "Text",
+              "link": "the-function-stack/filters/text"
+            },
+            {
+              "text": "Timestamp",
+              "link": "the-function-stack/filters/timestamp"
+            },
+            {
+              "text": "Transform",
+              "link": "the-function-stack/filters/transform"
+            }
+          ]
+        },
+        {
+          "text": "Functions",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Functions Overview",
+              "link": "the-function-stack/functions/README"
+            },
+            {
+              "text": "AI Tools",
+              "link": "the-function-stack/functions/ai-tools"
+            },
+            {
+              "text": "APIs and Lambdas",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "APIs and Lambdas Overview",
+                  "link": "the-function-stack/functions/apis-and-lambdas/README"
+                },
+                {
+                  "text": "External API Request",
+                  "link": "the-function-stack/functions/apis-and-lambdas/external-api-request"
+                },
+                {
+                  "text": "Lambda Functions",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "text": "Supported Libraries",
+                      "link": "the-function-stack/functions/apis-and-lambdas/lambda-functions/supported-libraries"
+                    }
+                  ]
+                },
+                {
+                  "text": "Lambda Functions",
+                  "link": "the-function-stack/functions/apis-and-lambdas/lambda-functions"
+                },
+                {
+                  "text": "Realtime Functions",
+                  "link": "the-function-stack/functions/apis-and-lambdas/realtime-functions"
+                }
+              ]
+            },
+            {
+              "text": "Cloud Services",
+              "link": "the-function-stack/functions/cloud-services"
+            },
+            {
+              "text": "Connected",
+              "link": "the-function-stack/functions/connected"
+            },
+            {
+              "text": "Custom Functions",
+              "link": "the-function-stack/functions/custom-functions"
+            },
+            {
+              "text": "Data Caching Redis",
+              "link": "the-function-stack/functions/data-caching-redis"
+            },
+            {
+              "text": "Data Manipulation",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "Data Manipulation Overview",
+                  "link": "the-function-stack/functions/data-manipulation/README"
+                },
+                {
+                  "text": "Arrays",
+                  "link": "the-function-stack/functions/data-manipulation/arrays"
+                },
+                {
+                  "text": "Conditional",
+                  "link": "the-function-stack/functions/data-manipulation/conditional"
+                },
+                {
+                  "text": "Create Variable",
+                  "link": "the-function-stack/functions/data-manipulation/create-variable"
+                },
+                {
+                  "text": "Loops",
+                  "link": "the-function-stack/functions/data-manipulation/loops"
+                },
+                {
+                  "text": "Math",
+                  "link": "the-function-stack/functions/data-manipulation/math"
+                },
+                {
+                  "text": "Objects",
+                  "link": "the-function-stack/functions/data-manipulation/objects"
+                },
+                {
+                  "text": "Switch",
+                  "link": "the-function-stack/functions/data-manipulation/switch"
+                },
+                {
+                  "text": "Text",
+                  "link": "the-function-stack/functions/data-manipulation/text"
+                },
+                {
+                  "text": "Update Variable",
+                  "link": "the-function-stack/functions/data-manipulation/update-variable"
+                }
+              ]
+            },
+            {
+              "text": "Database Requests",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "Database Requests Overview",
+                  "link": "the-function-stack/functions/database-requests/README"
+                },
+                {
+                  "text": "Add or Edit Record",
+                  "link": "the-function-stack/functions/database-requests/add-or-edit-record"
+                },
+                {
+                  "text": "Add Record",
+                  "link": "the-function-stack/functions/database-requests/add-record"
+                },
+                {
+                  "text": "Bulk Operations",
+                  "link": "the-function-stack/functions/database-requests/bulk-operations"
+                },
+                {
+                  "text": "Database Transaction",
+                  "link": "the-function-stack/functions/database-requests/database-transaction"
+                },
+                {
+                  "text": "Delete Record",
+                  "link": "the-function-stack/functions/database-requests/delete-record"
+                },
+                {
+                  "text": "Direct Database Query",
+                  "link": "the-function-stack/functions/database-requests/direct-database-query"
+                },
+                {
+                  "text": "Edit Record",
+                  "link": "the-function-stack/functions/database-requests/edit-record"
+                },
+                {
+                  "text": "External Database Query",
+                  "link": "the-function-stack/functions/database-requests/external-database-query"
+                },
+                {
+                  "text": "Get Database Schema",
+                  "link": "the-function-stack/functions/database-requests/get-database-schema"
+                },
+                {
+                  "text": "Get Record",
+                  "link": "the-function-stack/functions/database-requests/get-record"
+                },
+                {
+                  "text": "Patch Record",
+                  "link": "the-function-stack/functions/database-requests/patch-record"
+                },
+                {
+                  "text": "Query All Records",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "text": "Query All Records Overview",
+                      "link": "the-function-stack/functions/database-requests/query-all-records/README"
+                    },
+                    {
+                      "text": "External Filtering Examples",
+                      "link": "the-function-stack/functions/database-requests/query-all-records/external-filtering-examples"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "File Storage",
+              "link": "the-function-stack/functions/file-storage"
+            },
+            {
+              "text": "Security",
+              "link": "the-function-stack/functions/security"
+            },
+            {
+              "text": "Utility Functions",
+              "link": "the-function-stack/functions/utility-functions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Tool Rate Limit",
+      "link": "tool-rate-limit"
+    },
+    {
+      "text": "Troubleshooting and Support",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Error Reference",
+          "link": "troubleshooting-and-support/error-reference"
+        },
+        {
+          "text": "Getting Help",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Getting Help Overview",
+              "link": "troubleshooting-and-support/getting-help/README"
+            },
+            {
+              "text": "Community Code of Conduct",
+              "link": "troubleshooting-and-support/getting-help/community-code-of-conduct"
+            },
+            {
+              "text": "Community Content Modification Policy",
+              "link": "troubleshooting-and-support/getting-help/community-content-modification-policy"
+            },
+            {
+              "text": "Granting Access",
+              "link": "troubleshooting-and-support/getting-help/granting-access"
+            }
+          ]
+        },
+        {
+          "text": "Troubleshooting Performance",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Troubleshooting Performance Overview",
+              "link": "troubleshooting-and-support/troubleshooting-performance/README"
+            },
+            {
+              "text": "Function Stack Performance",
+              "link": "troubleshooting-and-support/troubleshooting-performance/function-stack-performance"
+            },
+            {
+              "text": "RAM Usage",
+              "link": "troubleshooting-and-support/troubleshooting-performance/ram-usage"
+            },
+            {
+              "text": "When a Single Workflow Feels Slow",
+              "link": "troubleshooting-and-support/troubleshooting-performance/when-a-single-workflow-feels-slow"
+            },
+            {
+              "text": "When Everything Feels Slow",
+              "link": "troubleshooting-and-support/troubleshooting-performance/when-everything-feels-slow"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Xano Actions",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "What are Actions",
+          "link": "xano-actions/what-are-actions"
+        }
+      ]
+    },
+    {
+      "text": "Xano AI",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "AI Database Assistant",
+          "link": "xano-ai/ai-database-assistant"
+        },
+        {
+          "text": "AI Lambda Assistant",
+          "link": "xano-ai/ai-lambda-assistant"
+        },
+        {
+          "text": "AI SQL Assistant",
+          "link": "xano-ai/ai-sql-assistant"
+        },
+        {
+          "text": "API Request Assistant",
+          "link": "xano-ai/api-request-assistant"
+        },
+        {
+          "text": "Building a Backend Using AI",
+          "link": "xano-ai/building-a-backend-using-ai"
+        },
+        {
+          "text": "Get Started Assistant",
+          "link": "xano-ai/get-started-assistant"
+        },
+        {
+          "text": "Streaming APIs",
+          "link": "xano-ai/streaming-apis"
+        },
+        {
+          "text": "Template Engine",
+          "link": "xano-ai/template-engine"
+        }
+      ]
+    },
+    {
+      "text": "Xano Features",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Advanced Back End Features",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Advanced Back End Features Overview",
+              "link": "xano-features/advanced-back-end-features/README"
+            },
+            {
+              "text": "Developer API Deprecated",
+              "link": "xano-features/advanced-back-end-features/developer-api-deprecated"
+            },
+            {
+              "text": "Xano Link",
+              "link": "xano-features/advanced-back-end-features/xano-link"
+            }
+          ]
+        },
+        {
+          "text": "Instance Settings",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Instance Settings Overview",
+              "link": "xano-features/instance-settings/README"
+            },
+            {
+              "text": "Backup and Restore",
+              "link": "xano-features/instance-settings/backup-and-restore"
+            },
+            {
+              "text": "Change Server Region",
+              "link": "xano-features/instance-settings/change-server-region"
+            },
+            {
+              "text": "Direct Database Connector",
+              "link": "xano-features/instance-settings/direct-database-connector"
+            },
+            {
+              "text": "Release Track Preferences",
+              "link": "xano-features/instance-settings/release-track-preferences"
+            },
+            {
+              "text": "Security Policy",
+              "link": "xano-features/instance-settings/security-policy"
+            },
+            {
+              "text": "Static IP Outgoing",
+              "link": "xano-features/instance-settings/static-ip-outgoing"
+            }
+          ]
+        },
+        {
+          "text": "Metadata API",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Metadata API Overview",
+              "link": "xano-features/metadata-api/README"
+            },
+            {
+              "text": "Content",
+              "link": "xano-features/metadata-api/content"
+            },
+            {
+              "text": "File",
+              "link": "xano-features/metadata-api/file"
+            },
+            {
+              "text": "Master Metadata API",
+              "link": "xano-features/metadata-api/master-metadata-api"
+            },
+            {
+              "text": "Request History",
+              "link": "xano-features/metadata-api/request-history"
+            },
+            {
+              "text": "Search",
+              "link": "xano-features/metadata-api/search"
+            },
+            {
+              "text": "Tables and Schema",
+              "link": "xano-features/metadata-api/tables-and-schema"
+            },
+            {
+              "text": "Token Scopes Reference",
+              "link": "xano-features/metadata-api/token-scopes-reference"
+            },
+            {
+              "text": "Workspace Import and Export",
+              "link": "xano-features/metadata-api/workspace-import-and-export"
+            }
+          ]
+        },
+        {
+          "text": "Snippets",
+          "link": "xano-features/snippets"
+        }
+      ]
+    },
+    {
+      "text": "Xano Transform",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Using Xano Transform",
+          "link": "xano-transform/using-xano-transform"
+        }
+      ]
+    },
+    {
+      "text": "Xanoscript",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "DB",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "DB Overview",
+              "link": "xanoscript/db/README"
+            },
+            {
+              "text": "Field Type Reference",
+              "link": "xanoscript/db/field-type-reference"
+            }
+          ]
+        },
+        {
+          "text": "FS",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "FS Overview",
+              "link": "xanoscript/fs/README"
+            },
+            {
+              "text": "Filter Reference",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "Filter Reference Overview",
+                  "link": "xanoscript/fs/filter-reference/README"
+                },
+                {
+                  "text": "Array",
+                  "link": "xanoscript/fs/filter-reference/array"
+                },
+                {
+                  "text": "Comparison",
+                  "link": "xanoscript/fs/filter-reference/comparison"
+                },
+                {
+                  "text": "Manipulation",
+                  "link": "xanoscript/fs/filter-reference/manipulation"
+                },
+                {
+                  "text": "Math",
+                  "link": "xanoscript/fs/filter-reference/math"
+                },
+                {
+                  "text": "Security",
+                  "link": "xanoscript/fs/filter-reference/security"
+                },
+                {
+                  "text": "Text",
+                  "link": "xanoscript/fs/filter-reference/text"
+                },
+                {
+                  "text": "Timestamp",
+                  "link": "xanoscript/fs/filter-reference/timestamp"
+                },
+                {
+                  "text": "Transform",
+                  "link": "xanoscript/fs/filter-reference/transform"
+                }
+              ]
+            },
+            {
+              "text": "Function Reference",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "Function Reference Overview",
+                  "link": "xanoscript/fs/function-reference/README"
+                },
+                {
+                  "text": "APIs and Lambdas",
+                  "link": "xanoscript/fs/function-reference/apis-and-lambdas"
+                },
+                {
+                  "text": "Cloud Services",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "text": "Cloud Services Overview",
+                      "link": "xanoscript/fs/function-reference/cloud-services/README"
+                    },
+                    {
+                      "text": "Algolia",
+                      "link": "xanoscript/fs/function-reference/cloud-services/algolia"
+                    },
+                    {
+                      "text": "AWS Opensearch",
+                      "link": "xanoscript/fs/function-reference/cloud-services/aws-opensearch"
+                    },
+                    {
+                      "text": "AWS S3",
+                      "link": "xanoscript/fs/function-reference/cloud-services/aws-s3"
+                    },
+                    {
+                      "text": "Azure Blob Storage",
+                      "link": "xanoscript/fs/function-reference/cloud-services/azure-blob-storage"
+                    },
+                    {
+                      "text": "Elasticsearch",
+                      "link": "xanoscript/fs/function-reference/cloud-services/elasticsearch"
+                    },
+                    {
+                      "text": "Google Cloud Storage",
+                      "link": "xanoscript/fs/function-reference/cloud-services/google-cloud-storage"
+                    }
+                  ]
+                },
+                {
+                  "text": "Custom Functions",
+                  "link": "xanoscript/fs/function-reference/custom-functions"
+                },
+                {
+                  "text": "Data Caching Redis",
+                  "link": "xanoscript/fs/function-reference/data-caching-redis"
+                },
+                {
+                  "text": "Data Manipulation",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "text": "Data Manipulation Overview",
+                      "link": "xanoscript/fs/function-reference/data-manipulation/README"
+                    },
+                    {
+                      "text": "Arrays",
+                      "link": "xanoscript/fs/function-reference/data-manipulation/arrays"
+                    },
+                    {
+                      "text": "Conditionals",
+                      "link": "xanoscript/fs/function-reference/data-manipulation/conditionals"
+                    },
+                    {
+                      "text": "Loops",
+                      "link": "xanoscript/fs/function-reference/data-manipulation/loops"
+                    },
+                    {
+                      "text": "Math",
+                      "link": "xanoscript/fs/function-reference/data-manipulation/math"
+                    },
+                    {
+                      "text": "Objects",
+                      "link": "xanoscript/fs/function-reference/data-manipulation/objects"
+                    },
+                    {
+                      "text": "Text",
+                      "link": "xanoscript/fs/function-reference/data-manipulation/text"
+                    },
+                    {
+                      "text": "Variables",
+                      "link": "xanoscript/fs/function-reference/data-manipulation/variables"
+                    }
+                  ]
+                },
+                {
+                  "text": "Database Operations",
+                  "link": "xanoscript/fs/function-reference/database-operations"
+                },
+                {
+                  "text": "File Storage",
+                  "link": "xanoscript/fs/function-reference/file-storage"
+                },
+                {
+                  "text": "Security",
+                  "link": "xanoscript/fs/function-reference/security"
+                },
+                {
+                  "text": "Utility Functions",
+                  "link": "xanoscript/fs/function-reference/utility-functions"
+                }
+              ]
+            },
+            {
+              "text": "Input Types Reference",
+              "link": "xanoscript/fs/input-types-reference"
+            }
+          ]
+        },
+        {
+          "text": "Introduction to Xanoscript",
+          "link": "xanoscript/introduction-to-xanoscript"
+        },
+        {
+          "text": "Keyconcepts",
+          "link": "xanoscript/keyconcepts"
+        },
+        {
+          "text": "TS",
+          "link": "xanoscript/ts"
+        }
+      ]
+    },
+    {
+      "text": "Your Xano Account",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Account Page",
+          "link": "your-xano-account/account-page"
+        },
+        {
+          "text": "Billing",
+          "link": "your-xano-account/billing"
+        },
+        {
+          "text": "Referrals and Commissions",
+          "link": "your-xano-account/referrals-and-commissions"
+        }
+      ]
+    }
+  ]
 }
