@@ -5,19 +5,18 @@
   "colors": {
     "primary": "#ff0000"
   },
-  "navigation": [ // Changed to an array containing a single group object if using groups as the top level, or directly use the "groups" key as shown below based on common Mintlify structure. Sticking to the common structure:
-  // "navigation": { // Correct structure: Use ONE key like "groups", "pages", "tabs", etc.
-    // "groups": [ // Start with groups as the top level organizer
+  "navigation": {
+    "groups": [
       {
         "group": "General",
         "pages": [
-          "introduction", // Moved from top-level pages
-          "adjust-server-performance", // Moved from top-level pages
-          "api-rate-limit", // Moved from top-level pages
-          "developer-api-deprecated", // Moved from top-level pages
-          "frequently-asked-questions", // Moved from top-level pages
-          "increasing-plan-limits", // Moved from top-level pages
-          "tool-rate-limit" // Moved from top-level pages
+          "introduction",
+          "adjust-server-performance",
+          "api-rate-limit",
+          "developer-api-deprecated",
+          "frequently-asked-questions",
+          "increasing-plan-limits",
+          "tool-rate-limit"
         ]
       },
       {
@@ -134,8 +133,8 @@
                "the-function-stack/functions/file-storage",
                "the-function-stack/functions/security",
                "the-function-stack/functions/ai-tools",
-               "the-function-stack/functions/cloud-services", // Note: This had README page under it originally, check if needed
-               "the-function-stack/functions/connected" // Assuming this is a page, check if it was meant to be group
+               "the-function-stack/functions/cloud-services",
+               "the-function-stack/functions/connected"
              ],
              "groups": [
                {
@@ -184,12 +183,12 @@
                  "pages": [
                    "the-function-stack/functions/apis-and-lambdas/README",
                    "the-function-stack/functions/apis-and-lambdas/external-api-request",
-                   "the-function-stack/functions/apis-and-lambdas/lambda-functions", // Note: Had a subgroup, check if needed
+                   "the-function-stack/functions/apis-and-lambdas/lambda-functions",
                    "the-function-stack/functions/apis-and-lambdas/realtime-functions"
                  ],
                  "groups": [
                    {
-                     "group": "Lambda Functions", // This subgroup was present, preserving it
+                     "group": "Lambda Functions",
                      "pages": [
                        "the-function-stack/functions/apis-and-lambdas/lambda-functions/supported-libraries"
                      ]
@@ -197,7 +196,7 @@
                  ]
                },
                {
-                 "group": "Cloud Services", // This subgroup was present, preserving it
+                 "group": "Cloud Services",
                  "pages": [
                    "the-function-stack/functions/cloud-services/README",
                    "the-function-stack/functions/cloud-services/aws-s3",
@@ -234,8 +233,6 @@
            }
         ]
       },
-      // ... (Include all other top-level groups from your original file structure here, ensuring correct nesting)
-      // Example structure continuation:
       {
         "group": "Connecting to a Front End",
         "pages": [
@@ -253,7 +250,6 @@
        {
         "group": "Building Backend Features",
         "pages": [
-          // Keep pages from original file
           "building-backend-features/chatbots",
           "building-backend-features/connecting-to-external-systems-and-services",
           "building-backend-features/custom-report-generation",
@@ -278,12 +274,8 @@
           }
         ]
       },
-       // --- Add ALL other groups from your original file here ---
-      // Ensure all groups like "Agencies", "AI Tools", "Enterprise", etc.
-      // and their nested structures are copied correctly into this "groups" array.
-      // Make sure to maintain the exact page paths and group structures.
       {
-        "group": "XanoScript", // Example: Copying XanoScript group
+        "group": "XanoScript",
         "pages": [
           "xanoscript/introduction-to-xanoscript",
           "xanoscript/keyconcepts",
@@ -332,7 +324,6 @@
                   "xanoscript/fs/function-reference/utility-functions"
                 ],
                 "groups": [
-                  // Nested groups under Function Reference
                    {
                     "group": "Cloud Services",
                     "pages": [
@@ -365,7 +356,7 @@
         ]
       },
        {
-        "group": "Your Xano Account", // Last group from original file
+        "group": "Your Xano Account",
         "pages": [
           "your-xano-account/account-page",
           "your-xano-account/billing",
@@ -373,5 +364,5 @@
         ]
        }
      ]
-  // } // End navigation object
-} // End main JSON object
+  }
+}
