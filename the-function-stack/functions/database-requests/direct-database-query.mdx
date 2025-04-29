@@ -8,7 +8,7 @@ The Direct Database Query function is available starting on the **upgraded** (no
 
 To access the Direct Database Query function, add a new function to your function stack, choose Database Operations, and then Direct Database Query.
 
-<figure><img src="../../..//assets/CleanShot 2023-05-22 at 12.32.13.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../..//assets/CleanShot 2023-05-22 at 12.32.13.png" alt="" /><figcaption></figcaption></figure>
 
 From the Direct Database Query panel, you can provide the following:
 
@@ -17,7 +17,7 @@ From the Direct Database Query panel, you can provide the following:
 * **Response Type** - Return either a single item, or a list of items
 * **Output Variable** - The name of the variable that will contain the result of the query
 
-<figure><img src="../../..//assets/CleanShot 2023-05-22 at 12.34.45.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../..//assets/CleanShot 2023-05-22 at 12.34.45.png" alt="" /><figcaption></figcaption></figure>
 
 ### Finding your database identifier
 
@@ -33,7 +33,7 @@ You can also use an **x identifier**, such as x1\_3, to return a more readable v
 
 Using **x\_** is typically best when just performing queries.
 
-<figure><img src="../../..//assets/CleanShot 2023-05-25 at 17.16.45.png" alt=""><figcaption><p>Where to find your table ID and workspace ID</p></figcaption></figure>
+<figure><img src="../../..//assets/CleanShot 2023-05-25 at 17.16.45.png" alt="" /><figcaption><p>Where to find your table ID and workspace ID</p></figcaption></figure>
 
 <Info>
 
@@ -49,11 +49,11 @@ Head to your database table, and create a [[custom view](../../../the-database/d
 
 In the screenshot below, we've created a database view to filter people named David in our people table. When saving the view, we're providing an alias called 'david'.
 
-<figure><img src="../../..//assets/CleanShot 2024-03-18 at 14.45.42.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../..//assets/CleanShot 2024-03-18 at 14.45.42.png" alt="" /><figcaption></figcaption></figure>
 
 Once this view is saved, we can utilize it in a Direct Database Query function to retrieve the data from that view. The view is listed when using the Direct Query wizard, or you can type it manually if you are writing a query from scratch as `SELECT * from "view_name";`
 
-<figure><img src="../../..//assets/CleanShot 2024-03-18 at 14.47.47.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../..//assets/CleanShot 2024-03-18 at 14.47.47.png" alt="" /><figcaption></figcaption></figure>
 
 ### Test Data
 
@@ -79,7 +79,7 @@ To insert an argument value with no quotes, such as a table name, use `?:raw`.&#
 
 In the following query, there are two statement arguments. The input `search` will be placed at the first `?` and the variable `var_1` will be placed at the second `?`.
 
-<figure><img src="../../..//assets/CleanShot 2023-06-19 at 15.56.27.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../..//assets/CleanShot 2023-06-19 at 15.56.27.png" alt="" /><figcaption></figcaption></figure>
 
 <Info>
 
@@ -93,33 +93,33 @@ Arguments can not, at this time, be anything other than single values. Arguments
 
 The SQL Query Wizard generates simple SQL queries. **It is not designed to support complex statements or joins but basic statements** to help get you started.
 
-<figure><img src="../../..//assets/CleanShot 2023-06-15 at 17.10.04.png" alt=""><figcaption><p>Open the Wizard Panel</p></figcaption></figure>
+<figure><img src="../../..//assets/CleanShot 2023-06-15 at 17.10.04.png" alt="" /><figcaption><p>Open the Wizard Panel</p></figcaption></figure>
 
 #### Step 1: Choose the Database Table to Query
 
-<figure><img src="../../..//assets/CleanShot 2023-06-19 at 10.10.42.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../..//assets/CleanShot 2023-06-19 at 10.10.42.png" alt="" /><figcaption></figcaption></figure>
 
 #### Step 2: Choose the field
 
-<figure><img src="../../..//assets/CleanShot 2023-06-19 at 10.11.17.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../..//assets/CleanShot 2023-06-19 at 10.11.17.png" alt="" /><figcaption></figcaption></figure>
 
 #### Step 3: Choose an operator and value.
 
-<figure><img src="../../..//assets/CleanShot 2023-06-19 at 11.11.46.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../..//assets/CleanShot 2023-06-19 at 11.11.46.png" alt="" /><figcaption></figcaption></figure>
 
 Choose an operator for the query and add a value. Optionally include multiple conditions with AND or OR statements.&#x20;
 
 #### Step 4: Select the columns to include in the query response.
 
-<figure><img src="../../..//assets/CleanShot 2023-06-19 at 11.20.39.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../..//assets/CleanShot 2023-06-19 at 11.20.39.png" alt="" /><figcaption></figcaption></figure>
 
 The Wizard will process the settings and generate a SQL query in the code editor.
 
-<figure><img src="../../..//assets/CleanShot 2023-06-19 at 11.21.25.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../..//assets/CleanShot 2023-06-19 at 11.21.25.png" alt="" /><figcaption></figcaption></figure>
 
 The result returns a list from merchant where desc = Pizza.
 
-<figure><img src="../../..//assets/CleanShot 2023-06-19 at 15.50.37.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../..//assets/CleanShot 2023-06-19 at 15.50.37.png" alt="" /><figcaption></figcaption></figure>
 
 ### What's the difference between Direct Database Query and Direct Database Access?
 

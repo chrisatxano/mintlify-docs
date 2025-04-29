@@ -49,7 +49,7 @@ Evals are used to add additional fields from joined tables as part of your respo
 
 In the below example, we have two tables: **sales** and **product**. We've queried the **sales** table and joined it with **product** so we can retrieve product data for each sale. Our eval adds the product name to the response for each sales record returned.
 
-<figure><img src="../../../..//assets/CleanShot 2025-04-14 at 17.38.50.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../..//assets/CleanShot 2025-04-14 at 17.38.50.png" alt="" /><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Output" %}
@@ -101,7 +101,7 @@ The features present in the External tab are essential for any of the following 
 * You want your users to have more control over search parameters
 * You want to otherwise define how the Query All Records function behaves with parameters coming in from your front-end.
 
-<div align="left"><figure><img src="../../../..//assets/CleanShot 2025-01-07 at 08.46.03.png" alt="" width="298"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../../..//assets/CleanShot 2025-01-07 at 08.46.03.png" alt="" width="298" /><figcaption></figcaption></figure></div>
 
 ### External Query Options
 
@@ -177,7 +177,7 @@ In this example, we are doing a simple search to check if a field contains a spe
 }
 ```
 
-<figure><img src="../../../..//assets/CleanShot 2023-06-12 at 09.53.52.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../..//assets/CleanShot 2023-06-12 at 09.53.52.png" alt="" /><figcaption></figcaption></figure>
 
 If you want to define multiple search conditions, you can add additional objects to the "expression" array.
 
@@ -221,7 +221,7 @@ Video Example of Using External Paging (Simple mode)
 
 To define your external parameters using simple mode, just specify your desired values or variables in the External tab:
 
-<div align="left"><figure><img src="../../../..//assets/CleanShot 2023-01-17 at 16.46.54@2x.png" alt="" width="375"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../../..//assets/CleanShot 2023-01-17 at 16.46.54@2x.png" alt="" width="375" /><figcaption></figcaption></figure></div>
 {% endtab %}
 {% endtabs %}
 
@@ -249,7 +249,7 @@ You'll see this attached to the base level of the response, table reference fiel
 
 In this example, we have an Order table that just contains product IDs, and we want to see actual product information instead.
 
-<div align="left"><figure><img src="../../../..//assets/CleanShot 2025-01-07 at 08.26.38.png" alt="" width="440"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../../..//assets/CleanShot 2025-01-07 at 08.26.38.png" alt="" width="440" /><figcaption></figcaption></figure></div>
 {% endstep %}
 
 {% step %}
@@ -263,7 +263,7 @@ You can also select from already created addons from here.
 
 For this example, we're adding product data to our orders, so we'll choose product.
 
-<div align="left"><figure><img src="../../../..//assets/CleanShot 2025-01-07 at 08.34.23.png" alt="" width="335"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../../..//assets/CleanShot 2025-01-07 at 08.34.23.png" alt="" width="335" /><figcaption></figcaption></figure></div>
 {% endstep %}
 
 {% step %}
@@ -281,7 +281,7 @@ For this example, because we are only returning one product per product ID, we'l
 
 Our orders table contains product IDs in a field called `product_id`, so we'll choose that field. Xano will try and make the right choice for you automatically, so you may not have to make any changes here.
 
-<div align="left"><figure><img src="../../../..//assets/CleanShot 2025-01-07 at 08.38.40.png" alt="" width="335"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../../..//assets/CleanShot 2025-01-07 at 08.38.40.png" alt="" width="335" /><figcaption></figcaption></figure></div>
 {% endstep %}
 
 {% step %}
@@ -297,7 +297,7 @@ Our parent object in this case is each product ID. The parent object is just wha
 
 We want each product to be nested under a key called product\_info, so that's what we'll put here.
 
-<div align="left"><figure><img src="../../../..//assets/CleanShot 2025-01-07 at 08.40.34.png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../../..//assets/CleanShot 2025-01-07 at 08.40.34.png" alt="" /><figcaption></figcaption></figure></div>
 
 You can also click ![[](<../../../../.gitbook/assets/CleanShot 2025-01-07 at 08.42.21.png>) to change the response if you only want certain fields returned.
 {% endstep %}

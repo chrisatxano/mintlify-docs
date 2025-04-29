@@ -34,17 +34,17 @@ It’s important to construct your index based on the query being performed that
 
 #### Example Query: Find all users in a specific country, with a specific profession
 
-<figure><img src="https://lh3.googleusercontent.com/DqBBS92W4kPeFmqQ_opVpKYhaZjOlvMj_-F5W5f6FsbYRNYepExRJ57jOfdR-obut1jM25r-e3PsqUaZ2c8p4GsL7idsLdP3hQe3p3yITkTxeno21GuXBq3McFgC2uwvj0EzbEEJrbFa-F7vWh7rN-w" alt=""><figcaption><p>Example query with no indexing</p></figcaption></figure>
+<figure><img src="https://lh3.googleusercontent.com/DqBBS92W4kPeFmqQ_opVpKYhaZjOlvMj_-F5W5f6FsbYRNYepExRJ57jOfdR-obut1jM25r-e3PsqUaZ2c8p4GsL7idsLdP3hQe3p3yITkTxeno21GuXBq3McFgC2uwvj0EzbEEJrbFa-F7vWh7rN-w" alt="" /><figcaption><p>Example query with no indexing</p></figcaption></figure>
 
 With no indexing applied, this query takes **0.62** seconds to complete.
 
 Because these two pieces of data can exist independently of each other -- meaning we don't need to know a country to determine a profession, and vice versa, we will apply two separate indexes to our table, one for each field.
 
-<figure><img src="https://lh5.googleusercontent.com/HKQ-aHlQjct6toQpewypBYsLXLdD5Y8hH3nk7gi_cTxUjk3gaxbjeMT83iIcaPb8Z1IO-f8SAF2xTiWsepqpfAm_qd6v4RVCG07CSN65ShG_Q-zmZrKtS6rBICqVRtYXK1sjBuDhw-7XE8FpZwbQYvM" alt=""><figcaption><p>Indexes applied based on the sample query</p></figcaption></figure>
+<figure><img src="https://lh5.googleusercontent.com/HKQ-aHlQjct6toQpewypBYsLXLdD5Y8hH3nk7gi_cTxUjk3gaxbjeMT83iIcaPb8Z1IO-f8SAF2xTiWsepqpfAm_qd6v4RVCG07CSN65ShG_Q-zmZrKtS6rBICqVRtYXK1sjBuDhw-7XE8FpZwbQYvM" alt="" /><figcaption><p>Indexes applied based on the sample query</p></figcaption></figure>
 
 With these indexes applied, the example query now executes in **0.05** seconds, a **95% increase in query speed.**
 
-<figure><img src="https://lh5.googleusercontent.com/Hm6j45xDF7o_AZLnIZKt6rpCIm6G2PPuFnSSMZdW6Kn2dT34Xnkq4yEo-g5BZLZCF-g0VeQm6FtVlWmysjcr03D15ajBGMdrVrpE7k683g8FwrKcziY-kJCdG71WDsOdJLH-p0YLTPRX9rkxProi95c" alt=""><figcaption><p>Example query with indexing applied</p></figcaption></figure>
+<figure><img src="https://lh5.googleusercontent.com/Hm6j45xDF7o_AZLnIZKt6rpCIm6G2PPuFnSSMZdW6Kn2dT34Xnkq4yEo-g5BZLZCF-g0VeQm6FtVlWmysjcr03D15ajBGMdrVrpE7k683g8FwrKcziY-kJCdG71WDsOdJLH-p0YLTPRX9rkxProi95c" alt="" /><figcaption><p>Example query with indexing applied</p></figcaption></figure>
 
 ### When should I index a single field by itself vs multiple fields in the same index?
 
@@ -62,15 +62,15 @@ You can use a field in a double-field index as well as a single-field index, but
 
 **Example Query: Find all users who are part of a specific subset of artists**
 
-<figure><img src="https://lh5.googleusercontent.com/TE8piA-TZd-1pohkWh7GO3RuZ549fQSQU3LINMkM7uvkfuqGk5TVDp65tsIqwFW1kycjvezEtzvJ8RfQtREhdYCl4kXnK2YCaIGgubAyRbFcbNbaxZymu7nXSbdPK7qY1MgS2GbMAZTgAorZ5M6nafI" alt=""><figcaption><p>Example query with no indexing</p></figcaption></figure>
+<figure><img src="https://lh5.googleusercontent.com/TE8piA-TZd-1pohkWh7GO3RuZ549fQSQU3LINMkM7uvkfuqGk5TVDp65tsIqwFW1kycjvezEtzvJ8RfQtREhdYCl4kXnK2YCaIGgubAyRbFcbNbaxZymu7nXSbdPK7qY1MgS2GbMAZTgAorZ5M6nafI" alt="" /><figcaption><p>Example query with no indexing</p></figcaption></figure>
 
 Executing the example query, with no indexing applied, takes **1.44s**.
 
 Because we know that the artist\_service field requires the profession field to make sense in the context of our query, we will place both of those fields, in order, in the same index.
 
-<figure><img src="https://lh4.googleusercontent.com/d2SO_6uzBigUQvCbSnVTuXs_afX0f4oM0yUveZeQ5VjO6SFg0PKv2lXI6G2ORqAFMRGPJZ0lQc2_E8sJ97Bwp0HgzGF5xsNh7CN71Y9Orve4tVWtBAKDAL0YwmOpIDwl7YqDuXtIvpV1FhAQ12hhlv0" alt=""><figcaption><p>Applying the index for the example query</p></figcaption></figure>
+<figure><img src="https://lh4.googleusercontent.com/d2SO_6uzBigUQvCbSnVTuXs_afX0f4oM0yUveZeQ5VjO6SFg0PKv2lXI6G2ORqAFMRGPJZ0lQc2_E8sJ97Bwp0HgzGF5xsNh7CN71Y9Orve4tVWtBAKDAL0YwmOpIDwl7YqDuXtIvpV1FhAQ12hhlv0" alt="" /><figcaption><p>Applying the index for the example query</p></figcaption></figure>
 
-<figure><img src="https://lh5.googleusercontent.com/xyJz6sIMQf1BWzUZM6d9JWjSXr9788IGaESrLwj16ffrE_U_yQ7hUZSpLGiIJUQ7l339TZBvXiyTzfdEMMMAY_map6YDR1him_xVm3MxpvOPMM4e5jxxqhPUqIpz-Tf0OWpsj267b3Py3OqnDleirME" alt=""><figcaption><p>Example query results with indexing applied</p></figcaption></figure>
+<figure><img src="https://lh5.googleusercontent.com/xyJz6sIMQf1BWzUZM6d9JWjSXr9788IGaESrLwj16ffrE_U_yQ7hUZSpLGiIJUQ7l339TZBvXiyTzfdEMMMAY_map6YDR1him_xVm3MxpvOPMM4e5jxxqhPUqIpz-Tf0OWpsj267b3Py3OqnDleirME" alt="" /><figcaption><p>Example query results with indexing applied</p></figcaption></figure>
 
 After applying the index shown, this query completes in **0.02 seconds, 98% faster.**
 
@@ -107,11 +107,11 @@ To use the GIN index in this query, we first need to create a variable with the 
 
 The structure starts with an object containing the name of the field, with the value being an empty array. We then use the **push** filter to add the value we are searching for inside of that list. You can use multiple push filters to search for multiple values.
 
-<figure><img src="../..//assets/CleanShot 2023-04-20 at 16.17.16@2x.png" alt=""><figcaption><p>Constructing the variable to be used in our query</p></figcaption></figure>
+<figure><img src="../..//assets/CleanShot 2023-04-20 at 16.17.16@2x.png" alt="" /><figcaption><p>Constructing the variable to be used in our query</p></figcaption></figure>
 
 Once we have our object constructed, we will set up our custom query by selecting the table on the left side, which leaves us with the 'contains' operator, and our constructed object on the right.
 
-<figure><img src="../..//assets/CleanShot 2023-04-20 at 16.18.45@2x.png" alt=""><figcaption><p>An example of a GIN index query</p></figcaption></figure>
+<figure><img src="../..//assets/CleanShot 2023-04-20 at 16.18.45@2x.png" alt="" /><figcaption><p>An example of a GIN index query</p></figcaption></figure>
 
 In this example, a query without indexing takes **0.23** seconds.
 
@@ -121,15 +121,15 @@ In this example, utilizing the GIN index, the query takes **0.02** seconds.
 
 In the database view, click on the table that you want to index. Choose "Indexes" from the top bar.
 
-<figure><img src="../..//assets/CleanShot 2023-04-20 at 15.57.18.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../..//assets/CleanShot 2023-04-20 at 15.57.18.png" alt="" /><figcaption></figcaption></figure>
 
 Click "Create Index" to add a new index, or click on an existing index to manage it.
 
-<figure><img src="../..//assets/CleanShot 2023-04-20 at 15.58.20.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../..//assets/CleanShot 2023-04-20 at 15.58.20.png" alt="" /><figcaption></figcaption></figure>
 
 Choose the fields, sort, and index type. When done, click 'Save'.
 
-<figure><img src="../..//assets/CleanShot 2023-04-20 at 15.59.07.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../..//assets/CleanShot 2023-04-20 at 15.59.07.png" alt="" /><figcaption></figcaption></figure>
 
 <Warning>
 

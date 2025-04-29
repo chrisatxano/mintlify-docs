@@ -314,9 +314,9 @@ Multiple SET filters may be required for each transformation.
 
 | Syntax                                                                                                                                                                                                 | Result                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p><em>Change the value of "v"</em></p><p></p><p><strong>Path</strong>: v<br><strong>Value</strong>: 50</p>                                                                                            | <pre class="language-json"><code class="lang-json">{"v": 50,...
+| <p><em>Change the value of "v"</em></p><p></p><p><strong>Path</strong>: v<br /><strong>Value</strong>: 50</p>                                                                                            | <pre class="language-json"><code class="lang-json">{"v": 50,...
 </code></pre>                                                                                                                                                                                                                                                                                                                                                                                              |
-| <p><em>Change the value of all IDs in the items</em></p><p></p><p><strong>Path</strong>: items.id<br><strong>Value</strong>: 99</p>                                                                    | <pre class="language-json"><code class="lang-json">{
+| <p><em>Change the value of all IDs in the items</em></p><p></p><p><strong>Path</strong>: items.id<br /><strong>Value</strong>: 99</p>                                                                    | <pre class="language-json"><code class="lang-json">{
   "v": 10,
   "items": [
     {
@@ -340,7 +340,7 @@ Multiple SET filters may be required for each transformation.
   ]
 }
 </code></pre>                                                    |
-| <p><em>Add 1 to all item IDs</em></p><p></p><p><strong>Path</strong>: items.id<br><strong>Value</strong>: $$+1</p>                                                                                     | <pre class="language-json"><code class="lang-json">{
+| <p><em>Add 1 to all item IDs</em></p><p></p><p><strong>Path</strong>: items.id<br /><strong>Value</strong>: $$+1</p>                                                                                     | <pre class="language-json"><code class="lang-json">{
   "v": 10,
   "items": [
     {
@@ -364,7 +364,7 @@ Multiple SET filters may be required for each transformation.
   ]
 }
 </code></pre>                                                      |
-| <p><em>Uppercase all item tags</em></p><p></p><p><strong>Path</strong>: items.tags.tag<br><strong>Value</strong>: $$|to_upper</p>                                                                      | <pre class="language-json"><code class="lang-json">{
+| <p><em>Uppercase all item tags</em></p><p></p><p><strong>Path</strong>: items.tags.tag<br /><strong>Value</strong>: $$|to_upper</p>                                                                      | <pre class="language-json"><code class="lang-json">{
   "v": 10,
   "items": [
     {
@@ -388,7 +388,7 @@ Multiple SET filters may be required for each transformation.
   ]
 }
 </code></pre>                                                      |
-| <p><em>Add the value of an input to each tag weight</em></p><p></p><p><strong>Path</strong>: items.tags.weight<br><strong>Value</strong>: $input.add+$$<br><strong>Input</strong>: 500</p>             | <pre class="language-json"><code class="lang-json">{
+| <p><em>Add the value of an input to each tag weight</em></p><p></p><p><strong>Path</strong>: items.tags.weight<br /><strong>Value</strong>: $input.add+$$<br /><strong>Input</strong>: 500</p>             | <pre class="language-json"><code class="lang-json">{
   "v": 10,
   "items": [
     {
@@ -412,7 +412,7 @@ Multiple SET filters may be required for each transformation.
   ]
 }
 </code></pre>                                                 |
-| <p><em>Add a new total_weight key for each item that contains the sum of all tag weights</em></p><p></p><p><strong>Path</strong>: items.total_weight<br><strong>Value</strong>: $1.tags.weight|sum</p> | <pre class="language-json"><code class="lang-json">{
+| <p><em>Add a new total_weight key for each item that contains the sum of all tag weights</em></p><p></p><p><strong>Path</strong>: items.total_weight<br /><strong>Value</strong>: $1.tags.weight|sum</p> | <pre class="language-json"><code class="lang-json">{
   "v": 10,
   "items": [
     {
@@ -776,7 +776,7 @@ These are just a few examples of what Xano Transform could accomplish.
 
 {% tabs %}
 {% tab title="Xano Transform (GET Filter)" %}
-<figure><img src="..//assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="..//assets/image (7).png" alt="" /><figcaption></figcaption></figure>
 
 ```
 result[$$.price>700]
@@ -793,7 +793,7 @@ result[$$.price>700]
 {% endtab %}
 
 {% tab title="No-Code" %}
-<figure><img src="..//assets/image (8).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="..//assets/image (8).png" alt="" width="563" /><figcaption></figcaption></figure>
 
 * **Create Variable**
   * Create a variable to hold our list of qualifying results
@@ -808,7 +808,7 @@ result[$$.price>700]
 {% endtab %}
 
 {% tab title="High Order Filters" %}
-<figure><img src="..//assets/image (9).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="..//assets/image (9).png" alt="" width="563" /><figcaption></figcaption></figure>
 
 Using the higher order filter called 'filter', apply the following code:
 
@@ -828,7 +828,7 @@ return $var.products.filter(product => product.price > 700);
 
 {% tabs %}
 {% tab title="Xano Transform (GET Filter)" %}
-<figure><img src="..//assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="..//assets/image (10).png" alt="" /><figcaption></figcaption></figure>
 
 ```
 result[$$.price>700 && $$.rating>4.5]
@@ -851,7 +851,7 @@ result[$$.price>700 && $$.rating>4.5]
 {% endtab %}
 
 {% tab title="No-Code" %}
-<figure><img src="..//assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="..//assets/image (11).png" alt="" /><figcaption></figcaption></figure>
 
 * **Create Variable**
   * Create a variable to hold our list of qualifying results
@@ -866,7 +866,7 @@ result[$$.price>700 && $$.rating>4.5]
 {% endtab %}
 
 {% tab title="High Order Filters" %}
-<figure><img src="..//assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="..//assets/image (12).png" alt="" /><figcaption></figcaption></figure>
 
 Using the higher order filter called 'filter', apply the following code:
 
@@ -885,7 +885,7 @@ return $var.products.filter(product => product.price > 700 && product.rating > 4
 
 {% tabs %}
 {% tab title="Xano Transform (GET Filter)" %}
-<figure><img src="..//assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="..//assets/image (13).png" alt="" /><figcaption></figcaption></figure>
 
 ```
 result[$$.price>700 && $$.rating>4.5 && $$.stock>0]
@@ -912,7 +912,7 @@ result[$$.price>700 && $$.rating>4.5 && $$.stock>0]
 {% endtab %}
 
 {% tab title="No-Code" %}
-<figure><img src="..//assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="..//assets/image (14).png" alt="" /><figcaption></figcaption></figure>
 
 * **Create Variable**
   * Create a variable to hold our list of qualifying results
@@ -927,7 +927,7 @@ result[$$.price>700 && $$.rating>4.5 && $$.stock>0]
 {% endtab %}
 
 {% tab title="High Order Filters" %}
-<figure><img src="..//assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="..//assets/image (15).png" alt="" /><figcaption></figcaption></figure>
 
 Using the higher order filter called 'filter', apply the following code:
 
@@ -947,7 +947,7 @@ return $var.products.filter(product => product.price > 700 && product.rating > 4
 
 {% tabs %}
 {% tab title="Xano Transform (SET Filter)" %}
-<figure><img src="..//assets/CleanShot 2023-12-21 at 14.27.47.png" alt="" width="408"><figcaption></figcaption></figure>
+<figure><img src="..//assets/CleanShot 2023-12-21 at 14.27.47.png" alt="" width="408" /><figcaption></figcaption></figure>
 
 ```
 Path: name
@@ -964,7 +964,7 @@ Value: $$|to_upper
 {% endtab %}
 
 {% tab title="No-Code" %}
-<figure><img src="..//assets/CleanShot 2023-12-21 at 14.29.32.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="..//assets/CleanShot 2023-12-21 at 14.29.32.png" alt="" /><figcaption></figcaption></figure>
 
 * **Create Variable**
   * Create a variable to hold our list of qualifying results
@@ -980,7 +980,7 @@ Value: $$|to_upper
 {% endtab %}
 
 {% tab title="High Order Filters" %}
-<figure><img src="..//assets/CleanShot 2023-12-21 at 14.30.19.png" alt="" width="404"><figcaption></figcaption></figure>
+<figure><img src="..//assets/CleanShot 2023-12-21 at 14.30.19.png" alt="" width="404" /><figcaption></figcaption></figure>
 
 Using the filter **filter**, apply the following code:
 
@@ -1016,7 +1016,7 @@ return modifiedProducts;
 
 {% tabs %}
 {% tab title="Xano Transform (GET Filter)" %}
-<figure><img src="..//assets/CleanShot 2023-12-21 at 14.37.11.png" alt="" width="413"><figcaption></figcaption></figure>
+<figure><img src="..//assets/CleanShot 2023-12-21 at 14.37.11.png" alt="" width="413" /><figcaption></figcaption></figure>
 
 _To complete this example, you'll want to apply the SET filter for name as described in the previous example._
 
@@ -1049,7 +1049,7 @@ Value: $1.stock>50 ? ("$"~($$*0.9|number_format:2:.:,)) : ("$"~($$*1.3|number_fo
 {% endtab %}
 
 {% tab title="No-Code" %}
-<figure><img src="..//assets/CleanShot 2023-12-21 at 14.48.23.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="..//assets/CleanShot 2023-12-21 at 14.48.23.png" alt="" width="563" /><figcaption></figcaption></figure>
 
 
 
@@ -1073,7 +1073,7 @@ Value: $1.stock>50 ? ("$"~($$*0.9|number_format:2:.:,)) : ("$"~($$*1.3|number_fo
 {% endtab %}
 
 {% tab title="High Order Filters" %}
-<figure><img src="..//assets/CleanShot 2023-12-21 at 15.10.13.png" alt="" width="407"><figcaption></figcaption></figure>
+<figure><img src="..//assets/CleanShot 2023-12-21 at 15.10.13.png" alt="" width="407" /><figcaption></figcaption></figure>
 
 Using the filter **filter**, apply the following code:
 

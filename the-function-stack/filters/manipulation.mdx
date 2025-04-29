@@ -14,7 +14,7 @@ Create an array of a certain size with a default value.
 
 ### Examples <a href="#fillexamples" id="fillexamples"></a>
 
-<table><thead><tr><th width="342.8411865234375">Example</th><th>Result</th></tr></thead><tbody><tr><td><img src="../..//assets/CleanShot 2025-03-19 at 09.22.26.png" alt="" data-size="original"></td><td><p></p><pre class="language-json"><code class="lang-json">[
+<table><thead><tr><th width="342.8411865234375">Example</th><th>Result</th></tr></thead><tbody><tr><td><img src="../..//assets/CleanShot 2025-03-19 at 09.22.26.png" alt="" data-size="original" /></td><td><p></p><pre class="language-json"><code class="lang-json">[
      "Default Value",
      "Default Value",
      "Default Value",
@@ -48,7 +48,7 @@ Creates an object of a certain size with a default value and a list of keys.
 
 | Example                                                                                            | Output                                                                                                                                                   |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <img src="../..//assets/CleanShot 2025-03-19 at 09.27.52.png" alt="" data-size="original"> | <p></p><pre class="language-json"><code class="lang-json">{
+| <img src="../..//assets/CleanShot 2025-03-19 at 09.27.52.png" alt="" data-size="original" /> | <p></p><pre class="language-json"><code class="lang-json">{
 	"key1": "Default Value",
 	"key2": "Default Value",
 	"key3": "Default Value"
@@ -70,9 +70,9 @@ Useful if you need to determine a value to apply based on what is provided, such
 
 ### Examples <a href="#first_notempty_examples" id="first_notempty_examples"></a>
 
-<figure><img src="../..//assets/CleanShot 2025-03-19 at 09.52.57.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../..//assets/CleanShot 2025-03-19 at 09.52.57.png" alt="" /><figcaption></figcaption></figure>
 
-<figure><img src="../..//assets/CleanShot 2025-03-19 at 09.39.01.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../..//assets/CleanShot 2025-03-19 at 09.39.01.png" alt="" /><figcaption></figcaption></figure>
 
 ***
 
@@ -97,11 +97,11 @@ Remember, **`null`** is its own value entirely. It is not the same as "null", an
 
 ### Examples <a href="#first_notnull_examples" id="first_notnull_examples"></a>
 
-<figure><img src="../..//assets/CleanShot 2025-03-19 at 09.59.51.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../..//assets/CleanShot 2025-03-19 at 09.59.51.png" alt="" /><figcaption></figcaption></figure>
 
-<figure><img src="../..//assets/CleanShot 2025-03-19 at 09.59.31.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../..//assets/CleanShot 2025-03-19 at 09.59.31.png" alt="" /><figcaption></figcaption></figure>
 
-<figure><img src="../..//assets/CleanShot 2025-03-19 at 09.54.10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../..//assets/CleanShot 2025-03-19 at 09.54.10.png" alt="" /><figcaption></figcaption></figure>
 
 ***
 
@@ -128,14 +128,14 @@ Are you getting errors in your function stacks because certain values don't exis
 | Parameter     | Purpose                                                     | Example                                                                                                                                                                                                                                   |
 | ------------- | ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | parent value  | The object or array to search for the value                 | This can be an object, array, a variable, or the result of one of the Get All Input functions [[\[1\](../functions/utility-functions.md#get-all-input) [[\[2\](../functions/utility-functions.md#get-all-raw-input)                       |
-| path          | The path to look for inside of the parent value             | <p>For getting a specific array item:<br><code>0</code><br><br>For getting a specific path inside of an object:<br><code>pathName</code><br><br>For getting a specific path inside of an array of objects:<br><code>0.pathName</code></p> |
+| path          | The path to look for inside of the parent value             | <p>For getting a specific array item:<br /><code>0</code><br /><br />For getting a specific path inside of an object:<br /><code>pathName</code><br /><br />For getting a specific path inside of an array of objects:<br /><code>0.pathName</code></p> |
 | default value | The value to provide in place of the value that isn't found | This value can be whatever you'd like.                                                                                                                                                                                                    |
 
 ### Examples <a href="#get_examples" id="get_examples"></a>
 
-<figure><img src="../..//assets/CleanShot 2025-03-19 at 10.50.15 (1).png" alt=""><figcaption><p>An age is provided in the input, so it is provided by the GET filter.</p></figcaption></figure>
+<figure><img src="../..//assets/CleanShot 2025-03-19 at 10.50.15 (1).png" alt="" /><figcaption><p>An age is provided in the input, so it is provided by the GET filter.</p></figcaption></figure>
 
-<figure><img src="../..//assets/CleanShot 2025-03-19 at 10.50.47.png" alt=""><figcaption><p>No age is provided in the input, so the default value is used instead.</p></figcaption></figure>
+<figure><img src="../..//assets/CleanShot 2025-03-19 at 10.50.47.png" alt="" /><figcaption><p>No age is provided in the input, so the default value is used instead.</p></figcaption></figure>
 
 ***
 
@@ -146,13 +146,13 @@ Checks if a value is present (similar to get), but only returns a true or false.
 | Parameter    | Purpose                                         | Example                                                                                                                                                                                                                                   |
 | ------------ | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | parent value | The object or array to search for the value     | This can be an object, array, a variable, or the result of one of the Get All Input functions [[\[1\](../functions/utility-functions.md#get-all-input) [[\[2\](../functions/utility-functions.md#get-all-raw-input)                       |
-| path         | The path to look for inside of the parent value | <p>For getting a specific array item:<br><code>0</code><br><br>For getting a specific path inside of an object:<br><code>pathName</code><br><br>For getting a specific path inside of an array of objects:<br><code>0.pathName</code></p> |
+| path         | The path to look for inside of the parent value | <p>For getting a specific array item:<br /><code>0</code><br /><br />For getting a specific path inside of an object:<br /><code>pathName</code><br /><br />For getting a specific path inside of an array of objects:<br /><code>0.pathName</code></p> |
 
 ### Examples <a href="#has_examples" id="has_examples"></a>
 
-<figure><img src="../..//assets/CleanShot 2025-03-19 at 10.53.10.png" alt=""><figcaption><p>An age is provided, so the filter returns <strong>true</strong></p></figcaption></figure>
+<figure><img src="../..//assets/CleanShot 2025-03-19 at 10.53.10.png" alt="" /><figcaption><p>An age is provided, so the filter returns <strong>true</strong></p></figcaption></figure>
 
-<figure><img src="../..//assets/CleanShot 2025-03-19 at 10.52.51.png" alt=""><figcaption><p>An age is not provided, so the filter returns <strong>false</strong></p></figcaption></figure>
+<figure><img src="../..//assets/CleanShot 2025-03-19 at 10.52.51.png" alt="" /><figcaption><p>An age is not provided, so the filter returns <strong>false</strong></p></figcaption></figure>
 
 ***
 
@@ -168,9 +168,9 @@ Replaces or inserts new data at a specified path.
 
 ### Examples <a href="#set_examples" id="set_examples"></a>
 
-<figure><img src="../..//assets/CleanShot 2025-03-19 at 10.57.53.png" alt=""><figcaption><p>Replace a value with another</p></figcaption></figure>
+<figure><img src="../..//assets/CleanShot 2025-03-19 at 10.57.53.png" alt="" /><figcaption><p>Replace a value with another</p></figcaption></figure>
 
-<figure><img src="../..//assets/CleanShot 2025-03-19 at 10.59.23.png" alt=""><figcaption><p>Set a new key inside of an object</p></figcaption></figure>
+<figure><img src="../..//assets/CleanShot 2025-03-19 at 10.59.23.png" alt="" /><figcaption><p>Set a new key inside of an object</p></figcaption></figure>
 
 ***
 
@@ -189,7 +189,7 @@ Use set\_conditional to set a new value in an object based on whether a conditio
 
 ### Examples <a href="#set_conditional_examples" id="set_conditional_examples"></a>
 
-<figure><img src="../..//assets/CleanShot 2025-03-19 at 11.01.54.png" alt=""><figcaption><p>The age provided is greater than 20, so we return the value set in our set_conditional filter</p></figcaption></figure>
+<figure><img src="../..//assets/CleanShot 2025-03-19 at 11.01.54.png" alt="" /><figcaption><p>The age provided is greater than 20, so we return the value set in our set_conditional filter</p></figcaption></figure>
 
 ***
 
@@ -206,7 +206,7 @@ set\_ifnotnull works the same, but only checks for `null`
 | Parameter    | Purpose                                                      | Example                                 |
 | ------------ | ------------------------------------------------------------ | --------------------------------------- |
 | parent value | Where to set the value                                       | This will usually be an existing object |
-| path         | The path to set the value if the checked value exists        | <p>"name"<br>"age"<br>"location"</p>    |
+| path         | The path to set the value if the checked value exists        | <p>"name"<br />"age"<br />"location"</p>    |
 | value        | The value to set if the checked value is not empty (or null) | Any value                               |
 
 ### Examples <a href="#set_ifnotempty_ifnotnull_examples" id="set_ifnotempty_ifnotnull_examples"></a>
@@ -231,7 +231,7 @@ In this function stack, we're simulating a user submitting changes to their user
 {% endstep %}
 {% endstepper %}
 
-<figure><img src="../..//assets/CleanShot 2025-03-19 at 11.20.25.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../..//assets/CleanShot 2025-03-19 at 11.20.25.png" alt="" /><figcaption></figcaption></figure>
 
 ***
 
@@ -285,6 +285,6 @@ Removes a key from an object
 
 ### Examples <a href="#unset_examples" id="unset_examples"></a>
 
-<figure><img src="../..//assets/CleanShot 2025-03-19 at 11.28.06.png" alt=""><figcaption><p>The user record normally returns a "name", but using <strong>unset</strong> has removed it.</p></figcaption></figure>
+<figure><img src="../..//assets/CleanShot 2025-03-19 at 11.28.06.png" alt="" /><figcaption><p>The user record normally returns a "name", but using <strong>unset</strong> has removed it.</p></figcaption></figure>
 
 ***

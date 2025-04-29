@@ -60,7 +60,7 @@ Sign off with the name of their account manager: {{ $accountManager.name }}
 {% step %}
 ## Look for the Template Engine function under Utility Functions.
 
-<div align="left"><figure><img src="../assets/CleanShot 2025-04-02 at 16.29.13.png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../assets/CleanShot 2025-04-02 at 16.29.13.png" alt="" /><figcaption></figcaption></figure></div>
 {% endstep %}
 
 {% step %}
@@ -70,7 +70,7 @@ Sign off with the name of their account manager: {{ $accountManager.name }}
 {% step %}
 ## Take a tour of the editor and begin building your template.
 
-<figure><img src="../assets/CleanShot 2025-04-02 at 16.33.01.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../assets/CleanShot 2025-04-02 at 16.33.01.png" alt="" /><figcaption></figcaption></figure>
 {% endstep %}
 {% endstepper %}
 
@@ -196,7 +196,7 @@ You can use Twig's built in filters, similar to our own, to transform or manipul
 
 The below list is some of the most essential filters used in Twig, but it is not all of them. You can review the entire list [here](https://twig.symfony.com/doc/3.x/filters/index.html).
 
-<table><thead><tr><th width="148.541259765625">Filter</th><th width="161.507080078125">Description</th><th width="271.359375">Example</th><th>Result</th></tr></thead><tbody><tr><td><code>upper</code></td><td>Converts string to uppercase</td><td><code>{{ $user.name|upper }}</code><br><em>When $user.name is "John Smith"</em></td><td>"JOHN SMITH"</td></tr><tr><td><code>lower</code></td><td>Converts string to lowercase</td><td><code>{{ $user.name|lower }}</code><br><em>When $user.name is "John Smith"</em></td><td>"john smith"</td></tr><tr><td><code>trim</code></td><td>Removes whitespace from the beginning and end of a string</td><td><code>{{ $user.input|trim }}</code><br><em>When $user.input is " hello "</em></td><td>"hello"</td></tr><tr><td><code>join</code></td><td>Joins array elements into a string with a delimiter</td><td><code>{{ $user.tags|join(', ') }}</code><br><em>When $user.tags is ["php", "twig", "web"]</em></td><td>"php, twig, web"</td></tr><tr><td><code>default</code></td><td>Provides a fallback value if the variable is null, empty, or undefined</td><td><code>{{ $user.middleName|default('No middle name') }}</code><br><em>When $user.middleName is null</em></td><td>"No middle name"</td></tr><tr><td><code>number_format</code></td><td>Formats numbers with grouped thousands and decimal points</td><td><code>{{ $product.price|number_format(2, '.', ',') }}</code><br><em>When $product.price is 1234.56</em></td><td>"1,234.56"</td></tr><tr><td><code>shuffle</code></td><td>Randomly shuffles an array</td><td><code>{{ $user.items|shuffle }}</code><br><em>When $user.items is ["a", "b", "c"]</em></td><td><em>Random order like:</em> ["c", "a", "b"]</td></tr><tr><td><code>date</code></td><td>Formats dates using PHP's date syntax</td><td><code>{{ $user.createdAt|date("F j, Y") }}</code><br><em>When $user.createdAt is "2023-12-25"</em></td><td>"December 25, 2023"</td></tr></tbody></table>
+<table><thead><tr><th width="148.541259765625">Filter</th><th width="161.507080078125">Description</th><th width="271.359375">Example</th><th>Result</th></tr></thead><tbody><tr><td><code>upper</code></td><td>Converts string to uppercase</td><td><code>{{ $user.name|upper }}</code><br /><em>When $user.name is "John Smith"</em></td><td>"JOHN SMITH"</td></tr><tr><td><code>lower</code></td><td>Converts string to lowercase</td><td><code>{{ $user.name|lower }}</code><br /><em>When $user.name is "John Smith"</em></td><td>"john smith"</td></tr><tr><td><code>trim</code></td><td>Removes whitespace from the beginning and end of a string</td><td><code>{{ $user.input|trim }}</code><br /><em>When $user.input is " hello "</em></td><td>"hello"</td></tr><tr><td><code>join</code></td><td>Joins array elements into a string with a delimiter</td><td><code>{{ $user.tags|join(', ') }}</code><br /><em>When $user.tags is ["php", "twig", "web"]</em></td><td>"php, twig, web"</td></tr><tr><td><code>default</code></td><td>Provides a fallback value if the variable is null, empty, or undefined</td><td><code>{{ $user.middleName|default('No middle name') }}</code><br /><em>When $user.middleName is null</em></td><td>"No middle name"</td></tr><tr><td><code>number_format</code></td><td>Formats numbers with grouped thousands and decimal points</td><td><code>{{ $product.price|number_format(2, '.', ',') }}</code><br /><em>When $product.price is 1234.56</em></td><td>"1,234.56"</td></tr><tr><td><code>shuffle</code></td><td>Randomly shuffles an array</td><td><code>{{ $user.items|shuffle }}</code><br /><em>When $user.items is ["a", "b", "c"]</em></td><td><em>Random order like:</em> ["c", "a", "b"]</td></tr><tr><td><code>date</code></td><td>Formats dates using PHP's date syntax</td><td><code>{{ $user.createdAt|date("F j, Y") }}</code><br /><em>When $user.createdAt is "2023-12-25"</em></td><td>"December 25, 2023"</td></tr></tbody></table>
 
 ## Escape Filter (e)
 

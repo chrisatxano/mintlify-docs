@@ -2,7 +2,7 @@
 title: XS - Query All Records
 ---
 
-## <img src="../assets/docuBadge.png" alt="" data-size="line"> Query All Records <a href="#xs-secretkey" id="xs-secretkey"></a>
+## <img src="../assets/docuBadge.png" alt="" data-size="line" /> Query All Records <a href="#xs-secretkey" id="xs-secretkey"></a>
 
 ## Simple Query
 
@@ -86,7 +86,7 @@ Returns are defined immediately before `} as returnVariable`
     ```
 *   **Aggregate**
 
-    <figure><img src="../assets/CleanShot 2025-03-07 at 08.29.54 (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../assets/CleanShot 2025-03-07 at 08.29.54 (1).png" alt="" /><figcaption></figcaption></figure>
 
     * ```javascript
             return_aggregate = {
@@ -140,12 +140,12 @@ Returns are defined immediately before `} as returnVariable`
 
 | Visual Builder                                                                                                                                                                     | XanoScript                                                                                                                                                                                                                              |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p>Return any user records with an ID that matches the input <code>userId</code></p><p><img src="../assets/CleanShot 2025-03-07 at 08.42.46.png" alt="" data-size="original"></p>  | <pre class="language-javascript"><code class="lang-javascript">    db.query user {
+| <p>Return any user records with an ID that matches the input <code>userId</code></p><p><img src="../assets/CleanShot 2025-03-07 at 08.42.46.png" alt="" data-size="original" /></p>  | <pre class="language-javascript"><code class="lang-javascript">    db.query user {
       search = `$db.user.id == $input.userId`
       return_exists = {}
     } as user1
 </code></pre>                                                  |
-| <p>Return any user records with an ID that matches the input <code>userId</code> that are also admins<br><img src="../assets/CleanShot 2025-03-07 at 09.17.24 (1).png" alt=""></p> | <p></p><pre class="language-javascript"><code class="lang-javascript">    db.query user {
+| <p>Return any user records with an ID that matches the input <code>userId</code> that are also admins<br /><img src="../assets/CleanShot 2025-03-07 at 09.17.24 (1).png" alt="" /></p> | <p></p><pre class="language-javascript"><code class="lang-javascript">    db.query user {
       search = `$db.user.id == $input.userId &#x26;&#x26; $db.user.userRole == "admin"`
       return_exists = {}
     } as user1

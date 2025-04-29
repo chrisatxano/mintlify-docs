@@ -26,13 +26,13 @@ function "My Custom Function" {
 
 Use the quick toggle above the input blocks to switch between XanoScript and the visual builder.
 
-<figure><img src="../..//assets/CleanShot 2025-03-11 at 09.52.58.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../..//assets/CleanShot 2025-03-11 at 09.52.58.gif" alt="" /><figcaption></figcaption></figure>
 
 ## What does a XanoScript function stack look like?
 
 This is a typical Get Record API endpoint.
 
-<figure><img src="../..//assets/CleanShot 2025-03-11 at 09.54.26.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../..//assets/CleanShot 2025-03-11 at 09.54.26.png" alt="" /><figcaption></figcaption></figure>
 
 Here is the XanoScript representation.
 
@@ -91,10 +91,10 @@ If the function outputs to a variable, that is defined after the object is close
 
 Here, we're starting with a Get Record function on the table named `user`. &#x20;
 
-<table><thead><tr><th width="338.4896240234375">Function Stack</th><th width="391.0589599609375">XanoScript</th></tr></thead><tbody><tr><td><img src="../..//assets/image (85).png" alt="" data-size="original"></td><td><pre><code>    db.get user {
-</code></pre></td></tr><tr><td><img src="../..//assets/CleanShot 2025-03-11 at 09.57.55 (1).png" alt="" data-size="original"></td><td><p></p><pre><code>      field_name = "id"
+<table><thead><tr><th width="338.4896240234375">Function Stack</th><th width="391.0589599609375">XanoScript</th></tr></thead><tbody><tr><td><img src="../..//assets/image (85).png" alt="" data-size="original" /></td><td><pre><code>    db.get user {
+</code></pre></td></tr><tr><td><img src="../..//assets/CleanShot 2025-03-11 at 09.57.55 (1).png" alt="" data-size="original" /></td><td><p></p><pre><code>      field_name = "id"
       field_value = $input.user_id
-</code></pre></td></tr><tr><td><img src="../..//assets/image (86).png" alt="" data-size="original"></td><td><pre><code>    } as model
+</code></pre></td></tr><tr><td><img src="../..//assets/image (86).png" alt="" data-size="original" /></td><td><pre><code>    } as model
 </code></pre></td></tr></tbody></table>
 
 ### Part 3 - The response
@@ -103,7 +103,7 @@ Once your inputs and function stack are defined, we can build our response.  Thi
 
 Our response will be a JSON object, which is standard.
 
-<table><thead><tr><th width="357.3203125">Function Stack</th><th width="369.5164794921875">XanoScript</th></tr></thead><tbody><tr><td><img src="../..//assets/CleanShot 2025-03-11 at 09.59.34.png" alt="" data-size="original"></td><td><pre><code>  response {
+<table><thead><tr><th width="357.3203125">Function Stack</th><th width="369.5164794921875">XanoScript</th></tr></thead><tbody><tr><td><img src="../..//assets/CleanShot 2025-03-11 at 09.59.34.png" alt="" data-size="original" /></td><td><pre><code>  response {
     value = $model
   }
 </code></pre></td></tr></tbody></table>
