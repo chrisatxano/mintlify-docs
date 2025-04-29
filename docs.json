@@ -7,31 +7,31 @@
 },
   "navigation": {
     "pages": [
-      "adjust-server-performance.mdx",
-      "api-rate-limit.mdx",
-      "developer-api-deprecated.mdx",
-      "frequently-asked-questions.mdx",
-      "increasing-plan-limits.mdx",
-      "tool-rate-limit.mdx",
-      "introduction.mdx"
+      "adjust-server-performance",
+      "api-rate-limit",
+      "developer-api-deprecated",
+      "frequently-asked-questions",
+      "increasing-plan-limits",
+      "tool-rate-limit",
+      "introduction"
     ],
     "groups": [
       {
         "group": "Agencies",
         "pages": [
-          "agencies/xano-for-agencies.mdx"
+          "agencies/xano-for-agencies"
         ],
         "groups": [
           {
             "group": "Agency Features",
             "pages": [
-              "agencies/agency-features/README.mdx",
-              "agencies/agency-features/agency-dashboard.mdx",
-              "agencies/agency-features/agency-profile.mdx",
-              "agencies/agency-features/client-invite.mdx",
-              "agencies/agency-features/commission.mdx",
-              "agencies/agency-features/private-marketplace.mdx",
-              "agencies/agency-features/transfer-ownership.mdx"
+              "agencies/agency-features/README",
+              "agencies/agency-features/agency-dashboard",
+              "agencies/agency-features/agency-profile",
+              "agencies/agency-features/client-invite",
+              "agencies/agency-features/commission",
+              "agencies/agency-features/private-marketplace",
+              "agencies/agency-features/transfer-ownership"
             ]
           }
         ]
@@ -42,9 +42,9 @@
           {
             "group": "MCP Servers",
             "pages": [
-              "ai-tools/mcp-servers/README.mdx",
-              "ai-tools/mcp-servers/connecting-clients.mdx",
-              "ai-tools/mcp-servers/mcp-functions.mdx"
+              "ai-tools/mcp-servers/README",
+              "ai-tools/mcp-servers/connecting-clients",
+              "ai-tools/mcp-servers/mcp-functions"
             ]
           }
         ]
@@ -52,37 +52,37 @@
       {
         "group": "Before You Begin",
         "pages": [
-          "before-you-begin/key-concepts.mdx",
-          "before-you-begin/navigating-xano.mdx",
-          "before-you-begin/set-up-a-free-xano-account.mdx",
-          "before-you-begin/the-development-life-cycle.mdx",
-          "before-you-begin/using-these-docs.mdx",
-          "before-you-begin/where-should-i-start.mdx"
+          "before-you-begin/key-concepts",
+          "before-you-begin/navigating-xano",
+          "before-you-begin/set-up-a-free-xano-account",
+          "before-you-begin/the-development-life-cycle",
+          "before-you-begin/using-these-docs",
+          "before-you-begin/where-should-i-start"
         ]
       },
       {
         "group": "Building Backend Features",
         "pages": [
-          "building-backend-features/chatbots.mdx",
-          "building-backend-features/connecting-to-external-systems-and-services.mdx",
-          "building-backend-features/custom-report-generation.mdx",
-          "building-backend-features/emails.mdx",
-          "building-backend-features/fuzzy-search.mdx",
-          "building-backend-features/location-data.mdx",
-          "building-backend-features/messaging.mdx",
-          "building-backend-features/notifications.mdx",
-          "building-backend-features/payments.mdx",
-          "building-backend-features/user-roles.mdx",
-          "building-backend-features/webhooks.mdx"
+          "building-backend-features/chatbots",
+          "building-backend-features/connecting-to-external-systems-and-services",
+          "building-backend-features/custom-report-generation",
+          "building-backend-features/emails",
+          "building-backend-features/fuzzy-search",
+          "building-backend-features/location-data",
+          "building-backend-features/messaging",
+          "building-backend-features/notifications",
+          "building-backend-features/payments",
+          "building-backend-features/user-roles",
+          "building-backend-features/webhooks"
         ],
         "groups": [
           {
             "group": "User Authentication and User Data",
             "pages": [
-              "building-backend-features/user-authentication-and-user-data/README.mdx",
-              "building-backend-features/user-authentication-and-user-data/oauth-sso.mdx",
-              "building-backend-features/user-authentication-and-user-data/restricting-access-rbac.mdx",
-              "building-backend-features/user-authentication-and-user-data/separating-user-data.mdx"
+              "building-backend-features/user-authentication-and-user-data/README",
+              "building-backend-features/user-authentication-and-user-data/oauth-sso",
+              "building-backend-features/user-authentication-and-user-data/restricting-access-rbac",
+              "building-backend-features/user-authentication-and-user-data/separating-user-data"
             ]
           }
         ]
@@ -90,35 +90,35 @@
       {
         "group": "Connecting to a Front End",
         "pages": [
-          "connecting-to-a-front-end/adalo.mdx",
-          "connecting-to-a-front-end/appgyver.mdx",
-          "connecting-to-a-front-end/bubble.mdx",
-          "connecting-to-a-front-end/flutterflow.mdx",
-          "connecting-to-a-front-end/fundamentals.mdx",
-          "connecting-to-a-front-end/javascript.mdx",
-          "connecting-to-a-front-end/toddle.mdx",
-          "connecting-to-a-front-end/webflow.mdx",
-          "connecting-to-a-front-end/weweb.mdx"
+          "connecting-to-a-front-end/adalo",
+          "connecting-to-a-front-end/appgyver",
+          "connecting-to-a-front-end/bubble",
+          "connecting-to-a-front-end/flutterflow",
+          "connecting-to-a-front-end/fundamentals",
+          "connecting-to-a-front-end/javascript",
+          "connecting-to-a-front-end/toddle",
+          "connecting-to-a-front-end/webflow",
+          "connecting-to-a-front-end/weweb"
         ]
       },
       {
         "group": "Enterprise",
         "pages": [
-          "enterprise/xano-for-enterprise.mdx"
+          "enterprise/xano-for-enterprise"
         ],
         "groups": [
           {
             "group": "Enterprise Features",
             "pages": [
-              "enterprise/enterprise-features/README.mdx",
-              "enterprise/enterprise-features/compliance-center.mdx",
-              "enterprise/enterprise-features/deployment.mdx",
-              "enterprise/enterprise-features/instance-activity.mdx",
-              "enterprise/enterprise-features/microservices.mdx",
-              "enterprise/enterprise-features/rbac-role-based-access-control.mdx",
-              "enterprise/enterprise-features/security-policy.mdx",
-              "enterprise/enterprise-features/tenant-center.mdx",
-              "enterprise/enterprise-features/xano-link.mdx"
+              "enterprise/enterprise-features/README",
+              "enterprise/enterprise-features/compliance-center",
+              "enterprise/enterprise-features/deployment",
+              "enterprise/enterprise-features/instance-activity",
+              "enterprise/enterprise-features/microservices",
+              "enterprise/enterprise-features/rbac-role-based-access-control",
+              "enterprise/enterprise-features/security-policy",
+              "enterprise/enterprise-features/tenant-center",
+              "enterprise/enterprise-features/xano-link"
             ]
           }
         ]
@@ -126,29 +126,29 @@
       {
         "group": "File Storage",
         "pages": [
-          "file-storage/file-storage-in-xano.mdx",
-          "file-storage/private-file-storage.mdx"
+          "file-storage/file-storage-in-xano",
+          "file-storage/private-file-storage"
         ]
       },
        {
         "group": "Instances",
         "pages": [
-          "instances/README.mdx",
-          "instances/api-rate-limit.mdx"
+          "instances/README",
+          "instances/api-rate-limit"
         ]
       },
       {
         "group": "Maintenance Monitoring and Logging",
         "pages": [
-          "maintenance-monitoring-and-logging/request-history.mdx",
-          "maintenance-monitoring-and-logging/statement-explorer.mdx"
+          "maintenance-monitoring-and-logging/request-history",
+          "maintenance-monitoring-and-logging/statement-explorer"
         ],
         "groups": [
           {
             "group": "Instance Dashboard",
             "pages": [
-              "maintenance-monitoring-and-logging/instance-dashboard/README.mdx",
-              "maintenance-monitoring-and-logging/instance-dashboard/memory-usage.mdx"
+              "maintenance-monitoring-and-logging/instance-dashboard/README",
+              "maintenance-monitoring-and-logging/instance-dashboard/memory-usage"
             ]
           }
         ]
@@ -156,82 +156,82 @@
       {
         "group": "Realtime",
         "pages": [
-          "realtime/channel-permissions.mdx",
-          "realtime/realtime-in-webflow.mdx",
-          "realtime/realtime-in-xano.mdx"
+          "realtime/channel-permissions",
+          "realtime/realtime-in-webflow",
+          "realtime/realtime-in-xano"
         ]
       },
       {
         "group": "Security",
         "pages": [
-          "security/best-practices.mdx"
+          "security/best-practices"
         ]
       },
       {
         "group": "Special Discount Pricing",
         "pages": [
-          "special-discount-pricing/non-profits.mdx",
-          "special-discount-pricing/students.mdx"
+          "special-discount-pricing/non-profits",
+          "special-discount-pricing/students"
         ]
       },
       {
         "group": "Team Collaboration",
         "pages": [
-          "team-collaboration/branching-and-merging.mdx",
-          "team-collaboration/managing-team-members.mdx",
-          "team-collaboration/realtime-collaboration.mdx",
-          "team-collaboration/role-based-access-control-rbac.mdx"
+          "team-collaboration/branching-and-merging",
+          "team-collaboration/managing-team-members",
+          "team-collaboration/realtime-collaboration",
+          "team-collaboration/role-based-access-control-rbac"
         ]
       },
       {
         "group": "Testing Debugging",
         "pages": [
-          "testing-debugging/test-suites.mdx",
-          "testing-debugging/testing-and-debugging-function-stacks.mdx",
-          "testing-debugging/unit-tests.mdx"
+          "testing-debugging/test-suites",
+          "testing-debugging/testing-and-debugging-function-stacks",
+          "testing-debugging/unit-tests"
         ]
       },
       {
         "group": "The Database",
         "pages": [
-          "the-database/designing-your-database.mdx"
+          "the-database/designing-your-database"
         ],
         "groups": [
           {
             "group": "Database Basics",
             "pages": [
-              "the-database/database-basics/README.mdx",
-              "the-database/database-basics/data-sources.mdx",
-              "the-database/database-basics/database-views.mdx",
-              "the-database/database-basics/export-and-sharing.mdx",
-              "the-database/database-basics/field-types.mdx",
-              "the-database/database-basics/relationships.mdx",
-              "the-database/database-basics/using-the-xano-database.mdx"
+              "the-database/database-basics/README",
+              "the-database/database-basics/data-sources",
+              "the-database/database-basics/database-views",
+              "the-database/database-basics/export-and-sharing",
+              "the-database/database-basics/field-types",
+              "the-database/database-basics/relationships",
+              "the-database/database-basics/using-the-xano-database"
             ]
           },
           {
             "group": "Database Performance and Maintenance",
             "pages": [
-              "the-database/database-performance-and-maintenance/README.mdx",
-              "the-database/database-performance-and-maintenance/indexing.mdx",
-              "the-database/database-performance-and-maintenance/maintenance.mdx",
-              "the-database/database-performance-and-maintenance/schema-versioning.mdx",
-              "the-database/database-performance-and-maintenance/storage.mdx"
+              "the-database/database-performance-and-maintenance/README",
+              "the-database/database-performance-and-maintenance/indexing",
+              "the-database/database-performance-and-maintenance/maintenance",
+              "the-database/database-performance-and-maintenance/schema-versioning",
+              "the-database/database-performance-and-maintenance/storage"
             ]
           },
           {
             "group": "Migrating Your Data",
             "pages": [
-              "the-database/migrating-your-data/README.mdx",
-              "the-database/migrating-your-data/adalo-to-xano.mdx",
-              "the-database/migrating-your-data/add-via-api.mdx",
-              "the-database/migrating-your-data/airtable-to-xano.mdx",
-              "the-database/migrating-your-data/bubble-to-xano.mdx",
-              "the-database/migrating-your-data/connect-to-an-external-database.mdx",
-              "the-database/migrating-your-data/csv-import-and-export.mdx",
-              "the-database/migrating-your-data/fastgen-to-xano.mdx",
-              "the-database/migrating-your-data/google-sheets-to-xano.mdx",
-              "the-database/migrating-your-data/supabase-to-xano.mdx"
+              "the-database/migrating-your-data/README",
+              "the-database/migrating-your-data/adalo-to-xano",
+              "the-database/migrating-your-data/add-via-api",
+              "the-database/migrating-your-data/airtable-to-xano",
+              "the-database/migrating-your-data/bubble-to-xano",
+              "the-database/migrating-your-data/connect-to-an-external-database",
+              "the-database/migrating-your-data/csv-import-and-export",
+              "the-database/migrating-your-data/fastgen-to-xano",
+              "the-database/migrating-your-data/google-sheets-to-xano",
+              "the-database/migrating-your-data/supabase-to-xano"
             ]
           }
         ]
@@ -239,39 +239,39 @@
       {
         "group": "The Function Stack",
         "pages": [
-          "the-function-stack/environment-variables.mdx"
+          "the-function-stack/environment-variables"
         ],
         "groups": [
           {
             "group": "Additional Features",
             "pages": [
-              "the-function-stack/additional-features/README.mdx",
-              "the-function-stack/additional-features/response-caching.mdx"
+              "the-function-stack/additional-features/README",
+              "the-function-stack/additional-features/response-caching"
             ]
           },
           {
             "group": "Building with Visual Development",
             "pages": [
-              "the-function-stack/building-with-visual-development/README.mdx",
-              "the-function-stack/building-with-visual-development/background-tasks.mdx",
-              "the-function-stack/building-with-visual-development/configuring-expressions.mdx",
-              "the-function-stack/building-with-visual-development/middleware.mdx",
-              "the-function-stack/building-with-visual-development/triggers.mdx",
-              "the-function-stack/building-with-visual-development/working-with-data.mdx"
+              "the-function-stack/building-with-visual-development/README",
+              "the-function-stack/building-with-visual-development/background-tasks",
+              "the-function-stack/building-with-visual-development/configuring-expressions",
+              "the-function-stack/building-with-visual-development/middleware",
+              "the-function-stack/building-with-visual-development/triggers",
+              "the-function-stack/building-with-visual-development/working-with-data"
             ],
             "groups": [
               {
                 "group": "APIs",
                 "pages": [
-                  "the-function-stack/building-with-visual-development/apis/README.mdx",
-                  "the-function-stack/building-with-visual-development/apis/swagger-openapi-documentation.mdx"
+                  "the-function-stack/building-with-visual-development/apis/README",
+                  "the-function-stack/building-with-visual-development/apis/swagger-openapi-documentation"
                 ]
               },
               {
                 "group": "Custom Functions",
                 "pages": [
-                  "the-function-stack/building-with-visual-development/custom-functions/README.mdx",
-                  "the-function-stack/building-with-visual-development/custom-functions/async-functions.mdx"
+                  "the-function-stack/building-with-visual-development/custom-functions/README",
+                  "the-function-stack/building-with-visual-development/custom-functions/async-functions"
                 ]
               }
             ]
@@ -279,60 +279,60 @@
           {
             "group": "Data Types",
             "pages": [
-              "the-function-stack/data-types/README.mdx",
-              "the-function-stack/data-types/array.mdx",
-              "the-function-stack/data-types/boolean.mdx",
-              "the-function-stack/data-types/decimal.mdx",
-              "the-function-stack/data-types/expression.mdx",
-              "the-function-stack/data-types/integer.mdx",
-              "the-function-stack/data-types/null.mdx",
-              "the-function-stack/data-types/object.mdx",
-              "the-function-stack/data-types/text.mdx",
-              "the-function-stack/data-types/timestamp.mdx"
+              "the-function-stack/data-types/README",
+              "the-function-stack/data-types/array",
+              "the-function-stack/data-types/boolean",
+              "the-function-stack/data-types/decimal",
+              "the-function-stack/data-types/expression",
+              "the-function-stack/data-types/integer",
+              "the-function-stack/data-types/null",
+              "the-function-stack/data-types/object",
+              "the-function-stack/data-types/text",
+              "the-function-stack/data-types/timestamp"
             ]
           },
           {
             "group": "Filters",
             "pages": [
-              "the-function-stack/filters/README.mdx",
-              "the-function-stack/filters/array.mdx",
-              "the-function-stack/filters/comparison.mdx",
-              "the-function-stack/filters/conversion.mdx",
-              "the-function-stack/filters/manipulation.mdx",
-              "the-function-stack/filters/math.mdx",
-              "the-function-stack/filters/security.mdx",
-              "the-function-stack/filters/text.mdx",
-              "the-function-stack/filters/timestamp.mdx",
-              "the-function-stack/filters/transform.mdx"
+              "the-function-stack/filters/README",
+              "the-function-stack/filters/array",
+              "the-function-stack/filters/comparison",
+              "the-function-stack/filters/conversion",
+              "the-function-stack/filters/manipulation",
+              "the-function-stack/filters/math",
+              "the-function-stack/filters/security",
+              "the-function-stack/filters/text",
+              "the-function-stack/filters/timestamp",
+              "the-function-stack/filters/transform"
             ]
           },
           {
             "group": "Functions",
             "pages": [
-              "the-function-stack/functions/README.mdx",
-              "the-function-stack/functions/ai-tools.mdx",
-              "the-function-stack/functions/cloud-services.mdx",
-              "the-function-stack/functions/connected.mdx",
-              "the-function-stack/functions/custom-functions.mdx",
-              "the-function-stack/functions/data-caching-redis.mdx",
-              "the-function-stack/functions/file-storage.mdx",
-              "the-function-stack/functions/security.mdx",
-              "the-function-stack/functions/utility-functions.mdx"
+              "the-function-stack/functions/README",
+              "the-function-stack/functions/ai-tools",
+              "the-function-stack/functions/cloud-services",
+              "the-function-stack/functions/connected",
+              "the-function-stack/functions/custom-functions",
+              "the-function-stack/functions/data-caching-redis",
+              "the-function-stack/functions/file-storage",
+              "the-function-stack/functions/security",
+              "the-function-stack/functions/utility-functions"
             ],
             "groups": [
               {
                 "group": "APIs and Lambdas",
                 "pages": [
-                  "the-function-stack/functions/apis-and-lambdas/README.mdx",
-                  "the-function-stack/functions/apis-and-lambdas/external-api-request.mdx",
-                  "the-function-stack/functions/apis-and-lambdas/lambda-functions.mdx",
-                  "the-function-stack/functions/apis-and-lambdas/realtime-functions.mdx"
+                  "the-function-stack/functions/apis-and-lambdas/README",
+                  "the-function-stack/functions/apis-and-lambdas/external-api-request",
+                  "the-function-stack/functions/apis-and-lambdas/lambda-functions",
+                  "the-function-stack/functions/apis-and-lambdas/realtime-functions"
                 ],
                 "groups": [
                   {
                     "group": "Lambda Functions",
                     "pages": [
-                      "the-function-stack/functions/apis-and-lambdas/lambda-functions/supported-libraries.mdx"
+                      "the-function-stack/functions/apis-and-lambdas/lambda-functions/supported-libraries"
                     ]
                   }
                 ]
@@ -340,52 +340,52 @@
               {
                 "group": "Cloud Services",
                 "pages": [
-                  "the-function-stack/functions/cloud-services/README.mdx",
-                  "the-function-stack/functions/cloud-services/algolia.mdx",
-                  "the-function-stack/functions/cloud-services/aws-opensearch.mdx",
-                  "the-function-stack/functions/cloud-services/aws-s3.mdx",
-                  "the-function-stack/functions/cloud-services/azure-blob-storage.mdx",
-                  "the-function-stack/functions/cloud-services/elasticsearch.mdx",
-                  "the-function-stack/functions/cloud-services/google-cloud-storage.mdx"
+                  "the-function-stack/functions/cloud-services/README",
+                  "the-function-stack/functions/cloud-services/algolia",
+                  "the-function-stack/functions/cloud-services/aws-opensearch",
+                  "the-function-stack/functions/cloud-services/aws-s3",
+                  "the-function-stack/functions/cloud-services/azure-blob-storage",
+                  "the-function-stack/functions/cloud-services/elasticsearch",
+                  "the-function-stack/functions/cloud-services/google-cloud-storage"
                 ]
               },
               {
                 "group": "Data Manipulation",
                 "pages": [
-                  "the-function-stack/functions/data-manipulation/README.mdx",
-                  "the-function-stack/functions/data-manipulation/arrays.mdx",
-                  "the-function-stack/functions/data-manipulation/conditional.mdx",
-                  "the-function-stack/functions/data-manipulation/create-variable.mdx",
-                  "the-function-stack/functions/data-manipulation/loops.mdx",
-                  "the-function-stack/functions/data-manipulation/math.mdx",
-                  "the-function-stack/functions/data-manipulation/objects.mdx",
-                  "the-function-stack/functions/data-manipulation/switch.mdx",
-                  "the-function-stack/functions/data-manipulation/text.mdx",
-                  "the-function-stack/functions/data-manipulation/update-variable.mdx"
+                  "the-function-stack/functions/data-manipulation/README",
+                  "the-function-stack/functions/data-manipulation/arrays",
+                  "the-function-stack/functions/data-manipulation/conditional",
+                  "the-function-stack/functions/data-manipulation/create-variable",
+                  "the-function-stack/functions/data-manipulation/loops",
+                  "the-function-stack/functions/data-manipulation/math",
+                  "the-function-stack/functions/data-manipulation/objects",
+                  "the-function-stack/functions/data-manipulation/switch",
+                  "the-function-stack/functions/data-manipulation/text",
+                  "the-function-stack/functions/data-manipulation/update-variable"
                 ]
               },
               {
                 "group": "Database Requests",
                 "pages": [
-                  "the-function-stack/functions/database-requests/README.mdx",
-                  "the-function-stack/functions/database-requests/add-or-edit-record.mdx",
-                  "the-function-stack/functions/database-requests/add-record.mdx",
-                  "the-function-stack/functions/database-requests/bulk-operations.mdx",
-                  "the-function-stack/functions/database-requests/database-transaction.mdx",
-                  "the-function-stack/functions/database-requests/delete-record.mdx",
-                  "the-function-stack/functions/database-requests/direct-database-query.mdx",
-                  "the-function-stack/functions/database-requests/edit-record.mdx",
-                  "the-function-stack/functions/database-requests/external-database-query.mdx",
-                  "the-function-stack/functions/database-requests/get-database-schema.mdx",
-                  "the-function-stack/functions/database-requests/get-record.mdx",
-                  "the-function-stack/functions/database-requests/patch-record.mdx"
+                  "the-function-stack/functions/database-requests/README",
+                  "the-function-stack/functions/database-requests/add-or-edit-record",
+                  "the-function-stack/functions/database-requests/add-record",
+                  "the-function-stack/functions/database-requests/bulk-operations",
+                  "the-function-stack/functions/database-requests/database-transaction",
+                  "the-function-stack/functions/database-requests/delete-record",
+                  "the-function-stack/functions/database-requests/direct-database-query",
+                  "the-function-stack/functions/database-requests/edit-record",
+                  "the-function-stack/functions/database-requests/external-database-query",
+                  "the-function-stack/functions/database-requests/get-database-schema",
+                  "the-function-stack/functions/database-requests/get-record",
+                  "the-function-stack/functions/database-requests/patch-record"
                 ],
                 "groups": [
                   {
                     "group": "Query All Records",
                     "pages": [
-                      "the-function-stack/functions/database-requests/query-all-records/README.mdx",
-                      "the-function-stack/functions/database-requests/query-all-records/external-filtering-examples.mdx"
+                      "the-function-stack/functions/database-requests/query-all-records/README",
+                      "the-function-stack/functions/database-requests/query-all-records/external-filtering-examples"
                     ]
                   }
                 ]
@@ -397,26 +397,26 @@
       {
         "group": "Troubleshooting and Support",
         "pages": [
-          "troubleshooting-and-support/error-reference.mdx"
+          "troubleshooting-and-support/error-reference"
         ],
         "groups": [
           {
             "group": "Getting Help",
             "pages": [
-              "troubleshooting-and-support/getting-help/README.mdx",
-              "troubleshooting-and-support/getting-help/community-code-of-conduct.mdx",
-              "troubleshooting-and-support/getting-help/community-content-modification-policy.mdx",
-              "troubleshooting-and-support/getting-help/granting-access.mdx"
+              "troubleshooting-and-support/getting-help/README",
+              "troubleshooting-and-support/getting-help/community-code-of-conduct",
+              "troubleshooting-and-support/getting-help/community-content-modification-policy",
+              "troubleshooting-and-support/getting-help/granting-access"
             ]
           },
           {
             "group": "Troubleshooting Performance",
             "pages": [
-              "troubleshooting-and-support/troubleshooting-performance/README.mdx",
-              "troubleshooting-and-support/troubleshooting-performance/function-stack-performance.mdx",
-              "troubleshooting-and-support/troubleshooting-performance/ram-usage.mdx",
-              "troubleshooting-and-support/troubleshooting-performance/when-a-single-workflow-feels-slow.mdx",
-              "troubleshooting-and-support/troubleshooting-performance/when-everything-feels-slow.mdx"
+              "troubleshooting-and-support/troubleshooting-performance/README",
+              "troubleshooting-and-support/troubleshooting-performance/function-stack-performance",
+              "troubleshooting-and-support/troubleshooting-performance/ram-usage",
+              "troubleshooting-and-support/troubleshooting-performance/when-a-single-workflow-feels-slow",
+              "troubleshooting-and-support/troubleshooting-performance/when-everything-feels-slow"
             ]
           }
         ]
@@ -424,60 +424,60 @@
       {
         "group": "Xano Actions",
         "pages": [
-          "xano-actions/what-are-actions.mdx"
+          "xano-actions/what-are-actions"
         ]
       },
       {
         "group": "Xano AI",
         "pages": [
-          "xano-ai/ai-database-assistant.mdx",
-          "xano-ai/ai-lambda-assistant.mdx",
-          "xano-ai/ai-sql-assistant.mdx",
-          "xano-ai/api-request-assistant.mdx",
-          "xano-ai/building-a-backend-using-ai.mdx",
-          "xano-ai/get-started-assistant.mdx",
-          "xano-ai/streaming-apis.mdx",
-          "xano-ai/template-engine.mdx"
+          "xano-ai/ai-database-assistant",
+          "xano-ai/ai-lambda-assistant",
+          "xano-ai/ai-sql-assistant",
+          "xano-ai/api-request-assistant",
+          "xano-ai/building-a-backend-using-ai",
+          "xano-ai/get-started-assistant",
+          "xano-ai/streaming-apis",
+          "xano-ai/template-engine"
         ]
       },
       {
         "group": "Xano Features",
         "pages": [
-          "xano-features/snippets.mdx"
+          "xano-features/snippets"
         ],
         "groups": [
           {
             "group": "Advanced Back End Features",
             "pages": [
-              "xano-features/advanced-back-end-features/README.mdx",
-              "xano-features/advanced-back-end-features/developer-api-deprecated.mdx",
-              "xano-features/advanced-back-end-features/xano-link.mdx"
+              "xano-features/advanced-back-end-features/README",
+              "xano-features/advanced-back-end-features/developer-api-deprecated",
+              "xano-features/advanced-back-end-features/xano-link"
             ]
           },
           {
             "group": "Instance Settings",
             "pages": [
-              "xano-features/instance-settings/README.mdx",
-              "xano-features/instance-settings/backup-and-restore.mdx",
-              "xano-features/instance-settings/change-server-region.mdx",
-              "xano-features/instance-settings/direct-database-connector.mdx",
-              "xano-features/instance-settings/release-track-preferences.mdx",
-              "xano-features/instance-settings/security-policy.mdx",
-              "xano-features/instance-settings/static-ip-outgoing.mdx"
+              "xano-features/instance-settings/README",
+              "xano-features/instance-settings/backup-and-restore",
+              "xano-features/instance-settings/change-server-region",
+              "xano-features/instance-settings/direct-database-connector",
+              "xano-features/instance-settings/release-track-preferences",
+              "xano-features/instance-settings/security-policy",
+              "xano-features/instance-settings/static-ip-outgoing"
             ]
           },
           {
             "group": "Metadata API",
             "pages": [
-              "xano-features/metadata-api/README.mdx",
-              "xano-features/metadata-api/content.mdx",
-              "xano-features/metadata-api/file.mdx",
-              "xano-features/metadata-api/master-metadata-api.mdx",
-              "xano-features/metadata-api/request-history.mdx",
-              "xano-features/metadata-api/search.mdx",
-              "xano-features/metadata-api/tables-and-schema.mdx",
-              "xano-features/metadata-api/token-scopes-reference.mdx",
-              "xano-features/metadata-api/workspace-import-and-export.mdx"
+              "xano-features/metadata-api/README",
+              "xano-features/metadata-api/content",
+              "xano-features/metadata-api/file",
+              "xano-features/metadata-api/master-metadata-api",
+              "xano-features/metadata-api/request-history",
+              "xano-features/metadata-api/search",
+              "xano-features/metadata-api/tables-and-schema",
+              "xano-features/metadata-api/token-scopes-reference",
+              "xano-features/metadata-api/workspace-import-and-export"
             ]
           }
         ]
@@ -485,82 +485,82 @@
       {
         "group": "Xano Transform",
         "pages": [
-          "xano-transform/using-xano-transform.mdx"
+          "xano-transform/using-xano-transform"
         ]
       },
       {
         "group": "XanoScript",
         "pages": [
-          "xanoscript/introduction-to-xanoscript.mdx",
-          "xanoscript/keyconcepts.mdx",
-          "xanoscript/ts.mdx"
+          "xanoscript/introduction-to-xanoscript",
+          "xanoscript/keyconcepts",
+          "xanoscript/ts"
         ],
         "groups": [
           {
             "group": "DB",
             "pages": [
-              "xanoscript/db/README.mdx",
-              "xanoscript/db/field-type-reference.mdx"
+              "xanoscript/db/README",
+              "xanoscript/db/field-type-reference"
             ]
           },
           {
             "group": "FS",
             "pages": [
-              "xanoscript/fs/README.mdx",
-              "xanoscript/fs/input-types-reference.mdx"
+              "xanoscript/fs/README",
+              "xanoscript/fs/input-types-reference"
             ],
             "groups": [
               {
                 "group": "Filter Reference",
                 "pages": [
-                  "xanoscript/fs/filter-reference/README.mdx",
-                  "xanoscript/fs/filter-reference/array.mdx",
-                  "xanoscript/fs/filter-reference/comparison.mdx",
-                  "xanoscript/fs/filter-reference/conversion.mdx",
-                  "xanoscript/fs/filter-reference/manipulation.mdx",
-                  "xanoscript/fs/filter-reference/math.mdx",
-                  "xanoscript/fs/filter-reference/security.mdx",
-                  "xanoscript/fs/filter-reference/text.mdx",
-                  "xanoscript/fs/filter-reference/timestamp.mdx",
-                  "xanoscript/fs/filter-reference/transform.mdx"
+                  "xanoscript/fs/filter-reference/README",
+                  "xanoscript/fs/filter-reference/array",
+                  "xanoscript/fs/filter-reference/comparison",
+                  "xanoscript/fs/filter-reference/conversion",
+                  "xanoscript/fs/filter-reference/manipulation",
+                  "xanoscript/fs/filter-reference/math",
+                  "xanoscript/fs/filter-reference/security",
+                  "xanoscript/fs/filter-reference/text",
+                  "xanoscript/fs/filter-reference/timestamp",
+                  "xanoscript/fs/filter-reference/transform"
                 ]
               },
               {
                 "group": "Function Reference",
                 "pages": [
-                  "xanoscript/fs/function-reference/README.mdx",
-                  "xanoscript/fs/function-reference/apis-and-lambdas.mdx",
-                  "xanoscript/fs/function-reference/custom-functions.mdx",
-                  "xanoscript/fs/function-reference/data-caching-redis.mdx",
-                  "xanoscript/fs/function-reference/database-operations.mdx",
-                  "xanoscript/fs/function-reference/file-storage.mdx",
-                  "xanoscript/fs/function-reference/security.mdx",
-                  "xanoscript/fs/function-reference/utility-functions.mdx"
+                  "xanoscript/fs/function-reference/README",
+                  "xanoscript/fs/function-reference/apis-and-lambdas",
+                  "xanoscript/fs/function-reference/custom-functions",
+                  "xanoscript/fs/function-reference/data-caching-redis",
+                  "xanoscript/fs/function-reference/database-operations",
+                  "xanoscript/fs/function-reference/file-storage",
+                  "xanoscript/fs/function-reference/security",
+                  "xanoscript/fs/function-reference/utility-functions"
                 ],
                 "groups": [
                   {
                     "group": "Cloud Services",
                     "pages": [
-                      "xanoscript/fs/function-reference/cloud-services/README.mdx",
-                      "xanoscript/fs/function-reference/cloud-services/algolia.mdx",
-                      "xanoscript/fs/function-reference/cloud-services/aws-opensearch.mdx",
-                      "xanoscript/fs/function-reference/cloud-services/aws-s3.mdx",
-                      "xanoscript/fs/function-reference/cloud-services/azure-blob-storage.mdx",
-                      "xanoscript/fs/function-reference/cloud-services/elasticsearch.mdx",
-                      "xanoscript/fs/function-reference/cloud-services/google-cloud-storage.mdx"
+                      "xanoscript/fs/function-reference/cloud-services/README",
+                      "xanoscript/fs/function-reference/cloud-services/algolia",
+                      "xanoscript/fs/function-reference/cloud-services/aws-opensearch",
+                      "xanoscript/fs/function-reference/cloud-services/aws-s3",
+                      "xanoscript/fs/function-reference/cloud-services/azure-blob-storage",
+                      "xanoscript/fs/function-reference/cloud-services/elasticsearch",
+                      "xanoscript/fs/function-reference/cloud-services/google-cloud-storage"
                     ]
                   },
                   {
                     "group": "Data Manipulation",
                     "pages": [
-                      "xanoscript/fs/function-reference/data-manipulation/README.mdx",
-                      "xanoscript/fs/function-reference/data-manipulation/arrays.mdx",
-                      "xanoscript/fs/function-reference/data-manipulation/conditionals.mdx",
-                      "xanoscript/fs/function-reference/data-manipulation/loops.mdx",
-                      "xanoscript/fs/function-reference/data-manipulation/math.mdx",
-                      "xanoscript/fs/function-reference/data-manipulation/objects.mdx",
-                      "xanoscript/fs/function-reference/data-manipulation/text.mdx",
-                      "xanoscript/fs/function-reference/data-manipulation/variables.mdx"
+                      "xanoscript/fs/function-reference/data-manipulation/README",
+                      "xanoscript/fs/function-reference/data-manipulation/arrays",
+                      "xanoscript/fs/function-reference/data-manipulation/conditionals",
+                      "xanoscript/fs/function-reference/data-manipulation/loops",
+                      "xanoscript/fs/function-reference/data-manipulation/math",
+                      "xanoscript/fs/function-reference/data-manipulation/objects",
+                      "xanoscript/fs/function-reference/data-manipulation/text",
+                      "xanoscript/fs/function-reference/data-manipulation/variables"
                     ]
                   }
                 ]
@@ -572,9 +572,9 @@
       {
         "group": "Your Xano Account",
         "pages": [
-          "your-xano-account/account-page.mdx",
-          "your-xano-account/billing.mdx",
-          "your-xano-account/referrals-and-commissions.mdx"
+          "your-xano-account/account-page",
+          "your-xano-account/billing",
+          "your-xano-account/referrals-and-commissions"
         ]
       }
     ]
